@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Special Gothic Expanded One", "Plus Jakarta Sans", sans-serif;
+  --font-mono: "Fragment Mono", ui-monospace, monospace;
+  --font-script: "Great Vibes", cursive;
+
+  --color-ink: #080b0f;
+  --color-body: #4b5b63;
+  --color-mist: #f5f5f5;
+  --color-mist2: #f6f6f6;
+  --color-line: #ebebeb;
+  --color-silver: #c7c7c7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink font-sans antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #080b0f;
+  color: #fff;
+}
+
+/* thin gray scrollbar like the original */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 8px; }
+
+.h-display {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* manifesto words */
+.mword {
+  opacity: 0.12;
+  display: inline-block;
+}
+
+/* faq answer grid animation helper */
+.faq-answer {
+  overflow: hidden;
+  height: 0;
+}
+
+/* reviews marquee */
+.reviews-marquee-outer {
+  overflow: hidden;
+}
+.reviews-marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: max-content;
+  will-change: transform;
+}

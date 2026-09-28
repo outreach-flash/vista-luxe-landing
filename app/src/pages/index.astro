@@ -1,0 +1,563 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import Button from '../components/Button.astro';
+import PropertyCard from '../components/PropertyCard.astro';
+import Faq from '../components/Faq.astro';
+import Cta from '../components/Cta.astro';
+
+const all = await getCollection('properties');
+const properties = all;
+const featured = properties.filter((p) => p.data.featured);
+const preview = properties.slice(0, 4);
+
+const services = [
+  { n: '.01', label: 'Buy a Home', title: 'Find Homes Perfect For You', img: '/assets/img/Pt48YpvwQR3aV3F0PcwV1ZfGs.png' },
+  { n: '.02', label: 'Rent a Home', title: 'Find Rental Homes With Ease', img: '/assets/img/fTvLhDbO86UBiJORkMBXabiLfM.png' },
+  { n: '.03', label: 'Explore Listings', title: 'Explore Available Properties Easily', img: '/assets/img/Cn8DCdolOsfC5Loc5Z2UAI1fY.png' },
+];
+
+const reviews = [
+  {
+    text: 'I was able to find a home that matched my needs perfectly. The overall experience was smooth and very easy to follow.',
+    name: 'Olivia Bennett', role: 'Interior Designer', avatar: '/assets/img/acIeRY2yV2JQft8tHEVInJNRM.png',
+  },
+  {
+    text: 'Clean interface and useful details helped me make better decisions. It saved time and made the process much easier.',
+    name: 'Liam Carter', role: 'Real Estate Investor', avatar: '/assets/img/7dVYJ55BZQIncK7SDGrshTKZcE0.png',
+  },
+  {
+    text: 'From browsing to shortlisting properties, everything felt intuitive. It helped me move forward with confidence.',
+    name: 'Sophia Turner', role: 'Marketing Manager', avatar: '/assets/img/OgBtefhmhr3VouU2xaj0nJf60.png',
+  },
+  {
+    text: 'The way homes are presented makes it easy to understand value and compare options without feeling overwhelmed.',
+    name: 'Noah Mitchell', role: 'Software Engineer', avatar: '/assets/img/HEZdbLUhbczLhoFloUmzapT33QQ.png',
+  },
+  {
+    text: 'A very well-designed experience that made finding the right home simple. Everything was clear and easy to navigate.',
+    name: 'Emma Collins', role: 'Business Analyst', avatar: '/assets/img/TPme1TmgGcM5s0V2rbRpTFZhMI.png',
+  },
+  {
+    text: 'The experience felt clean and thoughtfully designed. It helped me explore options clearly and choose a home with confidence.',
+    name: 'Lucas Anderson', role: 'Architect', avatar: '/assets/img/PxK4SiyP328sI5a8iZD9GzF1psw.png',
+  },
+];
+---
+
+<Layout>
+  <!-- ============ HERO ============ -->
+  <!--
+    Parallax layering:
+    • .hero-scroll-container  – tall scroll driver (≈ 200svh)
+    • .hero-sticky-stage      – sticky viewport-height panel, clips content
+    • .hero-bg                – sky/gradient background fills stage (z:0)
+    • .hero-content           – text, badge, buttons  (z:1)  ← stays sticky
+    • .hero-building-wrap     – building + clouds     (z:2)  ← rises over text
+    As the user scrolls through the extra height the building image
+    (which has a higher z-index) climbs upward and visually covers the text.
+  -->
+  <section id="hero-scroll-container" class="relative" style="height: 200svh;">
+    <div id="hero-sticky-stage" class="sticky top-0 h-[100svh] overflow-hidden">
+
+      <!-- sky background -->
+      <img src="/assets/img/lQ2c1tUqYlj0bLtzWgULCmgN7Q.png" alt="" class="absolute inset-0 h-full w-full object-cover" style="z-index:0" />
+
+      <!-- text content — sits BEHIND the building image -->
+      <div id="hero-content" class="relative mx-auto flex w-full max-w-[1320px] flex-col items-center px-6 pt-36 text-center md:pt-44" style="z-index:1">
+        <div class="hero-badge flex items-center gap-2.5 rounded-full border border-white/60 bg-white/50 py-1.5 pl-2 pr-4 backdrop-blur-md">
+          <span class="flex -space-x-2">
+            <img src="/assets/img/GxM7bKLSVnAGAmdHwGVLuMTXU.png" alt="" class="h-6 w-6 rounded-full border border-white object-cover" />
+            <img src="/assets/img/xr937T4MDyNfNI6hQKE0vaUL0Rk.png" alt="" class="h-6 w-6 rounded-full border border-white object-cover" />
+            <img src="/assets/img/9OKbutbMYdTLxQ8UP6D7nFyc7NM.png" alt="" class="h-6 w-6 rounded-full border border-white object-cover" />
+          </span>
+          <span class="text-[12px] font-medium text-ink">3,500+ Pro Users</span>
+        </div>
+
+        <h1 class="hero-title h-display mt-7 max-w-[1000px] text-[52px] text-ink md:text-[88px]">
+          Find Your Dream Home
+        </h1>
+        <p class="hero-sub mt-6 max-w-[560px] text-[16px] leading-relaxed text-body md:text-[17px]">
+          Explore thoughtfully designed homes in premium locations, crafted to match modern lifestyles with comfort, elegance, and long-term value.
+        </p>
+        <div class="hero-cta mt-9 flex flex-wrap items-center justify-center gap-4">
+          <Button href="/properties" label="Explore Homes" variant="dark" />
+          <Button href="/contact-us" label="Book a Visit" variant="outline" />
+        </div>
+      </div>
+
+      <!-- building + clouds — sits IN FRONT of the text, rises on scroll -->
+      <!--
+        top: 57vh  → building's top edge starts at 57% of the viewport,
+        so the CTA buttons (at ~46-50vh) are fully visible at scroll=0.
+        GSAP translates it up by 59vh → final top at -2vh (fully covers viewport).
+      -->
+      <div id="hero-building-wrap" class="absolute inset-x-0 w-full" style="z-index:2; top:57vh">
+        <img
+          id="hero-building"
+          src="/assets/img/JmEO3k1QnS2hTbLE5miZu6iHho.png"
+          alt="Modern dream home"
+          class="block h-auto w-full"
+          style="will-change: transform;"
+        />
+        <img id="cloud-left" src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png" alt="" class="absolute -left-[6%] bottom-[24%] w-[42%] opacity-90" />
+        <img id="cloud-right" src="/assets/img/C2ebO7rPg1aRgfSeP2BBMcx45A.png" alt="" class="absolute -right-[7%] bottom-[42%] w-[36%] opacity-90" />
+      </div>
+
+      <!--
+        Static fog layer — z-index:3 (above building), always pinned to the
+        bottom of the sticky viewport. Cloud images span the full width and
+        fade into a white gradient, making the hero dissolve seamlessly into
+        the white background of the next section.
+      -->
+      <div id="hero-fog" class="absolute inset-x-0 bottom-0 pointer-events-none" style="z-index:3">
+        <!-- left cloud -->
+        <img
+          src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png" alt=""
+          class="absolute -left-[4%] bottom-0 w-[58%] opacity-95"
+          style="transform: translateY(18%)"
+        />
+        <!-- right cloud -->
+        <img
+          src="/assets/img/C2ebO7rPg1aRgfSeP2BBMcx45A.png" alt=""
+          class="absolute -right-[4%] bottom-0 w-[52%] opacity-95"
+          style="transform: translateY(18%)"
+        />
+        <!-- gradient band that fades the mist into clean white -->
+        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ OUR IMPACT ============ -->
+  <section class="mx-auto max-w-[1320px] px-6 py-24 md:px-10 md:py-36">
+    <Eyebrow text="Our Impact" />
+    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <h2 class="h-display reveal text-[40px] text-ink md:text-[52px]">Real insights behind every property decision</h2>
+      <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
+        Built to make modern home discovery simple, transparent, and more confident for every user.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-4 md:grid-cols-4">
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/7kuxPVTjMLe1PbETJGXV0BIBB6s.png" alt="Modern home exterior" class="h-full max-h-[340px] w-full object-cover md:max-h-none" />
+      </div>
+      <div class="flex flex-col gap-4 md:col-span-2">
+        <div class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-10">
+          <span class="stat-value text-[34px] font-bold tracking-tight text-ink md:text-[44px]" data-target="4.6" data-prefix="$" data-suffix="M+">$4.6M+</span>
+          <span class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">Total Value</span>
+        </div>
+        <div class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-10">
+          <span class="stat-value text-[34px] font-bold tracking-tight text-ink md:text-[44px]" data-target="320" data-suffix="+">320+</span>
+          <span class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">Active Homes</span>
+        </div>
+        <div class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-10">
+          <span class="stat-value text-[34px] font-bold tracking-tight text-ink md:text-[44px]" data-target="98" data-suffix="%">98%</span>
+          <span class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">Happy Clients</span>
+        </div>
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/RakXiRCu0eigdFvdHDqHa9us9PQ.png" alt="Hillside home" class="h-full max-h-[340px] w-full object-cover md:max-h-none" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MANIFESTO ============ -->
+  <section class="bg-mist2 px-6 py-28 md:py-44">
+    <p id="manifesto" class="mx-auto max-w-[900px] text-center text-[30px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]">
+      <span class="mword">Focused</span> <span class="mword">on</span> <span class="mword font-bold italic">discovery,</span>
+      <span class="mword">built</span> <span class="mword">for</span> <span class="mword">real</span> <span class="mword">choices.</span>
+      <span class="mword">We</span> <span class="mword">design</span> <span class="mword">platforms</span> <span class="mword">that</span>
+      <span class="mword">help</span> <span class="mword font-bold italic">buyers</span> <span class="mword">explore</span>
+      <span class="mword">homes,</span> <span class="mword">understand</span> <span class="mword">value,</span> <span class="mword">and</span>
+      <span class="mword">move</span> <span class="mword font-bold italic">forward</span> <span class="mword">with</span> <span class="mword">confidence.</span>
+    </p>
+  </section>
+
+  <!-- ============ TOP PROPERTIES ============ -->
+  <section class="pt-24 md:pt-36">
+    <div class="mx-auto max-w-[1320px] px-6 md:px-10">
+      <Eyebrow text="Top Properties" />
+      <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <h2 class="h-display reveal text-[40px] text-ink md:text-[52px]">Explore our selected homes for modern living</h2>
+        <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
+          Carefully chosen properties that combine design, comfort, and location to match real lifestyle needs.
+        </p>
+      </div>
+    </div>
+
+    <div id="stack-wrap" class="relative mt-14">
+      {featured.map((p) => (
+        <div class="stack-card sticky top-0 h-[100svh] overflow-hidden">
+          <img src={p.data.cardImage} alt={p.data.title} class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-black/45"></div>
+          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span class="rounded-full bg-white/15 px-5 py-2 text-[15px] font-medium text-white backdrop-blur-md">
+              ${p.data.price.toLocaleString('en-US')}
+            </span>
+            <h3 class="mt-5 text-[36px] font-bold tracking-tight text-white md:text-[44px]">{p.data.title}</h3>
+            <p class="mt-2 text-[15px] text-white/85">{p.data.street}, {p.data.area}</p>
+            <div class="mt-7">
+              <Button href={`/properties/${p.id}`} label="Explore" variant="light" />
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="mx-auto max-w-[1320px] scroll-mt-24 px-6 py-24 md:px-10 md:py-36">
+    <Eyebrow text="Our Services" />
+    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <h2 class="h-display reveal text-[40px] text-ink md:text-[52px]">Everything you need for your home</h2>
+      <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
+        Built to simplify your home search with clear insights, better options, and confident decisions.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-4 md:grid-cols-4">
+      {services.map((s, i) => (
+        <a
+          href="/properties"
+          class:list={[
+            'reveal group relative flex min-h-[420px] flex-col justify-end overflow-hidden rounded-2xl p-7',
+            i === 0 ? 'md:col-span-2' : 'md:col-span-1',
+          ]}
+        >
+          <img src={s.img} alt={s.label} loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+          <span class="absolute right-6 top-6 font-mono text-[13px] text-white/80">{s.n}</span>
+          <div class="relative">
+            <p class="text-[13px] text-white/80">{s.label}</p>
+            <h3 class="mt-1.5 max-w-[280px] text-[24px] font-semibold leading-snug tracking-tight text-white">{s.title}</h3>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============ LISTINGS PREVIEW ============ -->
+  <section class="mx-auto max-w-[1320px] px-6 pb-24 md:px-10 md:pb-36">
+    <Eyebrow text="Property Listings" />
+    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <h2 class="h-display reveal text-[40px] text-ink md:text-[52px]">Discover homes that fit your lifestyle</h2>
+      <div class="reveal md:justify-self-end">
+        <p class="max-w-[420px] text-[16px] leading-relaxed text-body">
+          Explore a range of properties built for comfort, location, and everyday living.
+        </p>
+        <div class="mt-6">
+          <Button href="/properties" label="Explore All" variant="dark" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
+      {preview.map((p) => (
+        <div class="reveal">
+          <PropertyCard
+            slug={p.id}
+            title={p.data.title}
+            status={p.data.status}
+            price={p.data.price}
+            cardImage={p.data.cardImage}
+            bedrooms={p.data.bedrooms}
+            bathrooms={p.data.bathrooms}
+            squareArea={p.data.squareArea}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============ HIGHLIGHTED HOME (video) ============ -->
+  <section class="px-3 pb-24 md:px-5 md:pb-36">
+    <div class="mx-auto max-w-[1320px] px-3 text-center md:px-6">
+      <div class="flex justify-center">
+        <Eyebrow text="Highlighted Home" />
+      </div>
+      <h2 class="h-display reveal mx-auto mt-6 max-w-[800px] text-[36px] text-ink md:text-[52px]">
+        Modern homes, designed to live better
+      </h2>
+      <p class="reveal mx-auto mt-5 max-w-[520px] text-[16px] leading-relaxed text-body">
+        Explore how modern homes are designed to feel clean, open, and functional.
+      </p>
+      <div class="reveal mt-8 flex justify-center">
+        <Button href="/properties" label="Explore Homes" variant="dark" />
+      </div>
+    </div>
+    <div class="mt-14 flex justify-center">
+      <div id="video-mask" class="w-full max-w-[1600px] overflow-hidden rounded-[28px]">
+        <video
+          src="/assets/vid/zEQ2uqOoz4IUC6n5QUkeURSWg.mp4"
+          poster="/assets/img/CdWqqbxMdI0CYbn1OZIsaPpFSU.png"
+          autoplay muted loop playsinline
+          class="aspect-video w-full object-cover"
+        ></video>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <section class="overflow-hidden py-10 md:py-16">
+    <div class="marquee-track" id="marquee">
+      {Array.from({ length: 4 }).map(() => (
+        <span class="marquee-chunk whitespace-nowrap pr-8 text-[64px] font-semibold tracking-tight text-silver md:text-[96px]">
+          Explore Homes&nbsp;&nbsp;·&nbsp;&nbsp;Live Better&nbsp;&nbsp;·&nbsp;&nbsp;Modern Spaces&nbsp;&nbsp;·&nbsp;&nbsp;
+        </span>
+      ))}
+    </div>
+  </section>
+
+  <!-- ============ CLIENT REVIEWS ============ -->
+  <section class="overflow-hidden py-24 md:py-36">
+    <div class="mx-auto max-w-[1320px] px-6 md:px-10">
+      <Eyebrow text="Client Reviews" />
+      <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+        <h2 class="h-display reveal text-[40px] text-ink md:text-[52px]">What people say about their home search</h2>
+        <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
+          Real feedback from users who explored homes and found the right place with confidence.
+        </p>
+      </div>
+    </div>
+
+    <!-- Row 1: scrolls LEFT -->
+    <div class="reviews-marquee-outer mt-14" style="--dir:-1">
+      <div class="reviews-marquee-track" id="reviews-row-1">
+        {[...reviews, ...reviews].map((r) => (
+          <div class="reviews-card shrink-0 w-[340px] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between" style="min-height:320px">
+            <div>
+              <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7"><path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z"/></svg>
+              <p class="mt-4 text-[15px] leading-relaxed text-ink/80">{r.text}</p>
+            </div>
+            <div class="mt-7 flex items-center gap-3">
+              <img src={r.avatar} alt={r.name} loading="lazy" class="h-10 w-10 rounded-lg object-cover" />
+              <div>
+                <p class="text-[14px] font-semibold text-ink">{r.name}</p>
+                <p class="text-[12px] text-body">{r.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+        <!-- photo card -->
+        <div class="reviews-card shrink-0 relative w-[340px] md:w-[380px] overflow-hidden rounded-2xl" style="min-height:320px">
+          <img src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png" alt="Ethan Walker" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-7 left-7">
+            <p class="text-[18px] font-semibold text-white">Ethan Walker</p>
+            <p class="mt-0.5 text-[13px] text-white/80">Property Consultant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: scrolls RIGHT -->
+    <div class="reviews-marquee-outer mt-4" style="--dir:1">
+      <div class="reviews-marquee-track" id="reviews-row-2">
+        {[...reviews].reverse().concat([...reviews].reverse()).map((r) => (
+          <div class="reviews-card shrink-0 w-[340px] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between" style="min-height:320px">
+            <div>
+              <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7"><path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z"/></svg>
+              <p class="mt-4 text-[15px] leading-relaxed text-ink/80">{r.text}</p>
+            </div>
+            <div class="mt-7 flex items-center gap-3">
+              <img src={r.avatar} alt={r.name} loading="lazy" class="h-10 w-10 rounded-lg object-cover" />
+              <div>
+                <p class="text-[14px] font-semibold text-ink">{r.name}</p>
+                <p class="text-[12px] text-body">{r.role}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+        <!-- photo card -->
+        <div class="reviews-card shrink-0 relative w-[340px] md:w-[380px] overflow-hidden rounded-2xl" style="min-height:320px">
+          <img src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png" alt="Ethan Walker" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div class="absolute bottom-7 left-7">
+            <p class="text-[18px] font-semibold text-white">Ethan Walker</p>
+            <p class="mt-0.5 text-[13px] text-white/80">Property Consultant</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Faq />
+  <Cta />
+</Layout>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+
+  /* ---- hero entrance ---- */
+  gsap.from('.hero-badge', { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out' });
+  gsap.from('.hero-title', { y: 44, opacity: 0, duration: 1.1, delay: 0.1, ease: 'power3.out' });
+  gsap.from('.hero-sub', { y: 30, opacity: 0, duration: 1, delay: 0.25, ease: 'power3.out' });
+  gsap.from('.hero-cta', { y: 24, opacity: 0, duration: 1, delay: 0.4, ease: 'power3.out' });
+
+  /* ---- hero parallax: building rises from 50vh → covers viewport ---- */
+  //
+  // Building-wrap starts with its TOP at 50vh (CSS: top:50vh).
+  // GSAP translates it upward by 52vh, so its top moves:
+  //   scroll=0   → top at 50vh  (only rooftop visible at bottom half)
+  //   scroll=50% → top at 24vh  (building covers subtitle/buttons)
+  //   scroll=100%→ top at -2vh  (building fully covers viewport)
+  // Using vh units makes the movement viewport-relative, independent of
+  // the building image's natural rendered height.
+  //
+  gsap.fromTo(
+    '#hero-building-wrap',
+    { y: 0 },
+    {
+      y: '-59vh',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero-scroll-container',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+      },
+    }
+  );
+
+  /* ---- hero text scales down as building rises ---- */
+  // #hero-content shrinks from full size → 0.65× while the building covers it.
+  // transformOrigin:'center top' keeps the badge anchored at the top while
+  // everything below (title, subtitle, CTA) compresses downward.
+  gsap.fromTo(
+    '#hero-content',
+    { scale: 1, transformOrigin: 'center top' },
+    {
+      scale: 0.65,
+      transformOrigin: 'center top',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: '#hero-scroll-container',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+      },
+    }
+  );
+
+  /* ---- clouds drift (floating) ---- */
+  gsap.to('#cloud-left', { x: 60, duration: 14, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  gsap.to('#cloud-right', { x: -70, duration: 17, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  /* clouds also rise slightly with the building on scroll */
+  gsap.to('#cloud-left', {
+    yPercent: -20, ease: 'none',
+    scrollTrigger: { trigger: '#hero-scroll-container', start: 'top top', end: 'bottom bottom', scrub: true },
+  });
+  gsap.to('#cloud-right', {
+    yPercent: -15, ease: 'none',
+    scrollTrigger: { trigger: '#hero-scroll-container', start: 'top top', end: 'bottom bottom', scrub: true },
+  });
+
+  /* ---- generic reveals ---- */
+  gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
+    gsap.from(el, {
+      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%' },
+    });
+  });
+
+  /* ---- stat counters ---- */
+  gsap.utils.toArray<HTMLElement>('.stat-value').forEach((el) => {
+    const target = parseFloat(el.dataset.target || '0');
+    const prefix = el.dataset.prefix || '';
+    const suffix = el.dataset.suffix || '';
+    const isFloat = String(el.dataset.target).includes('.');
+    const obj = { v: 0 };
+    ScrollTrigger.create({
+      trigger: el, start: 'top 88%', once: true,
+      onEnter: () =>
+        gsap.to(obj, {
+          v: target, duration: 1.6, ease: 'power2.out',
+          onUpdate: () => {
+            el.textContent = prefix + (isFloat ? obj.v.toFixed(1) : Math.round(obj.v).toString()) + suffix;
+          },
+        }),
+    });
+  });
+
+  /* ---- manifesto word reveal ---- */
+  gsap.to('#manifesto .mword', {
+    opacity: 1, stagger: 0.06, ease: 'none',
+    scrollTrigger: { trigger: '#manifesto', start: 'top 78%', end: 'bottom 45%', scrub: true },
+  });
+
+  /* ---- stacking cards: shrink the one being covered ---- */
+  const stackCards = gsap.utils.toArray<HTMLElement>('.stack-card');
+  stackCards.forEach((card, i) => {
+    if (i === stackCards.length - 1) return;
+    gsap.to(card.querySelector('img'), {
+      scale: 1.08, ease: 'none',
+      scrollTrigger: { trigger: stackCards[i + 1], start: 'top bottom', end: 'top top', scrub: true },
+    });
+    gsap.to(card, {
+      opacity: 0.75, ease: 'none',
+      scrollTrigger: { trigger: stackCards[i + 1], start: 'top bottom', end: 'top top', scrub: true },
+    });
+  });
+
+  /* ---- video mask scale-up ---- */
+  gsap.fromTo(
+    '#video-mask',
+    { scale: 0.72, borderRadius: '48px' },
+    {
+      scale: 1, borderRadius: '28px', ease: 'none',
+      scrollTrigger: { trigger: '#video-mask', start: 'top 95%', end: 'top 30%', scrub: true },
+    }
+  );
+
+  /* ---- marquee ---- */
+  const track = document.getElementById('marquee')!;
+  const chunk = track.querySelector<HTMLElement>('.marquee-chunk')!;
+  const loop = () => {
+    const w = chunk.offsetWidth;
+    gsap.fromTo(track, { x: 0 }, { x: -w, duration: 22, ease: 'none', repeat: -1 });
+  };
+  loop();
+  window.addEventListener('resize', () => {
+    gsap.killTweensOf(track);
+    gsap.set(track, { x: 0 });
+    loop();
+  });
+
+  /* ---- reviews marquee (dual row) ---- */
+  function initReviewsMarquee() {
+    const rows = [
+      { el: document.getElementById('reviews-row-1')!, dir: -1, dur: 38 },
+      { el: document.getElementById('reviews-row-2')!, dir:  1, dur: 46 },
+    ];
+    rows.forEach(({ el, dir, dur }) => {
+      // measure the width of exactly half the cards (the original set)
+      const cards = el.querySelectorAll<HTMLElement>('.reviews-card');
+      // half the total cards = one full loop width
+      const halfCount = Math.floor(cards.length / 2);
+      let halfW = 0;
+      for (let i = 0; i < halfCount; i++) {
+        halfW += cards[i].offsetWidth + 16; // 16px = gap-4
+      }
+      // start offset for rightward rows so they don't jump
+      const startX = dir === 1 ? -halfW : 0;
+      const endX   = dir === 1 ? 0 : -halfW;
+      gsap.fromTo(
+        el,
+        { x: startX },
+        { x: endX, duration: dur, ease: 'none', repeat: -1 }
+      );
+    });
+  }
+  initReviewsMarquee();
+  window.addEventListener('resize', () => {
+    gsap.killTweensOf('#reviews-row-1');
+    gsap.killTweensOf('#reviews-row-2');
+    initReviewsMarquee();
+  });
+</script>

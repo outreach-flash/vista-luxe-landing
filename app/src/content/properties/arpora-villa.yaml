@@ -1,0 +1,26 @@
+title: Arpora Villa
+status: For Buy
+featured: true
+price: 55000000
+street: Fifth Avenue
+area: North Goa
+city: New York
+propertyType: Villa
+bedrooms: '2'
+bathrooms: '2'
+squareArea: 1850
+yearBuilt: 2017
+gallery:
+  - null
+  - null
+  - null
+amenities:
+  - Gym
+  - Elevator
+  - Security
+  - Parking
+  - Air Conditioning
+  - Balcony
+description: >-
+  High-floor Manhattan condo with iconic skyline views, premium finishes, and
+  full building amenities in a prime location.

@@ -1,0 +1,15 @@
+---
+interface Props {
+  text: string;
+  light?: boolean;
+}
+const { text, light = false } = Astro.props;
+---
+
+<div class:list={['flex items-center gap-2 font-mono text-[12px] uppercase tracking-[0.14em]', light ? 'text-white/80' : 'text-body']}>
+  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <circle cx="6" cy="6" r="5" stroke="currentColor" stroke-width="1.2" />
+    <circle cx="6" cy="6" r="2" fill="currentColor" />
+  </svg>
+  {text}
+</div>

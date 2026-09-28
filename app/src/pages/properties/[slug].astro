@@ -1,0 +1,264 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+
+export async function getStaticPaths() {
+  const properties = await getCollection('properties');
+  return properties.map((p) => ({ params: { slug: p.id }, props: { property: p } }));
+}
+
+const { property } = Astro.props;
+const d = property.data;
+
+/** Format a number as Indian Rupees */
+function formatINR(n: number) {
+  return new Intl.NumberFormat('en-IN', {
+    style: 'currency',
+    currency: 'INR',
+    maximumFractionDigits: 0,
+  }).format(n);
+}
+
+/** Render an area pair: "12.5 sq m / 134.5 sq ft" — omits units with no value */
+function formatArea(area?: { sqM?: number | null; sqFt?: number | null } | null) {
+  if (!area) return null;
+  const parts: string[] = [];
+  if (area.sqM != null) parts.push(`${area.sqM.toLocaleString('en-IN')} sq m`);
+  if (area.sqFt != null) parts.push(`${area.sqFt.toLocaleString('en-IN')} sq ft`);
+  return parts.length ? parts.join(' / ') : null;
+}
+
+const areaRows: { label: string; value: string | null }[] = [
+  { label: 'Plot Area', value: formatArea(d.plotArea) },
+  { label: 'Net Effective Area', value: formatArea(d.netEffectiveArea) },
+  { label: 'Ground Floor Area', value: formatArea(d.groundFloorArea) },
+  { label: 'First Floor Area', value: formatArea(d.firstFloorArea) },
+  { label: 'Total Floor Area', value: formatArea(d.totalFloorArea) },
+  { label: 'Plot + Road & Common Area', value: formatArea(d.plotRoadCommonArea) },
+  { label: 'Built-up Area', value: formatArea(d.builtUpArea) },
+  { label: 'Entrance + Deck + Verandah + Balconies', value: formatArea(d.entranceDeckVerandahBalconies) },
+  { label: 'Double Height Area', value: formatArea(d.doubleHeightArea) },
+  { label: 'Half Area of Terrace', value: formatArea(d.halfAreaOfTerrace) },
+  { label: 'Swimming Pool', value: formatArea(d.swimmingPool) },
+  { label: '33% Lawn Area', value: formatArea(d.lawnArea33Percent) },
+  { label: 'Total Super Area', value: formatArea(d.totalSuperArea) },
+  { label: 'Carpet Area', value: formatArea(d.carpetArea) },
+  { label: 'Terrace Area', value: formatArea(d.terraceArea) },
+  { label: 'Pool Deck Area', value: formatArea(d.poolDeckArea) },
+  { label: 'Private Pool & Garden Area', value: d.privatePoolAndGarden ? formatArea(d.privatePoolAndGardenArea) : null },
+  { label: 'Total Super Built-up Area', value: formatArea(d.totalSuperBuiltUpArea) },
+].filter((r) => r.value !== null);
+
+const specRows: { label: string; value: string }[] = [
+  d.configuration ? { label: 'Configuration', value: d.configuration } : null,
+  d.bedrooms ? { label: 'Bedrooms', value: d.bedrooms } : null,
+  d.bathrooms ? { label: 'Bathrooms', value: d.bathrooms } : null,
+  d.numberOfBalconies != null ? { label: 'Number of Balconies', value: String(d.numberOfBalconies) } : null,
+  d.parking ? { label: 'Parking', value: d.parking } : null,
+  d.numberOfFloors != null ? { label: 'Number of Floors', value: String(d.numberOfFloors) } : null,
+  d.squareArea != null ? { label: 'Square Area', value: `${d.squareArea.toLocaleString('en-IN')} sq ft` } : null,
+  d.yearBuilt != null ? { label: 'Year Built', value: String(d.yearBuilt) } : null,
+  d.propertyType ? { label: 'Property Type', value: d.propertyType } : null,
+  d.privatePoolAndGarden ? { label: 'Private Pool + Garden', value: 'Yes' } : null,
+].filter(Boolean) as { label: string; value: string }[];
+
+const hasFloors = d.floors && d.floors.length > 0;
+const hasAreaRows = areaRows.length > 0;
+const hasProximity = d.proximityLocations && d.proximityLocations.length > 0;
+const hasAmenities = d.amenities && d.amenities.length > 0;
+const hasFloorPlan = !!d.floorPlan;
+const hasGallery = d.gallery && d.gallery.length > 0;
+---
+
+<Layout title={`${d.title} — Homy`} description={d.description ?? d.title}>
+  <section class="mx-auto max-w-[1320px] px-6 pt-32 md:px-10 md:pt-44">
+    <span class="inline-flex items-center gap-1.5 rounded-full bg-mist px-4 py-2 text-[13px] font-medium text-ink">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 12h3v8h6v-6h2v6h6v-8h3z"/></svg>
+      {d.status}
+    </span>
+
+    <div class="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+      <div>
+        <h1 class="h-display text-[40px] text-ink md:text-[56px]">{d.title}</h1>
+        {(d.street || d.area || d.city) && (
+          <p class="mt-4 flex items-center gap-2 text-[15px] text-body">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            {[d.street, d.area, d.city].filter(Boolean).join(', ')}
+          </p>
+        )}
+      </div>
+
+      <!-- Pricing -->
+      <div class="flex flex-col items-end gap-2">
+        <p class="text-[36px] font-bold tracking-tight text-ink md:text-[48px]">{formatINR(d.price)}</p>
+        {d.semiFurnishedPrice != null && (
+          <p class="text-[14px] text-body">
+            Semi-Furnished: <span class="font-semibold text-ink">{formatINR(d.semiFurnishedPrice)}</span>
+          </p>
+        )}
+        {d.fullyFurnishedPrice != null && (
+          <p class="text-[14px] text-body">
+            Fully Furnished: <span class="font-semibold text-ink">{formatINR(d.fullyFurnishedPrice)}</span>
+          </p>
+        )}
+      </div>
+    </div>
+
+    <!-- Gallery -->
+    {hasGallery && (
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-12">
+        <div class="overflow-hidden rounded-2xl md:col-span-7">
+          <img src={d.gallery[0]} alt={d.title} class="h-full max-h-[560px] w-full object-cover" />
+        </div>
+        {d.gallery.length > 1 && (
+          <div class="flex flex-col gap-4 md:col-span-5">
+            {d.gallery.slice(1, 3).map((g) => (
+              <div class="flex-1 overflow-hidden rounded-2xl">
+                <img src={g} alt={d.title} loading="lazy" class="h-full max-h-[272px] w-full object-cover" />
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    )}
+
+    <!-- Content + sticky card -->
+    <div class="mt-16 grid grid-cols-1 gap-12 pb-24 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+
+        <!-- Description -->
+        {d.description && (
+          <>
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Description</h2>
+            <p class="mt-4 text-[15px] leading-[1.8] text-body">{d.description}</p>
+          </>
+        )}
+
+        <!-- Key Specs -->
+        {specRows.length > 0 && (
+          <div class="mt-10">
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Property Details</h2>
+            <div class="mt-5">
+              {specRows.map((s) => (
+                <div class="flex items-center justify-between border-b border-line py-4 last:border-0">
+                  <span class="text-[15px] text-body">{s.label}</span>
+                  <span class="text-[15px] font-semibold text-ink">{s.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Area Breakdown -->
+        {hasAreaRows && (
+          <div class="mt-10">
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Area Breakdown</h2>
+            <div class="mt-5">
+              {areaRows.map((r) => (
+                <div class="flex items-center justify-between border-b border-line py-4 last:border-0">
+                  <span class="text-[15px] text-body">{r.label}</span>
+                  <span class="text-[15px] font-semibold text-ink">{r.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Floors -->
+        {hasFloors && (
+          <div class="mt-10">
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Floors</h2>
+            <div class="mt-5 flex flex-col gap-4">
+              {d.floors!.map((floor) => (
+                <div class="rounded-xl bg-mist px-5 py-4">
+                  <p class="text-[15px] font-semibold text-ink">{floor.label}</p>
+                  {floor.description && (
+                    <p class="mt-1 text-[14px] leading-relaxed text-body">{floor.description}</p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Amenities -->
+        {hasAmenities && (
+          <div class="mt-10">
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Amenities & Features</h2>
+            <div class="mt-5 flex flex-wrap gap-2.5">
+              {d.amenities.map((a) => (
+                <span class="rounded-lg bg-mist px-5 py-2.5 text-[14px] font-medium text-ink">{a}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Floor Plans -->
+        {hasFloorPlan && (
+          <div class="mt-10">
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Floor Plans</h2>
+            <div class="mt-5 overflow-hidden rounded-2xl">
+              <img src={d.floorPlan!} alt={`${d.title} floor plan`} loading="lazy" class="w-full object-cover" />
+            </div>
+          </div>
+        )}
+
+        <!-- Proximity Locations -->
+        {hasProximity && (
+          <div class="mt-10">
+            <h2 class="text-[24px] font-bold tracking-tight text-ink">Nearby Locations</h2>
+            <div class="mt-5">
+              {d.proximityLocations!.map((loc) => (
+                <div class="flex items-center justify-between border-b border-line py-4 last:border-0">
+                  <span class="flex items-center gap-2.5 text-[15px] text-body">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    {loc.location}
+                  </span>
+                  <span class="text-[15px] font-semibold text-ink">{loc.distance}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
+
+      <!-- Sticky contact card -->
+      <div class="lg:col-span-5">
+        <div class="rounded-2xl bg-ink p-9 text-center lg:sticky lg:top-28">
+          <img src="/assets/img/wtAazKz9ClT6GcQ95wWsMeO0LI.svg" alt="" class="mx-auto h-12 w-auto" />
+          <h3 class="mt-6 text-[26px] font-bold tracking-tight text-white">Like this property?</h3>
+          <p class="mt-3 text-[14px] leading-relaxed text-white/70">
+            We'd love to help you explore this home. Reach out to get more details or book a visit.
+          </p>
+          <div class="mt-7 flex flex-col gap-3">
+            {['Verified Property Listings', 'Quality Living Spaces', 'Smart Real Estate Choice'].map((t) => (
+              <div class="flex items-center gap-3 rounded-xl bg-white/10 px-5 py-3.5 text-left text-[14px] font-medium text-white">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="shrink-0"><path d="m5 13 4 4L19 7"/></svg>
+                {t}
+              </div>
+            ))}
+          </div>
+          <a
+            href="/contact-us"
+            class="group mt-8 inline-flex items-center gap-3 rounded-full bg-white py-2.5 pl-6 pr-2.5 text-[14px] font-medium text-ink transition-colors hover:bg-white/90"
+          >
+            Get More Details
+            <span class="flex h-7 w-7 items-center justify-center rounded-full bg-ink text-white transition-transform duration-300 group-hover:rotate-45">
+              <svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 9.5L9.5 2.5M9.5 2.5H4M9.5 2.5V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Faq />
+  <Cta />
+</Layout>
+

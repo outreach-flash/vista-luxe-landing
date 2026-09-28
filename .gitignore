@@ -1,0 +1,21 @@
+# Dependencies
+app/node_modules/
+
+# Build output
+app/dist/
+app/.astro/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*

@@ -1,0 +1,28 @@
+title: Emerald Bay Villa
+status: For Rent
+featured: true
+price: 22000
+street: Biscayne Bay Drive
+area: Edgewater
+city: Miami
+propertyType: Apartment
+bedrooms: 4+
+bathrooms: '4'
+squareArea: 5200
+yearBuilt: 2023
+cardImage: /assets/img/2LXhTbxMglkXHEUCXW8SBkvPGQ.png
+gallery:
+- /assets/img/2LXhTbxMglkXHEUCXW8SBkvPGQ.png
+- /assets/img/TnWfniT1k0yJYprUeSYZjpb2Fo.png
+- /assets/img/RkxOJRXCe8yqAloctW3I8EtT0.png
+floorPlan: /assets/img/i9XlWb9aJJQDgMht6TzoJMdflZY.jpg
+amenities:
+- Swimming Pool
+- Gym
+- Parking
+- Security
+- Elevator
+- Pet Friendly
+- Air Conditioning
+description: Brand-new bay-facing villa with smart home technology, a boat dock, chef's
+  kitchen, and resort-style outdoor entertaining.

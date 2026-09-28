@@ -1,0 +1,29 @@
+title: Hillside View House
+status: For Rent
+featured: false
+price: 9200
+street: Silver Ridge Road
+area: Westside Hills
+city: New York
+propertyType: House
+bedrooms: 4+
+bathrooms: '3'
+squareArea: 2400
+yearBuilt: 2019
+cardImage: /assets/img/QmCjEL8YSsyArnN9l5L7Ox8LdSQ.jpeg
+gallery:
+- /assets/img/QmCjEL8YSsyArnN9l5L7Ox8LdSQ.jpeg
+- /assets/img/2e5X0Lp6aTVzCEfyOEnDgKuN7Pw.png
+- /assets/img/hVopKBmBnD5YtZ1ZzfHQlgJIXBQ.png
+floorPlan: /assets/img/y8GfVdwtHd2J7ZQa3Tc6k0lSg1c.jpg
+amenities:
+- Swimming Pool
+- Gym
+- Parking
+- Security
+- Air Conditioning
+- Garden
+description: Hillside View House is a beautifully designed modern home located in
+  the peaceful Westside Hills of New York, offering stunning panoramic views of ocean
+  and surrounding landscape. The property features spacious open-plan interiors with
+  glass windows that bring in natural light and enhance the overall living experience.

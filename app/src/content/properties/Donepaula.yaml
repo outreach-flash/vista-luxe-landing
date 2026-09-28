@@ -1,0 +1,25 @@
+title: Midtown Apartment
+status: For Rent
+featured: false
+price: 5500
+street: Park Avenue
+area: Murray Hill
+city: New York
+propertyType: Apartment
+bedrooms: '2'
+bathrooms: '1'
+squareArea: 1400
+yearBuilt: 2014
+cardImage: /assets/img/Vfn4eeciqKniY85fukB1U8Zyig.png
+gallery:
+- /assets/img/Vfn4eeciqKniY85fukB1U8Zyig.png
+- /assets/img/xzeaguzAA0OgBXFx0H91koGNS0.png
+- /assets/img/PW7axrL8Esn2j40Yqx3hJpbSgU.png
+floorPlan: /assets/img/wj6eGC6ENPfWRW1HCoX0PVMwHs.jpg
+amenities:
+- Security
+- Air Conditioning
+- Elevator
+- Parking
+description: Well-appointed midtown apartment with classic pre-war details, updated
+  kitchen, and easy access to Central Park.

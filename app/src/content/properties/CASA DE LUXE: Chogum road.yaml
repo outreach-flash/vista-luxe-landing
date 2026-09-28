@@ -1,0 +1,26 @@
+title: Downtown Loft
+status: For Rent
+featured: true
+price: 3200
+street: West Loop Street
+area: Fulton Market
+city: Chicago
+propertyType: Apartment
+bedrooms: '1'
+bathrooms: '1'
+squareArea: 1200
+yearBuilt: 2025
+cardImage: /assets/img/SCmPl4wPCIenDO4rrG5EsNrpsJg.png
+gallery:
+- /assets/img/SCmPl4wPCIenDO4rrG5EsNrpsJg.png
+- /assets/img/XHSiq6su4pphMPtRAzwh6yu5Y4U.png
+- /assets/img/H60YpTAa5us5AApAOCS67i9xqY.png
+floorPlan: /assets/img/FJc6EtVgxBKchv6O2r10j83ilII.jpg
+amenities:
+- Elevator
+- Security
+- Parking
+- Air Conditioning
+- Balcony
+description: Industrial-chic loft in the heart of the West Loop with exposed brick,
+  high ceilings, and walkable access to dining.

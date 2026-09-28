@@ -1,0 +1,26 @@
+title: Dallas Townhouse
+status: For Buy
+featured: false
+price: 9800
+street: Uptown Dallas Road
+area: Dallas
+city: Seattle
+propertyType: Townhouse
+bedrooms: '3'
+bathrooms: '2'
+squareArea: 980
+yearBuilt: 2021
+cardImage: /assets/img/Hs28VYJsumw25Bf01iFhauVh6U.png
+gallery:
+- /assets/img/Hs28VYJsumw25Bf01iFhauVh6U.png
+- /assets/img/yOdTsLHyVYJtTN0cWFTecJSlIg.png
+- /assets/img/fpaYDfZrIl7dyaMkII2rkOs.png
+floorPlan: /assets/img/wj6eGC6ENPfWRW1HCoX0PVMwHs.jpg
+amenities:
+- Parking
+- Balcony
+- Security
+- Air Conditioning
+- Garden
+description: Modern Uptown townhouse with rooftop deck, high-end appliances, and a
+  private garage in a walkable Dallas neighbourhood.

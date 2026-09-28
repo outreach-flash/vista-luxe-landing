@@ -1,0 +1,27 @@
+title: Palm Springs Villa
+status: For Rent
+featured: false
+price: 14500
+street: Desert Rose Avenue
+area: Vista Norte
+city: Los Angeles
+propertyType: Villa
+bedrooms: 4+
+bathrooms: '3'
+squareArea: 4800
+yearBuilt: 2020
+cardImage: /assets/img/Nhfmrz658cJu4j1XNGaBkiVhA.png
+gallery:
+- /assets/img/Nhfmrz658cJu4j1XNGaBkiVhA.png
+- /assets/img/pInNAcuAALNGIECEUe99ZaObE.png
+- /assets/img/sgzKETNeQyBA6mjf7o0jSdsowSA.png
+floorPlan: /assets/img/RCiM6ZLGv8sneyCqVTVYyQxESek.jpg
+amenities:
+- Swimming Pool
+- Gym
+- Parking
+- Garden
+- Security
+- Air Conditioning
+description: Desert modernist villa with a heated infinity pool, mountain backdrop,
+  and minimalist interiors designed for relaxation.

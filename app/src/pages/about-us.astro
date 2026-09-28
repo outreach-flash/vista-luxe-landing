@@ -1,0 +1,144 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import Button from '../components/Button.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import Faq from '../components/Faq.astro';
+import Cta from '../components/Cta.astro';
+---
+
+<Layout title="About Us — Homy" description="We help people discover, explore, and choose homes with clarity - combining design, data, and a modern real estate experience.">
+  <!-- ============ HERO ============ -->
+  <section class="mx-auto max-w-[1320px] px-6 pt-32 md:px-10 md:pt-44">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <div>
+        <Eyebrow text="About Us" />
+        <h1 class="h-display mt-6 text-[40px] text-ink md:text-[52px]">Discover homes that fit your lifestyle</h1>
+        <p class="mt-5 max-w-[460px] text-[16px] leading-relaxed text-body">
+          We help people discover, explore, and choose homes with clarity - combining design, data, and a modern real estate experience.
+        </p>
+        <div class="reveal mt-10 overflow-hidden rounded-2xl">
+          <video
+            src="/assets/vid/rI2dEovMPm3NHSgDR5vB8RrdGs.mp4"
+            autoplay muted loop playsinline
+            class="aspect-[4/2.9] w-full object-cover"
+          ></video>
+        </div>
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/4HL0fzFRq5ePZ1mpJXpZ4a4y5Y.png" alt="A-frame modern home" class="h-full min-h-[420px] w-full object-cover" />
+      </div>
+    </div>
+
+    <!-- clients -->
+    <div class="mt-16 flex items-center gap-6">
+      <span class="shrink-0 font-mono text-[12px] uppercase tracking-[0.14em] text-body">Our Clients</span>
+      <div class="min-w-0 flex-1">
+        <ClientLogos />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SMARTER CHOICES ============ -->
+  <section class="mt-24 bg-mist2 py-24 md:mt-32 md:py-32">
+    <div class="mx-auto grid max-w-[1320px] grid-cols-1 gap-8 px-6 md:grid-cols-2 md:px-10">
+      <h2 class="h-display reveal text-[36px] text-ink md:text-[44px]">Smarter choices behind every home decision</h2>
+      <p class="reveal max-w-[520px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
+        Designed to make your home search simple, clear, and more confident at every step, helping you explore properties with better understanding and make decisions that truly fit your lifestyle.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ BUILT FOR BETTER LIVING ============ -->
+  <section class="mx-auto max-w-[1320px] px-6 py-24 md:px-10 md:py-32">
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+      <h2 class="h-display reveal text-[36px] text-ink md:text-[44px]">Built for Better Living</h2>
+      <div class="reveal md:justify-self-end">
+        <p class="max-w-[420px] text-[16px] leading-relaxed text-body">
+          We do more than list homes - we create a smoother way to discover spaces that feel right for your lifestyle.
+        </p>
+        <div class="mt-6">
+          <Button href="/contact-us" label="Contact Us" variant="dark" />
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-14 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div class="reveal col-span-2 row-span-2 overflow-hidden rounded-2xl">
+        <img src="/assets/img/fIyAjnZ2gAZdn550oqGHb6GoSzA.png" alt="Confident homeowner" loading="lazy" class="h-full min-h-[300px] w-full object-cover" />
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/5Vxo16bNUTl6ZclqgomJdW5Q.png" alt="Couple receiving keys" loading="lazy" class="aspect-square h-full w-full object-cover" />
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/dJ7fWLlvgxhbTwk9okaVDZFG7JA.jpeg" alt="Signing a contract" loading="lazy" class="aspect-square h-full w-full object-cover" />
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/fzQ2xS2V9QmSJmALiGNMih6TWYU.png" alt="Couple entering new home" loading="lazy" class="aspect-square h-full w-full object-cover" />
+      </div>
+      <div class="reveal overflow-hidden rounded-2xl">
+        <img src="/assets/img/KJ8VlLuAo5JRrMqlrZ6SuEFJIQ.png" alt="Consultation with agent" loading="lazy" class="aspect-square h-full w-full object-cover" />
+      </div>
+    </div>
+    <div class="reveal mt-4 overflow-hidden rounded-2xl">
+      <img src="/assets/img/kgO0bckgo4wHvesBw5PMbiFiD2I.png" alt="Moving into a new home" loading="lazy" class="max-h-[420px] w-full object-cover" />
+    </div>
+  </section>
+
+  <!-- ============ MISSION / VISION ============ -->
+  <section class="px-3 pb-24 md:px-5 md:pb-32">
+    <div class="relative flex min-h-[560px] items-end overflow-hidden rounded-[28px]">
+      <video
+        src="/assets/vid/Bg3JpCFVhXQn97VzoZ1IHBgQMBg.mp4"
+        autoplay muted loop playsinline
+        class="absolute inset-0 h-full w-full object-cover"
+      ></video>
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="relative mx-auto grid w-full max-w-[1240px] grid-cols-1 gap-5 px-6 pb-14 pt-40 md:grid-cols-2 md:px-10">
+        <div class="reveal rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-10">
+          <h3 class="text-[26px] font-bold tracking-tight text-white">Our Mission</h3>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/80">
+            To make home discovery simple, clear, and accessible - helping people explore properties with confidence and make decisions without confusion.
+          </p>
+        </div>
+        <div class="reveal rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-10">
+          <h3 class="text-[26px] font-bold tracking-tight text-white">Our Vision</h3>
+          <p class="mt-4 text-[15px] leading-relaxed text-white/80">
+            To create a modern real estate experience where finding the right home feels effortless, transparent, and truly aligned with how people live today.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST & CONFIDENCE ============ -->
+  <section class="mx-auto max-w-[1320px] px-6 pb-24 md:px-10 md:pb-32">
+    <Eyebrow text="Trust & Confidence" />
+    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <h2 class="h-display reveal text-[40px] text-ink md:text-[52px]">Confidence behind every property decision</h2>
+      <div class="reveal md:justify-self-end">
+        <p class="max-w-[420px] text-[16px] leading-relaxed text-body">
+          Built to make modern home discovery simple, transparent, and more confident for every user.
+        </p>
+        <div class="mt-6">
+          <Button href="/contact-us" label="Contact Us" variant="dark" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Faq />
+  <Cta />
+</Layout>
+
+<script>
+  import gsap from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
+    gsap.from(el, {
+      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: el, start: 'top 88%' },
+    });
+  });
+</script>

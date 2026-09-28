@@ -1,0 +1,115 @@
+---
+import Eyebrow from './Eyebrow.astro';
+
+const faqs = [
+  {
+    q: 'How do I start searching for a home?',
+    a: 'You can browse available properties, apply filters, and explore listings based on your needs and location.',
+  },
+  {
+    q: 'Can I filter homes by budget & location?',
+    a: 'Yes, you can easily filter properties by price range, location, and other preferences.',
+  },
+  {
+    q: 'Are the property details accurate?',
+    a: 'We provide updated and verified details to help you make informed decisions.',
+  },
+  {
+    q: 'How do I contact a owner or agent?',
+    a: 'Each listing includes contact options so you can directly connect for more information.',
+  },
+  {
+    q: 'Can I explore rental and buying options',
+    a: 'Yes, you can browse both rental and purchase options in one place.',
+  },
+  {
+    q: 'Do I need an account to use platform',
+    a: 'You can browse freely, but creating an account helps you save and manage your preferences.',
+  },
+  {
+    q: 'How do I know if a property is available?',
+    a: 'Availability is updated regularly, but we recommend contacting the listing for confirmation.',
+  },
+];
+---
+
+<section id="faq-section" class="mx-auto max-w-[1320px] px-6 py-24 md:px-10 md:py-36">
+  <!--
+    Sticky FAQ left column:
+    The grid uses items-start so the left column can independently use
+    position:sticky. The left panel sticks at top:120px while the right
+    FAQ accordion list scrolls past it — matching homy.framer.media.
+  -->
+  <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-start">
+
+    <!-- LEFT: sticky panel -->
+    <div class="md:col-span-5 md:sticky md:top-[120px]">
+      <Eyebrow text="FAQ" />
+      <h2 class="h-display mt-6 text-[40px] text-ink md:text-[52px]">Things You Should Know</h2>
+      <p class="mt-5 max-w-[360px] text-[16px] leading-relaxed text-body">
+        We've answered the most common questions to help you get started with clarity.
+      </p>
+      <!-- CTA button that stays visible as the FAQ list scrolls -->
+      <div class="mt-8">
+        <a
+          href="/contact-us"
+          class="inline-flex items-center gap-2.5 rounded-full bg-ink px-6 py-3.5 text-[14px] font-semibold text-white transition-opacity hover:opacity-80"
+        >
+          Get in Touch
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2.5 7h9M7.5 3l4 4-4 4"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT: scrolling FAQ accordion -->
+    <div class="md:col-span-7">
+      <div class="flex flex-col gap-3" id="faq-list">
+        {faqs.map((f, i) => (
+          <div class="faq-item rounded-2xl bg-mist px-6 py-5 md:px-7">
+            <button class="faq-q flex w-full items-center justify-between gap-4 text-left" data-index={i}>
+              <span class="text-[15px] font-semibold text-ink md:text-[16px]">{f.q}</span>
+              <span class="faq-icon text-[20px] font-light leading-none text-ink">{i === 0 ? '−' : '+'}</span>
+            </button>
+            <div class="faq-answer" data-open={i === 0 ? 'true' : 'false'}>
+              <p class="max-w-[520px] pb-1 pt-3 text-[14px] leading-relaxed text-body">{f.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  import gsap from 'gsap';
+
+  document.querySelectorAll<HTMLElement>('#faq-list .faq-item').forEach((item) => {
+    const btn = item.querySelector('.faq-q')!;
+    const answer = item.querySelector<HTMLElement>('.faq-answer')!;
+    const icon = item.querySelector('.faq-icon')!;
+
+    if (answer.dataset.open === 'true') {
+      gsap.set(answer, { height: 'auto' });
+    }
+
+    btn.addEventListener('click', () => {
+      const isOpen = answer.dataset.open === 'true';
+      // close all
+      document.querySelectorAll<HTMLElement>('#faq-list .faq-answer').forEach((a) => {
+        if (a.dataset.open === 'true') {
+          a.dataset.open = 'false';
+          gsap.to(a, { height: 0, duration: 0.4, ease: 'power2.inOut' });
+        }
+      });
+      document.querySelectorAll('#faq-list .faq-icon').forEach((ic) => (ic.textContent = '+'));
+      if (!isOpen) {
+        answer.dataset.open = 'true';
+        icon.textContent = '−';
+        gsap.to(answer, { height: 'auto', duration: 0.45, ease: 'power2.out' });
+      }
+    });
+  });
+</script>

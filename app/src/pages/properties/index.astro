@@ -1,0 +1,255 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Eyebrow from '../../components/Eyebrow.astro';
+import PropertyCard from '../../components/PropertyCard.astro';
+import Faq from '../../components/Faq.astro';
+import Cta from '../../components/Cta.astro';
+
+const all = await getCollection('properties');
+const properties = all;
+
+const locations = ['All', 'New York', 'Los Angeles', 'Miami', 'Chicago', 'Seattle', 'San Francisco'];
+const prices = ['All', '$0 - $10,000', '$10,000 - $25,000', '$25,000 - $50,000', '$50,000+'];
+const types = ['Apartment', 'House', 'Condo', 'Villa', 'Townhouse'];
+const beds = ['1', '2', '3', '4+'];
+---
+
+<Layout title="Properties — Homy" description="Explore a range of properties built for comfort, location, and everyday living.">
+  <section class="mx-auto max-w-[1320px] px-6 pb-24 pt-32 md:px-10 md:pt-44">
+    <Eyebrow text="Property Listings" />
+    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <h1 class="h-display text-[40px] text-ink md:text-[52px]">Discover homes that fit your lifestyle</h1>
+      <p class="max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
+        Explore a range of properties built for comfort, location, and everyday living.
+      </p>
+    </div>
+
+    <div class="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-12">
+      <!-- ============ FILTERS ============ -->
+      <aside class="lg:col-span-4 xl:col-span-3">
+        <div class="rounded-2xl bg-mist p-6 lg:sticky lg:top-28">
+          <div class="flex items-center justify-between">
+            <h2 class="text-[18px] font-bold text-ink">Filters</h2>
+            <button id="clear-all" class="text-[13px] text-body underline-offset-2 hover:underline">Clear all</button>
+          </div>
+
+          <div class="mt-6">
+            <div class="relative">
+              <svg class="absolute left-4 top-1/2 -translate-y-1/2 text-body" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <input
+                id="f-search"
+                type="text"
+                placeholder="Search..."
+                class="w-full rounded-xl border border-line bg-white py-3 pl-10 pr-4 text-[14px] text-ink outline-none placeholder:text-body/60 focus:border-ink/30"
+              />
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-[13px] font-medium text-body">Property Status</label>
+            <div class="relative mt-2.5">
+              <select
+                id="f-status"
+                class="w-full appearance-none rounded-xl border border-line bg-white px-4 py-3 text-[14px] text-ink outline-none focus:border-ink/30"
+              >
+                <option>All</option>
+                <option>For Rent</option>
+                <option>For Buy</option>
+              </select>
+              <svg class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-body" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-[13px] font-medium text-body">Location</label>
+            <div class="mt-2.5 flex flex-wrap gap-2" id="f-location">
+              {locations.map((l, i) => (
+                <button
+                  class:list={[
+                    'pill rounded-lg px-4 py-2 text-[13px] font-medium transition-colors',
+                    i === 0 ? 'bg-ink text-white' : 'bg-white text-ink hover:bg-line',
+                  ]}
+                  data-value={l}
+                >
+                  {l}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-[13px] font-medium text-body">Price Range</label>
+            <div class="mt-2.5 flex flex-wrap gap-2" id="f-price">
+              {prices.map((p, i) => (
+                <button
+                  class:list={[
+                    'pill rounded-lg px-4 py-2 text-[13px] font-medium transition-colors',
+                    i === 0 ? 'bg-ink text-white' : 'bg-white text-ink hover:bg-line',
+                  ]}
+                  data-value={p}
+                >
+                  {p}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-[13px] font-medium text-body">Property Type</label>
+            <div class="mt-2.5 flex flex-wrap gap-2" id="f-type">
+              {types.map((t) => (
+                <button class="pill rounded-lg bg-white px-4 py-2 text-[13px] font-medium text-ink transition-colors hover:bg-line" data-value={t}>
+                  {t}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div class="mt-6">
+            <label class="text-[13px] font-medium text-body">Bedrooms</label>
+            <div class="mt-2.5 flex flex-wrap gap-2" id="f-beds">
+              {beds.map((b) => (
+                <button class="pill rounded-lg bg-white px-4 py-2 text-[13px] font-medium text-ink transition-colors hover:bg-line" data-value={b}>
+                  {b}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ============ GRID ============ -->
+      <div class="lg:col-span-8 xl:col-span-9">
+        <div id="grid" class="grid grid-cols-1 gap-5 md:grid-cols-2">
+          {properties.map((p) => (
+            <div
+              class="grid-item"
+              data-title={p.data.title.toLowerCase()}
+              data-status={p.data.status}
+              data-city={p.data.city}
+              data-price={p.data.price}
+              data-type={p.data.propertyType}
+              data-beds={p.data.bedrooms}
+            >
+              <PropertyCard
+                slug={p.id}
+                title={p.data.title}
+                status={p.data.status}
+                price={p.data.price}
+                cardImage={p.data.cardImage}
+                bedrooms={p.data.bedrooms}
+                bathrooms={p.data.bathrooms}
+                squareArea={p.data.squareArea}
+              />
+            </div>
+          ))}
+        </div>
+        <p id="no-results" class="hidden py-20 text-center text-[15px] text-body">No homes match your filters.</p>
+      </div>
+    </div>
+  </section>
+
+  <Faq />
+  <Cta />
+</Layout>
+
+<script>
+  import gsap from 'gsap';
+
+  const state = { search: '', status: 'All', location: 'All', price: 'All', type: 'All', beds: 'All' };
+  const items = Array.from(document.querySelectorAll<HTMLElement>('.grid-item'));
+  const noResults = document.getElementById('no-results')!;
+
+  function priceOk(price: number, range: string) {
+    switch (range) {
+      case '$0 - $10,000': return price <= 10000;
+      case '$10,000 - $25,000': return price > 10000 && price <= 25000;
+      case '$25,000 - $50,000': return price > 25000 && price <= 50000;
+      case '$50,000+': return price > 50000;
+      default: return true;
+    }
+  }
+  function bedsOk(beds: string, want: string) {
+    if (want === 'All') return true;
+    if (want === '4+') return beds === '4+' || parseInt(beds) >= 4;
+    return beds === want;
+  }
+
+  function apply() {
+    let shown = 0;
+    const visible: HTMLElement[] = [];
+    items.forEach((el) => {
+      const ok =
+        el.dataset.title!.includes(state.search) &&
+        (state.status === 'All' || el.dataset.status === state.status) &&
+        (state.location === 'All' || el.dataset.city === state.location) &&
+        priceOk(Number(el.dataset.price), state.price) &&
+        (state.type === 'All' || el.dataset.type === state.type) &&
+        bedsOk(el.dataset.beds!, state.beds);
+      el.style.display = ok ? '' : 'none';
+      if (ok) { shown++; visible.push(el); }
+    });
+    noResults.classList.toggle('hidden', shown > 0);
+    gsap.fromTo(visible, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.45, stagger: 0.05, ease: 'power2.out', overwrite: true });
+  }
+
+  function pillGroup(id: string, key: keyof typeof state) {
+    const group = document.getElementById(id)!;
+    const pills = Array.from(group.querySelectorAll<HTMLButtonElement>('.pill'));
+    pills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        const isActive = pill.classList.contains('bg-ink');
+        pills.forEach((p) => {
+          p.classList.remove('bg-ink', 'text-white');
+          p.classList.add('bg-white', 'text-ink');
+        });
+        if (isActive && key !== 'location' && key !== 'price') {
+          (state as any)[key] = 'All';
+        } else {
+          pill.classList.add('bg-ink', 'text-white');
+          pill.classList.remove('bg-white', 'text-ink');
+          (state as any)[key] = pill.dataset.value!;
+        }
+        if ((key === 'location' || key === 'price') && isActive) {
+          // keep at least one selected for single-choice groups
+          pill.classList.add('bg-ink', 'text-white');
+          pill.classList.remove('bg-white', 'text-ink');
+          (state as any)[key] = pill.dataset.value!;
+        }
+        apply();
+      });
+    });
+    return pills;
+  }
+
+  const groupPills = [pillGroup('f-location', 'location'), pillGroup('f-price', 'price'), pillGroup('f-type', 'type'), pillGroup('f-beds', 'beds')];
+
+  const searchInput = document.getElementById('f-search') as HTMLInputElement;
+  searchInput.addEventListener('input', () => {
+    state.search = searchInput.value.trim().toLowerCase();
+    apply();
+  });
+
+  const statusSel = document.getElementById('f-status') as HTMLSelectElement;
+  statusSel.addEventListener('change', () => {
+    state.status = statusSel.value;
+    apply();
+  });
+
+  document.getElementById('clear-all')!.addEventListener('click', () => {
+    state.search = ''; state.status = 'All'; state.location = 'All'; state.price = 'All'; state.type = 'All'; state.beds = 'All';
+    searchInput.value = '';
+    statusSel.value = 'All';
+    groupPills.forEach((pills, gi) => {
+      pills.forEach((p, pi) => {
+        const isDefault = gi < 2 ? pi === 0 : false;
+        p.classList.toggle('bg-ink', isDefault);
+        p.classList.toggle('text-white', isDefault);
+        p.classList.toggle('bg-white', !isDefault);
+        p.classList.toggle('text-ink', !isDefault);
+      });
+    });
+    apply();
+  });
+</script>
