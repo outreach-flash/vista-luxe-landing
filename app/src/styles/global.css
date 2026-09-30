@@ -52,7 +52,7 @@ body {
 
 /* manifesto words */
 .mword {
-  opacity: 0.12;
+  opacity: 0;
   display: inline-block;
 }
 

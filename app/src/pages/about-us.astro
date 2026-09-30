@@ -81,13 +81,13 @@ import Cta from '../components/Cta.astro';
       </div>
     </div>
     <div class="reveal mt-4 overflow-hidden rounded-2xl">
-      <img src="/assets/img/kgO0bckgo4wHvesBw5PMbiFiD2I.png" alt="Moving into a new home" loading="lazy" class="max-h-[420px] w-full object-cover" />
+      <img src="/assets/img/kgO0bckgo4wHvesBw5PMbiFiD2I.png" alt="Moving into a new home" loading="lazy" class="aspect-[2816/1536] max-h-[420px] w-full object-cover" />
     </div>
   </section>
 
   <!-- ============ MISSION / VISION ============ -->
-  <section class="px-3 pb-24 md:px-5 md:pb-32">
-    <div class="relative flex min-h-[560px] items-end overflow-hidden rounded-[28px]">
+  <section id="mission-section" class="px-3 pb-24 md:px-5 md:pb-32">
+    <div id="mission-block" class="relative flex min-h-[560px] items-end overflow-hidden rounded-[28px]">
       <video
         src="/assets/vid/Bg3JpCFVhXQn97VzoZ1IHBgQMBg.mp4"
         autoplay muted loop playsinline
@@ -95,13 +95,13 @@ import Cta from '../components/Cta.astro';
       ></video>
       <div class="absolute inset-0 bg-black/45"></div>
       <div class="relative mx-auto grid w-full max-w-[1240px] grid-cols-1 gap-5 px-6 pb-14 pt-40 md:grid-cols-2 md:px-10">
-        <div class="reveal rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-10">
+        <div class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-10">
           <h3 class="text-[26px] font-bold tracking-tight text-white">Our Mission</h3>
           <p class="mt-4 text-[15px] leading-relaxed text-white/80">
             To make home discovery simple, clear, and accessible - helping people explore properties with confidence and make decisions without confusion.
           </p>
         </div>
-        <div class="reveal rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-10">
+        <div class="rounded-2xl border border-white/20 bg-white/10 p-8 backdrop-blur-xl md:p-10">
           <h3 class="text-[26px] font-bold tracking-tight text-white">Our Vision</h3>
           <p class="mt-4 text-[15px] leading-relaxed text-white/80">
             To create a modern real estate experience where finding the right home feels effortless, transparent, and truly aligned with how people live today.
@@ -136,9 +136,26 @@ import Cta from '../components/Cta.astro';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
-    gsap.from(el, {
-      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out',
-      scrollTrigger: { trigger: el, start: 'top 88%' },
-    });
+    gsap.fromTo(el,
+      { scale: 0.9, y: 20, opacity: 0 },
+      {
+        scale: 1, y: 0, opacity: 1, ease: 'none',
+        scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 60%', scrub: true },
+      }
+    );
   });
+
+  const missionBlock = document.getElementById('mission-block');
+  if (missionBlock) {
+    gsap.fromTo(missionBlock,
+      { scale: 0.7 },
+      {
+        scale: 1, ease: 'none',
+        scrollTrigger: { trigger: '#mission-section', start: 'top 95%', end: 'top 45%', scrub: true },
+      }
+    );
+  }
+
+  // Font swaps can change line counts after window load; re-measure trigger positions.
+  document.fonts?.ready.then(() => ScrollTrigger.refresh());
 </script>

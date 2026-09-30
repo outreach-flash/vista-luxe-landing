@@ -91,7 +91,7 @@ const reviews = [
       <!--
         top: 57vh  → building's top edge starts at 57% of the viewport,
         so the CTA buttons (at ~46-50vh) are fully visible at scroll=0.
-        GSAP translates it up by 59vh → final top at -2vh (fully covers viewport).
+        GSAP translates it up linearly by 50vh (−0.5×scroll), matching the reference.
       -->
       <div id="hero-building-wrap" class="absolute inset-x-0 w-full" style="z-index:2; top:57vh">
         <img
@@ -165,16 +165,18 @@ const reviews = [
     </div>
   </section>
 
-  <!-- ============ MANIFESTO ============ -->
-  <section class="bg-mist2 px-6 py-28 md:py-44">
-    <p id="manifesto" class="mx-auto max-w-[900px] text-center text-[30px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]">
-      <span class="mword">Focused</span> <span class="mword">on</span> <span class="mword font-bold italic">discovery,</span>
-      <span class="mword">built</span> <span class="mword">for</span> <span class="mword">real</span> <span class="mword">choices.</span>
-      <span class="mword">We</span> <span class="mword">design</span> <span class="mword">platforms</span> <span class="mword">that</span>
-      <span class="mword">help</span> <span class="mword font-bold italic">buyers</span> <span class="mword">explore</span>
-      <span class="mword">homes,</span> <span class="mword">understand</span> <span class="mword">value,</span> <span class="mword">and</span>
-      <span class="mword">move</span> <span class="mword font-bold italic">forward</span> <span class="mword">with</span> <span class="mword">confidence.</span>
-    </p>
+  <!-- ============ MANIFESTO (pinned word fill) ============ -->
+  <section id="manifesto-section" class="relative bg-mist2" style="height: 180svh;">
+    <div class="sticky top-0 flex h-[100svh] items-center justify-center px-6">
+      <p id="manifesto" class="mx-auto max-w-[900px] text-center text-[30px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]">
+        <span class="mword">Focused</span> <span class="mword">on</span> <span class="mword font-bold italic">discovery,</span>
+        <span class="mword">built</span> <span class="mword">for</span> <span class="mword">real</span> <span class="mword">choices.</span>
+        <span class="mword">We</span> <span class="mword">design</span> <span class="mword">platforms</span> <span class="mword">that</span>
+        <span class="mword">help</span> <span class="mword font-bold italic">buyers</span> <span class="mword">explore</span>
+        <span class="mword">homes,</span> <span class="mword">understand</span> <span class="mword">value,</span> <span class="mword">and</span>
+        <span class="mword">move</span> <span class="mword font-bold italic">forward</span> <span class="mword">with</span> <span class="mword">confidence.</span>
+      </p>
+    </div>
   </section>
 
   <!-- ============ TOP PROPERTIES ============ -->
@@ -273,8 +275,8 @@ const reviews = [
     </div>
   </section>
 
-  <!-- ============ HIGHLIGHTED HOME (video) ============ -->
-  <section class="px-3 pb-24 md:px-5 md:pb-36">
+  <!-- ============ HIGHLIGHTED HOME (pinned video zoom-through) ============ -->
+  <section class="px-3 pt-24 md:px-5 md:pt-36">
     <div class="mx-auto max-w-[1320px] px-3 text-center md:px-6">
       <div class="flex justify-center">
         <Eyebrow text="Highlighted Home" />
@@ -289,8 +291,25 @@ const reviews = [
         <Button href="/properties" label="Explore Homes" variant="dark" />
       </div>
     </div>
-    <div class="mt-14 flex justify-center">
-      <div id="video-mask" class="w-full max-w-[1600px] overflow-hidden rounded-[28px]">
+  </section>
+
+  <!--
+    Pinned zoom section: the ticker drifts continuously (time-based) inside the
+    pinned viewport while the video scales 1× → 5.7× on scroll, zooming through
+    the viewport like the reference's sticky section.
+  -->
+  <section id="highlight-pin" class="relative" style="height: 280svh;">
+    <div class="sticky top-0 flex h-[100svh] items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 flex items-center overflow-hidden">
+        <div class="marquee-track" id="marquee">
+          {Array.from({ length: 4 }).map(() => (
+            <span class="marquee-chunk whitespace-nowrap pr-8 text-[64px] font-semibold tracking-tight text-silver md:text-[96px]">
+              Explore Homes&nbsp;&nbsp;·&nbsp;&nbsp;Live Better&nbsp;&nbsp;·&nbsp;&nbsp;Modern Spaces&nbsp;&nbsp;·&nbsp;&nbsp;
+            </span>
+          ))}
+        </div>
+      </div>
+      <div id="video-zoom" class="relative w-[min(520px,72vw)] overflow-hidden rounded-[28px]" style="will-change: transform; z-index:1">
         <video
           src="/assets/vid/zEQ2uqOoz4IUC6n5QUkeURSWg.mp4"
           poster="/assets/img/CdWqqbxMdI0CYbn1OZIsaPpFSU.png"
@@ -298,17 +317,6 @@ const reviews = [
           class="aspect-video w-full object-cover"
         ></video>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ MARQUEE ============ -->
-  <section class="overflow-hidden py-10 md:py-16">
-    <div class="marquee-track" id="marquee">
-      {Array.from({ length: 4 }).map(() => (
-        <span class="marquee-chunk whitespace-nowrap pr-8 text-[64px] font-semibold tracking-tight text-silver md:text-[96px]">
-          Explore Homes&nbsp;&nbsp;·&nbsp;&nbsp;Live Better&nbsp;&nbsp;·&nbsp;&nbsp;Modern Spaces&nbsp;&nbsp;·&nbsp;&nbsp;
-        </span>
-      ))}
     </div>
   </section>
 
@@ -324,10 +332,10 @@ const reviews = [
       </div>
     </div>
 
-    <!-- Row 1: scrolls LEFT -->
-    <div class="reviews-marquee-outer mt-14" style="--dir:-1">
-      <div class="reviews-marquee-track" id="reviews-row-1">
-        {[...reviews, ...reviews].map((r) => (
+    <!-- single row: continuous leftward drift, photo card ends each loop unit -->
+    <div class="reviews-marquee-outer mt-14">
+      <div class="reviews-marquee-track" id="reviews-row">
+        {reviews.map((r) => (
           <div class="reviews-card shrink-0 w-[340px] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between" style="min-height:320px">
             <div>
               <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7"><path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z"/></svg>
@@ -342,7 +350,6 @@ const reviews = [
             </div>
           </div>
         ))}
-        <!-- photo card -->
         <div class="reviews-card shrink-0 relative w-[340px] md:w-[380px] overflow-hidden rounded-2xl" style="min-height:320px">
           <img src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png" alt="Ethan Walker" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -351,13 +358,7 @@ const reviews = [
             <p class="mt-0.5 text-[13px] text-white/80">Property Consultant</p>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Row 2: scrolls RIGHT -->
-    <div class="reviews-marquee-outer mt-4" style="--dir:1">
-      <div class="reviews-marquee-track" id="reviews-row-2">
-        {[...reviews].reverse().concat([...reviews].reverse()).map((r) => (
+        {reviews.map((r) => (
           <div class="reviews-card shrink-0 w-[340px] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between" style="min-height:320px">
             <div>
               <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7"><path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z"/></svg>
@@ -372,7 +373,6 @@ const reviews = [
             </div>
           </div>
         ))}
-        <!-- photo card -->
         <div class="reviews-card shrink-0 relative w-[340px] md:w-[380px] overflow-hidden rounded-2xl" style="min-height:320px">
           <img src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png" alt="Ethan Walker" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
@@ -400,21 +400,12 @@ const reviews = [
   gsap.from('.hero-sub', { y: 30, opacity: 0, duration: 1, delay: 0.25, ease: 'power3.out' });
   gsap.from('.hero-cta', { y: 24, opacity: 0, duration: 1, delay: 0.4, ease: 'power3.out' });
 
-  /* ---- hero parallax: building rises from 50vh → covers viewport ---- */
-  //
-  // Building-wrap starts with its TOP at 50vh (CSS: top:50vh).
-  // GSAP translates it upward by 52vh, so its top moves:
-  //   scroll=0   → top at 50vh  (only rooftop visible at bottom half)
-  //   scroll=50% → top at 24vh  (building covers subtitle/buttons)
-  //   scroll=100%→ top at -2vh  (building fully covers viewport)
-  // Using vh units makes the movement viewport-relative, independent of
-  // the building image's natural rendered height.
-  //
+  /* ---- hero parallax: building rises linearly at −0.5×scroll ---- */
   gsap.fromTo(
     '#hero-building-wrap',
     { y: 0 },
     {
-      y: '-59vh',
+      y: '-50vh',
       ease: 'none',
       scrollTrigger: {
         trigger: '#hero-scroll-container',
@@ -425,45 +416,34 @@ const reviews = [
     }
   );
 
-  /* ---- hero text scales down as building rises ---- */
-  // #hero-content shrinks from full size → 0.65× while the building covers it.
-  // transformOrigin:'center top' keeps the badge anchored at the top while
-  // everything below (title, subtitle, CTA) compresses downward.
-  gsap.fromTo(
-    '#hero-content',
-    { scale: 1, transformOrigin: 'center top' },
-    {
-      scale: 0.65,
-      transformOrigin: 'center top',
-      ease: 'none',
+  /* ---- hero text: shrink + fade saturate ~2/3 in, downward drift continues ---- */
+  gsap.set('#hero-content', { transformOrigin: 'center top' });
+  gsap
+    .timeline({
       scrollTrigger: {
         trigger: '#hero-scroll-container',
         start: 'top top',
         end: 'bottom bottom',
         scrub: true,
       },
-    }
-  );
+    })
+    .to('#hero-content', { scale: 0.87, opacity: 0.75, duration: 0.66, ease: 'none' }, 0)
+    .to('#hero-content', { y: '10vh', duration: 1, ease: 'none' }, 0);
 
   /* ---- clouds drift (floating) ---- */
   gsap.to('#cloud-left', { x: 60, duration: 14, yoyo: true, repeat: -1, ease: 'sine.inOut' });
   gsap.to('#cloud-right', { x: -70, duration: 17, yoyo: true, repeat: -1, ease: 'sine.inOut' });
-  /* clouds also rise slightly with the building on scroll */
-  gsap.to('#cloud-left', {
-    yPercent: -20, ease: 'none',
-    scrollTrigger: { trigger: '#hero-scroll-container', start: 'top top', end: 'bottom bottom', scrub: true },
-  });
-  gsap.to('#cloud-right', {
-    yPercent: -15, ease: 'none',
-    scrollTrigger: { trigger: '#hero-scroll-container', start: 'top top', end: 'bottom bottom', scrub: true },
-  });
 
-  /* ---- generic reveals ---- */
+  /* ---- generic reveals: scrubbed scale + rise + fade ---- */
   gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
-    gsap.from(el, {
-      y: 40, opacity: 0, duration: 0.9, ease: 'power3.out',
-      scrollTrigger: { trigger: el, start: 'top 88%' },
-    });
+    gsap.fromTo(
+      el,
+      { scale: 0.9, y: 20, opacity: 0 },
+      {
+        scale: 1, y: 0, opacity: 1, ease: 'none',
+        scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 60%', scrub: true },
+      }
+    );
   });
 
   /* ---- stat counters ---- */
@@ -485,37 +465,23 @@ const reviews = [
     });
   });
 
-  /* ---- manifesto word reveal ---- */
+  /* ---- manifesto: pinned per-word fill, scrubbed across the pin ---- */
   gsap.to('#manifesto .mword', {
     opacity: 1, stagger: 0.06, ease: 'none',
-    scrollTrigger: { trigger: '#manifesto', start: 'top 78%', end: 'bottom 45%', scrub: true },
+    scrollTrigger: { trigger: '#manifesto-section', start: 'top top', end: 'bottom bottom', scrub: true },
   });
 
-  /* ---- stacking cards: shrink the one being covered ---- */
-  const stackCards = gsap.utils.toArray<HTMLElement>('.stack-card');
-  stackCards.forEach((card, i) => {
-    if (i === stackCards.length - 1) return;
-    gsap.to(card.querySelector('img'), {
-      scale: 1.08, ease: 'none',
-      scrollTrigger: { trigger: stackCards[i + 1], start: 'top bottom', end: 'top top', scrub: true },
-    });
-    gsap.to(card, {
-      opacity: 0.75, ease: 'none',
-      scrollTrigger: { trigger: stackCards[i + 1], start: 'top bottom', end: 'top top', scrub: true },
-    });
-  });
-
-  /* ---- video mask scale-up ---- */
+  /* ---- highlighted home: video zooms 1× → 5.7× across the pin ---- */
   gsap.fromTo(
-    '#video-mask',
-    { scale: 0.72, borderRadius: '48px' },
+    '#video-zoom',
+    { scale: 1 },
     {
-      scale: 1, borderRadius: '28px', ease: 'none',
-      scrollTrigger: { trigger: '#video-mask', start: 'top 95%', end: 'top 30%', scrub: true },
+      scale: 5.7, ease: 'none',
+      scrollTrigger: { trigger: '#highlight-pin', start: 'top top', end: 'bottom bottom', scrub: true },
     }
   );
 
-  /* ---- marquee ---- */
+  /* ---- marquee: time-based drift inside the pinned viewport ---- */
   const track = document.getElementById('marquee')!;
   const chunk = track.querySelector<HTMLElement>('.marquee-chunk')!;
   const loop = () => {
@@ -529,35 +495,22 @@ const reviews = [
     loop();
   });
 
-  /* ---- reviews marquee (dual row) ---- */
+  /* ---- reviews marquee: single row, continuous leftward ~80px/s ---- */
   function initReviewsMarquee() {
-    const rows = [
-      { el: document.getElementById('reviews-row-1')!, dir: -1, dur: 38 },
-      { el: document.getElementById('reviews-row-2')!, dir:  1, dur: 46 },
-    ];
-    rows.forEach(({ el, dir, dur }) => {
-      // measure the width of exactly half the cards (the original set)
-      const cards = el.querySelectorAll<HTMLElement>('.reviews-card');
-      // half the total cards = one full loop width
-      const halfCount = Math.floor(cards.length / 2);
-      let halfW = 0;
-      for (let i = 0; i < halfCount; i++) {
-        halfW += cards[i].offsetWidth + 16; // 16px = gap-4
-      }
-      // start offset for rightward rows so they don't jump
-      const startX = dir === 1 ? -halfW : 0;
-      const endX   = dir === 1 ? 0 : -halfW;
-      gsap.fromTo(
-        el,
-        { x: startX },
-        { x: endX, duration: dur, ease: 'none', repeat: -1 }
-      );
-    });
+    const el = document.getElementById('reviews-row')!;
+    const cards = el.querySelectorAll<HTMLElement>('.reviews-card');
+    // the first half of the track = one loop unit (6 reviews + photo card)
+    const halfCount = Math.floor(cards.length / 2);
+    let halfW = 0;
+    for (let i = 0; i < halfCount; i++) {
+      halfW += cards[i].offsetWidth + 16; // 16px = gap
+    }
+    gsap.fromTo(el, { x: 0 }, { x: -halfW, duration: halfW / 80, ease: 'none', repeat: -1 });
   }
   initReviewsMarquee();
   window.addEventListener('resize', () => {
-    gsap.killTweensOf('#reviews-row-1');
-    gsap.killTweensOf('#reviews-row-2');
+    gsap.killTweensOf('#reviews-row');
+    gsap.set('#reviews-row', { x: 0 });
     initReviewsMarquee();
   });
 </script>
