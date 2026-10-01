@@ -1,0 +1,1248 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link [ref=e9] [cursor=pointer]:
+          - /url: ./
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - link [ref=e17] [cursor=pointer]:
+              - /url: ./properties
+              - paragraph [ref=e19]: PROPERTIES
+            - link [ref=e23] [cursor=pointer]:
+              - /url: ./#services
+              - paragraph [ref=e25]: SERVICES
+            - link [ref=e29] [cursor=pointer]:
+              - /url: ./about-us
+              - paragraph [ref=e31]: ABOUT
+          - link [ref=e35] [cursor=pointer]:
+            - /url: ./contact-us
+            - paragraph [ref=e37]: Contact us
+    - generic [ref=e41]:
+      - main [ref=e42]:
+        - img "Silhouette map of Europe in white on a black background." [ref=e45]
+        - img "Silhouette map of Europe in white on a black background." [ref=e49]
+        - img "Silhouette map of Europe in white on a black background." [ref=e53]
+        - img "Silhouette map of Europe in white on a black background." [ref=e56]
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - generic [ref=e60]:
+              - generic [ref=e61]:
+                - img "Smiling woman with long dark hair in a burgundy top." [ref=e64]
+                - img "Smiling man in an orange shirt." [ref=e67]
+                - img "Smiling woman with long red hair." [ref=e70]
+              - paragraph [ref=e72]: 3,500+ Pro Users
+            - heading "Find Your Dream Home" [level=1] [ref=e74]
+          - generic [ref=e75]:
+            - paragraph [ref=e77]: Explore thoughtfully designed homes in premium locations, crafted to match modern lifestyles with comfort, elegance, and long-term value.
+            - generic [ref=e78]:
+              - link [ref=e81] [cursor=pointer]:
+                - /url: ./properties
+                - paragraph [ref=e83]: Explore Homes
+              - link [ref=e89] [cursor=pointer]:
+                - /url: ./contact-us
+                - paragraph [ref=e91]: Book a Visit
+        - img "Modern multi-level home with large glass windows and layered terraces at dusk." [ref=e95]
+      - generic [ref=e96]:
+        - img "Basketball player mid-slam dunk in street game, with onlookers behind." [ref=e100]
+        - img "Basketball player mid-slam dunk in street game, with onlookers behind." [ref=e104]
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - paragraph [ref=e114]: OUR IMPACT
+              - heading "Real insights behind every property decision" [level=3] [ref=e116]:
+                - generic [ref=e117]: Real
+                - generic [ref=e118]: insights
+                - generic [ref=e119]: behind
+                - generic [ref=e120]: every
+                - generic [ref=e121]: property
+                - generic [ref=e122]: decision
+            - paragraph [ref=e124]:
+              - generic [ref=e125]:
+                - generic [ref=e126]: B
+                - generic [ref=e127]: u
+                - generic [ref=e128]: i
+                - generic [ref=e129]: l
+                - generic [ref=e130]: t
+              - generic [ref=e131]:
+                - generic [ref=e132]: t
+                - generic [ref=e133]: o
+              - generic [ref=e134]:
+                - generic [ref=e135]: m
+                - generic [ref=e136]: a
+                - generic [ref=e137]: k
+                - generic [ref=e138]: e
+              - generic [ref=e139]:
+                - generic [ref=e140]: m
+                - generic [ref=e141]: o
+                - generic [ref=e142]: d
+                - generic [ref=e143]: e
+                - generic [ref=e144]: r
+                - generic [ref=e145]: "n"
+              - generic [ref=e146]:
+                - generic [ref=e147]: h
+                - generic [ref=e148]: o
+                - generic [ref=e149]: m
+                - generic [ref=e150]: e
+              - generic [ref=e151]:
+                - generic [ref=e152]: d
+                - generic [ref=e153]: i
+                - generic [ref=e154]: s
+                - generic [ref=e155]: c
+                - generic [ref=e156]: o
+                - generic [ref=e157]: v
+                - generic [ref=e158]: e
+                - generic [ref=e159]: r
+                - generic [ref=e160]: "y"
+              - generic [ref=e161]:
+                - generic [ref=e162]: s
+                - generic [ref=e163]: i
+                - generic [ref=e164]: m
+                - generic [ref=e165]: p
+                - generic [ref=e166]: l
+                - generic [ref=e167]: e
+                - generic [ref=e168]: ","
+              - generic [ref=e169]:
+                - generic [ref=e170]: t
+                - generic [ref=e171]: r
+                - generic [ref=e172]: a
+                - generic [ref=e173]: "n"
+                - generic [ref=e174]: s
+                - generic [ref=e175]: p
+                - generic [ref=e176]: a
+                - generic [ref=e177]: r
+                - generic [ref=e178]: e
+                - generic [ref=e179]: "n"
+                - generic [ref=e180]: t
+                - generic [ref=e181]: ","
+              - generic [ref=e182]:
+                - generic [ref=e183]: a
+                - generic [ref=e184]: "n"
+                - generic [ref=e185]: d
+              - generic [ref=e186]:
+                - generic [ref=e187]: m
+                - generic [ref=e188]: o
+                - generic [ref=e189]: r
+                - generic [ref=e190]: e
+              - generic [ref=e191]:
+                - generic [ref=e192]: c
+                - generic [ref=e193]: o
+                - generic [ref=e194]: "n"
+                - generic [ref=e195]: f
+                - generic [ref=e196]: i
+                - generic [ref=e197]: d
+                - generic [ref=e198]: e
+                - generic [ref=e199]: "n"
+                - generic [ref=e200]: t
+              - generic [ref=e201]:
+                - generic [ref=e202]: f
+                - generic [ref=e203]: o
+                - generic [ref=e204]: r
+              - generic [ref=e205]:
+                - generic [ref=e206]: e
+                - generic [ref=e207]: v
+                - generic [ref=e208]: e
+                - generic [ref=e209]: r
+                - generic [ref=e210]: "y"
+              - generic [ref=e211]:
+                - generic [ref=e212]: u
+                - generic [ref=e213]: s
+                - generic [ref=e214]: e
+                - generic [ref=e215]: r
+                - generic [ref=e216]: .
+          - generic [ref=e218]:
+            - img "Modern three-story house with large glass windows at dusk." [ref=e222]
+            - generic [ref=e223]:
+              - generic [ref=e224]:
+                - generic [ref=e227]:
+                  - generic [ref=e228]: $
+                  - generic [ref=e229]:
+                    - generic [ref=e230]: "0"
+                    - generic [ref=e232]: .
+                    - generic [ref=e233]: "0"
+                    - generic [ref=e235]: M
+                  - generic [ref=e236]: +
+                - heading "TOTAL VALUE" [level=6] [ref=e238]
+              - generic [ref=e239]:
+                - generic [ref=e242]:
+                  - generic [ref=e243]:
+                    - generic [ref=e244]: "0"
+                    - generic [ref=e246]: "0"
+                    - generic [ref=e248]: "0"
+                  - generic [ref=e250]: +
+                - heading "ACTIVE HOMES" [level=6] [ref=e252]
+              - generic [ref=e253]:
+                - generic [ref=e256]:
+                  - generic [ref=e257]:
+                    - generic [ref=e258]: "0"
+                    - generic [ref=e260]: "0"
+                  - generic [ref=e262]: "%"
+                - heading "HAPPY CLIENTS" [level=6] [ref=e264]
+            - img "Modern glass house with hillside view and landscaped garden." [ref=e268]
+      - generic [ref=e269]:
+        - img "Pattren" [ref=e274]
+        - generic [ref=e275]: Focused on discovery, built for real choices. We design platforms that help buyers explore homes, understand value, and move forward with confidence.
+      - generic [ref=e282]:
+        - generic [ref=e284]:
+          - generic [ref=e285]:
+            - paragraph [ref=e292]: TOP PROPERTIES
+            - heading "Explore our selected homes for modern living" [level=3] [ref=e294]:
+              - generic [ref=e295]: Explore
+              - generic [ref=e296]: our
+              - generic [ref=e297]: selected
+              - generic [ref=e298]: homes
+              - generic [ref=e299]: for
+              - generic [ref=e300]: modern
+              - generic [ref=e301]: living
+          - paragraph [ref=e303]:
+            - generic [ref=e304]:
+              - generic [ref=e305]: C
+              - generic [ref=e306]: a
+              - generic [ref=e307]: r
+              - generic [ref=e308]: e
+              - generic [ref=e309]: f
+              - generic [ref=e310]: u
+              - generic [ref=e311]: l
+              - generic [ref=e312]: l
+              - generic [ref=e313]: "y"
+            - generic [ref=e314]:
+              - generic [ref=e315]: c
+              - generic [ref=e316]: h
+              - generic [ref=e317]: o
+              - generic [ref=e318]: s
+              - generic [ref=e319]: e
+              - generic [ref=e320]: "n"
+            - generic [ref=e321]:
+              - generic [ref=e322]: p
+              - generic [ref=e323]: r
+              - generic [ref=e324]: o
+              - generic [ref=e325]: p
+              - generic [ref=e326]: e
+              - generic [ref=e327]: r
+              - generic [ref=e328]: t
+              - generic [ref=e329]: i
+              - generic [ref=e330]: e
+              - generic [ref=e331]: s
+            - generic [ref=e332]:
+              - generic [ref=e333]: t
+              - generic [ref=e334]: h
+              - generic [ref=e335]: a
+              - generic [ref=e336]: t
+            - generic [ref=e337]:
+              - generic [ref=e338]: c
+              - generic [ref=e339]: o
+              - generic [ref=e340]: m
+              - generic [ref=e341]: b
+              - generic [ref=e342]: i
+              - generic [ref=e343]: "n"
+              - generic [ref=e344]: e
+            - generic [ref=e345]:
+              - generic [ref=e346]: d
+              - generic [ref=e347]: e
+              - generic [ref=e348]: s
+              - generic [ref=e349]: i
+              - generic [ref=e350]: g
+              - generic [ref=e351]: "n"
+              - generic [ref=e352]: ","
+            - generic [ref=e353]:
+              - generic [ref=e354]: c
+              - generic [ref=e355]: o
+              - generic [ref=e356]: m
+              - generic [ref=e357]: f
+              - generic [ref=e358]: o
+              - generic [ref=e359]: r
+              - generic [ref=e360]: t
+              - generic [ref=e361]: ","
+            - generic [ref=e362]:
+              - generic [ref=e363]: a
+              - generic [ref=e364]: "n"
+              - generic [ref=e365]: d
+            - generic [ref=e366]:
+              - generic [ref=e367]: l
+              - generic [ref=e368]: o
+              - generic [ref=e369]: c
+              - generic [ref=e370]: a
+              - generic [ref=e371]: t
+              - generic [ref=e372]: i
+              - generic [ref=e373]: o
+              - generic [ref=e374]: "n"
+            - generic [ref=e375]:
+              - generic [ref=e376]: t
+              - generic [ref=e377]: o
+            - generic [ref=e378]:
+              - generic [ref=e379]: m
+              - generic [ref=e380]: a
+              - generic [ref=e381]: t
+              - generic [ref=e382]: c
+              - generic [ref=e383]: h
+            - generic [ref=e384]:
+              - generic [ref=e385]: r
+              - generic [ref=e386]: e
+              - generic [ref=e387]: a
+              - generic [ref=e388]: l
+            - generic [ref=e389]:
+              - generic [ref=e390]: l
+              - generic [ref=e391]: i
+              - generic [ref=e392]: f
+              - generic [ref=e393]: e
+              - generic [ref=e394]: s
+              - generic [ref=e395]: t
+              - generic [ref=e396]: "y"
+              - generic [ref=e397]: l
+              - generic [ref=e398]: e
+            - generic [ref=e399]:
+              - generic [ref=e400]: "n"
+              - generic [ref=e401]: e
+              - generic [ref=e402]: e
+              - generic [ref=e403]: d
+              - generic [ref=e404]: s
+              - generic [ref=e405]: .
+        - generic [ref=e408]:
+          - generic [ref=e411]:
+            - img "Modern glass house with a pool and two parked cars." [ref=e414]
+            - generic [ref=e415]:
+              - paragraph [ref=e418]: $7,800
+              - generic [ref=e419]:
+                - heading "Sky High Condo" [level=4] [ref=e421]
+                - paragraph [ref=e423]: Fifth Avenue, Midtown East
+              - link [ref=e425] [cursor=pointer]:
+                - /url: ./properties/sky-high-condo
+                - paragraph [ref=e427]: Explore
+          - generic [ref=e433]:
+            - img "Charming country house with glowing windows and lush garden at sunset." [ref=e436]
+            - generic [ref=e437]:
+              - paragraph [ref=e440]: $3,200
+              - generic [ref=e441]:
+                - heading "Downtown Loft" [level=4] [ref=e443]
+                - paragraph [ref=e445]: West Loop Street, Fulton Market
+              - link [ref=e447] [cursor=pointer]:
+                - /url: ./properties/downtown-loft
+                - paragraph [ref=e449]: Explore
+          - generic [ref=e455]:
+            - img "Modern curved glass house by a reflective pond, surrounded by trees." [ref=e458]
+            - generic [ref=e459]:
+              - paragraph [ref=e462]: $22,000
+              - generic [ref=e463]:
+                - heading "Emerald Bay Villa" [level=4] [ref=e465]
+                - paragraph [ref=e467]: Biscayne Bay Drive, Edgewater
+              - link [ref=e469] [cursor=pointer]:
+                - /url: ./properties/emerald-bay-villa
+                - paragraph [ref=e471]: Explore
+      - generic [ref=e476]:
+        - generic [ref=e477]:
+          - generic [ref=e478]:
+            - paragraph [ref=e485]: Our Services
+            - heading "Everything you need for your home" [level=3] [ref=e487]:
+              - generic [ref=e488]: Everything
+              - generic [ref=e489]: you
+              - generic [ref=e490]: need
+              - generic [ref=e491]: for
+              - generic [ref=e492]: your
+              - generic [ref=e493]: home
+          - paragraph [ref=e495]:
+            - generic [ref=e496]:
+              - generic [ref=e497]: B
+              - generic [ref=e498]: u
+              - generic [ref=e499]: i
+              - generic [ref=e500]: l
+              - generic [ref=e501]: t
+            - generic [ref=e502]:
+              - generic [ref=e503]: t
+              - generic [ref=e504]: o
+            - generic [ref=e505]:
+              - generic [ref=e506]: s
+              - generic [ref=e507]: i
+              - generic [ref=e508]: m
+              - generic [ref=e509]: p
+              - generic [ref=e510]: l
+              - generic [ref=e511]: i
+              - generic [ref=e512]: f
+              - generic [ref=e513]: "y"
+            - generic [ref=e514]:
+              - generic [ref=e515]: "y"
+              - generic [ref=e516]: o
+              - generic [ref=e517]: u
+              - generic [ref=e518]: r
+            - generic [ref=e519]:
+              - generic [ref=e520]: h
+              - generic [ref=e521]: o
+              - generic [ref=e522]: m
+              - generic [ref=e523]: e
+            - generic [ref=e524]:
+              - generic [ref=e525]: s
+              - generic [ref=e526]: e
+              - generic [ref=e527]: a
+              - generic [ref=e528]: r
+              - generic [ref=e529]: c
+              - generic [ref=e530]: h
+            - generic [ref=e531]:
+              - generic [ref=e532]: w
+              - generic [ref=e533]: i
+              - generic [ref=e534]: t
+              - generic [ref=e535]: h
+            - generic [ref=e536]:
+              - generic [ref=e537]: c
+              - generic [ref=e538]: l
+              - generic [ref=e539]: e
+              - generic [ref=e540]: a
+              - generic [ref=e541]: r
+            - generic [ref=e542]:
+              - generic [ref=e543]: i
+              - generic [ref=e544]: "n"
+              - generic [ref=e545]: s
+              - generic [ref=e546]: i
+              - generic [ref=e547]: g
+              - generic [ref=e548]: h
+              - generic [ref=e549]: t
+              - generic [ref=e550]: s
+              - generic [ref=e551]: ","
+            - generic [ref=e552]:
+              - generic [ref=e553]: b
+              - generic [ref=e554]: e
+              - generic [ref=e555]: t
+              - generic [ref=e556]: t
+              - generic [ref=e557]: e
+              - generic [ref=e558]: r
+            - generic [ref=e559]:
+              - generic [ref=e560]: o
+              - generic [ref=e561]: p
+              - generic [ref=e562]: t
+              - generic [ref=e563]: i
+              - generic [ref=e564]: o
+              - generic [ref=e565]: "n"
+              - generic [ref=e566]: s
+              - generic [ref=e567]: ","
+            - generic [ref=e568]:
+              - generic [ref=e569]: a
+              - generic [ref=e570]: "n"
+              - generic [ref=e571]: d
+            - generic [ref=e572]:
+              - generic [ref=e573]: c
+              - generic [ref=e574]: o
+              - generic [ref=e575]: "n"
+              - generic [ref=e576]: f
+              - generic [ref=e577]: i
+              - generic [ref=e578]: d
+              - generic [ref=e579]: e
+              - generic [ref=e580]: "n"
+              - generic [ref=e581]: t
+            - generic [ref=e582]:
+              - generic [ref=e583]: d
+              - generic [ref=e584]: e
+              - generic [ref=e585]: c
+              - generic [ref=e586]: i
+              - generic [ref=e587]: s
+              - generic [ref=e588]: i
+              - generic [ref=e589]: o
+              - generic [ref=e590]: "n"
+              - generic [ref=e591]: s
+              - generic [ref=e592]: .
+        - generic [ref=e595]:
+          - generic:
+            - generic:
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - paragraph: Buy a Home
+                    - generic:
+                      - heading "Find Homes Perfect For You" [level=5]
+                  - generic:
+                    - paragraph: ".01"
+          - generic [ref=e603] [cursor=pointer]:
+            - generic [ref=e604]:
+              - paragraph [ref=e606]: Rent a Home
+              - heading "Find Rental Homes With Ease" [level=5] [ref=e608]
+            - paragraph [ref=e610]: ".02"
+          - generic [ref=e620] [cursor=pointer]:
+            - generic [ref=e621]:
+              - paragraph [ref=e623]: Explore Listings
+              - heading "Explore Available Properties Easily" [level=5] [ref=e625]
+            - paragraph [ref=e627]: ".03"
+      - generic [ref=e631]:
+        - generic [ref=e632]:
+          - generic [ref=e633]:
+            - paragraph [ref=e640]: PROPERTY LISTINGS
+            - heading "Discover homes that fit your lifestyle" [level=3] [ref=e642]:
+              - generic [ref=e643]: Discover
+              - generic [ref=e644]: homes
+              - generic [ref=e645]: that
+              - generic [ref=e646]: fit
+              - generic [ref=e647]: your
+              - generic [ref=e648]: lifestyle
+          - generic [ref=e649]:
+            - paragraph [ref=e651]:
+              - generic [ref=e652]:
+                - generic [ref=e653]: E
+                - generic [ref=e654]: x
+                - generic [ref=e655]: p
+                - generic [ref=e656]: l
+                - generic [ref=e657]: o
+                - generic [ref=e658]: r
+                - generic [ref=e659]: e
+              - generic [ref=e660]: a
+              - generic [ref=e662]:
+                - generic [ref=e663]: r
+                - generic [ref=e664]: a
+                - generic [ref=e665]: "n"
+                - generic [ref=e666]: g
+                - generic [ref=e667]: e
+              - generic [ref=e668]:
+                - generic [ref=e669]: o
+                - generic [ref=e670]: f
+              - generic [ref=e671]:
+                - generic [ref=e672]: p
+                - generic [ref=e673]: r
+                - generic [ref=e674]: o
+                - generic [ref=e675]: p
+                - generic [ref=e676]: e
+                - generic [ref=e677]: r
+                - generic [ref=e678]: t
+                - generic [ref=e679]: i
+                - generic [ref=e680]: e
+                - generic [ref=e681]: s
+              - generic [ref=e682]:
+                - generic [ref=e683]: b
+                - generic [ref=e684]: u
+                - generic [ref=e685]: i
+                - generic [ref=e686]: l
+                - generic [ref=e687]: t
+              - generic [ref=e688]:
+                - generic [ref=e689]: f
+                - generic [ref=e690]: o
+                - generic [ref=e691]: r
+              - generic [ref=e692]:
+                - generic [ref=e693]: c
+                - generic [ref=e694]: o
+                - generic [ref=e695]: m
+                - generic [ref=e696]: f
+                - generic [ref=e697]: o
+                - generic [ref=e698]: r
+                - generic [ref=e699]: t
+                - generic [ref=e700]: ","
+              - generic [ref=e701]:
+                - generic [ref=e702]: l
+                - generic [ref=e703]: o
+                - generic [ref=e704]: c
+                - generic [ref=e705]: a
+                - generic [ref=e706]: t
+                - generic [ref=e707]: i
+                - generic [ref=e708]: o
+                - generic [ref=e709]: "n"
+                - generic [ref=e710]: ","
+              - generic [ref=e711]:
+                - generic [ref=e712]: a
+                - generic [ref=e713]: "n"
+                - generic [ref=e714]: d
+              - generic [ref=e715]:
+                - generic [ref=e716]: e
+                - generic [ref=e717]: v
+                - generic [ref=e718]: e
+                - generic [ref=e719]: r
+                - generic [ref=e720]: "y"
+                - generic [ref=e721]: d
+                - generic [ref=e722]: a
+                - generic [ref=e723]: "y"
+              - generic [ref=e724]:
+                - generic [ref=e725]: l
+                - generic [ref=e726]: i
+                - generic [ref=e727]: v
+                - generic [ref=e728]: i
+                - generic [ref=e729]: "n"
+                - generic [ref=e730]: g
+                - generic [ref=e731]: .
+            - link [ref=e734] [cursor=pointer]:
+              - /url: ./properties
+              - paragraph [ref=e736]: Explore All
+        - generic [ref=e740]:
+          - link "Modern oceanfront house with infinity pool F o r R e n t Hillside View House $9,200 4+ 3 2,400 sq ft" [ref=e744] [cursor=pointer]:
+            - /url: ./properties/hillside-view-house
+            - generic [ref=e745]:
+              - img "Modern oceanfront house with infinity pool" [ref=e747]
+              - paragraph [ref=e754]:
+                - generic [ref=e755]:
+                  - generic [ref=e756]: F
+                  - generic [ref=e757]: o
+                  - generic [ref=e758]: r
+                - generic [ref=e759]:
+                  - generic [ref=e760]: R
+                  - generic [ref=e761]: e
+                  - generic [ref=e762]: "n"
+                  - generic [ref=e763]: t
+              - generic [ref=e765]:
+                - paragraph [ref=e767]: Hillside View House
+                - heading "$9,200" [level=5] [ref=e769]
+                - generic [ref=e770]:
+                  - paragraph [ref=e774]: 4+
+                  - paragraph [ref=e779]: "3"
+                  - generic [ref=e783]:
+                    - paragraph [ref=e785]: 2,400
+                    - paragraph [ref=e787]: sq ft
+          - link "Modern two-story house with garden and wooden pergola at sunset. F o r B u y Modern Hillside Home $58,000 3 2 3,100 sq ft" [ref=e794] [cursor=pointer]:
+            - /url: ./properties/modern-hillside-home
+            - generic [ref=e795]:
+              - img "Modern two-story house with garden and wooden pergola at sunset." [ref=e797]
+              - paragraph [ref=e804]:
+                - generic [ref=e805]:
+                  - generic [ref=e806]: F
+                  - generic [ref=e807]: o
+                  - generic [ref=e808]: r
+                - generic [ref=e809]:
+                  - generic [ref=e810]: B
+                  - generic [ref=e811]: u
+                  - generic [ref=e812]: "y"
+              - generic [ref=e814]:
+                - paragraph [ref=e816]: Modern Hillside Home
+                - heading "$58,000" [level=5] [ref=e818]
+                - generic [ref=e819]:
+                  - paragraph [ref=e823]: "3"
+                  - paragraph [ref=e828]: "2"
+                  - generic [ref=e832]:
+                    - paragraph [ref=e834]: 3,100
+                    - paragraph [ref=e836]: sq ft
+          - link "Yellow cottage in lush forest, with a wooden bridge and pathway leading to it. F o r B u y Dallas Townhouse $9,800 3 2 980 sq ft" [ref=e843] [cursor=pointer]:
+            - /url: ./properties/dallas-townhouse
+            - generic [ref=e844]:
+              - img "Yellow cottage in lush forest, with a wooden bridge and pathway leading to it." [ref=e846]
+              - paragraph [ref=e853]:
+                - generic [ref=e854]:
+                  - generic [ref=e855]: F
+                  - generic [ref=e856]: o
+                  - generic [ref=e857]: r
+                - generic [ref=e858]:
+                  - generic [ref=e859]: B
+                  - generic [ref=e860]: u
+                  - generic [ref=e861]: "y"
+              - generic [ref=e863]:
+                - paragraph [ref=e865]: Dallas Townhouse
+                - heading "$9,800" [level=5] [ref=e867]
+                - generic [ref=e868]:
+                  - paragraph [ref=e872]: "3"
+                  - paragraph [ref=e877]: "2"
+                  - generic [ref=e881]:
+                    - paragraph [ref=e883]: "980"
+                    - paragraph [ref=e885]: sq ft
+          - link "Modern two-story house with large windows and a car in the driveway. F o r B u y Urban Modern House $34,000 4+ 3 4,200 sq ft" [ref=e892] [cursor=pointer]:
+            - /url: ./properties/urban-modern-house
+            - generic [ref=e893]:
+              - img "Modern two-story house with large windows and a car in the driveway." [ref=e895]
+              - paragraph [ref=e902]:
+                - generic [ref=e903]:
+                  - generic [ref=e904]: F
+                  - generic [ref=e905]: o
+                  - generic [ref=e906]: r
+                - generic [ref=e907]:
+                  - generic [ref=e908]: B
+                  - generic [ref=e909]: u
+                  - generic [ref=e910]: "y"
+              - generic [ref=e912]:
+                - paragraph [ref=e914]: Urban Modern House
+                - heading "$34,000" [level=5] [ref=e916]
+                - generic [ref=e917]:
+                  - paragraph [ref=e921]: 4+
+                  - paragraph [ref=e926]: "3"
+                  - generic [ref=e930]:
+                    - paragraph [ref=e932]: 4,200
+                    - paragraph [ref=e934]: sq ft
+      - generic [ref=e938]:
+        - generic [ref=e940]:
+          - generic [ref=e941]:
+            - paragraph [ref=e948]: HIGHLIGHTED HOME
+            - heading "Modern homes, designed to live better" [level=3] [ref=e950]:
+              - generic [ref=e951]: Modern
+              - generic [ref=e952]: homes,
+              - generic [ref=e953]: designed
+              - generic [ref=e954]: to
+              - generic [ref=e955]: live
+              - generic [ref=e956]: better
+          - paragraph [ref=e958]:
+            - generic [ref=e959]:
+              - generic [ref=e960]: E
+              - generic [ref=e961]: x
+              - generic [ref=e962]: p
+              - generic [ref=e963]: l
+              - generic [ref=e964]: o
+              - generic [ref=e965]: r
+              - generic [ref=e966]: e
+            - generic [ref=e967]:
+              - generic [ref=e968]: h
+              - generic [ref=e969]: o
+              - generic [ref=e970]: w
+            - generic [ref=e971]:
+              - generic [ref=e972]: m
+              - generic [ref=e973]: o
+              - generic [ref=e974]: d
+              - generic [ref=e975]: e
+              - generic [ref=e976]: r
+              - generic [ref=e977]: "n"
+            - generic [ref=e978]:
+              - generic [ref=e979]: h
+              - generic [ref=e980]: o
+              - generic [ref=e981]: m
+              - generic [ref=e982]: e
+              - generic [ref=e983]: s
+            - generic [ref=e984]:
+              - generic [ref=e985]: a
+              - generic [ref=e986]: r
+              - generic [ref=e987]: e
+            - generic [ref=e988]:
+              - generic [ref=e989]: d
+              - generic [ref=e990]: e
+              - generic [ref=e991]: s
+              - generic [ref=e992]: i
+              - generic [ref=e993]: g
+              - generic [ref=e994]: "n"
+              - generic [ref=e995]: e
+              - generic [ref=e996]: d
+            - generic [ref=e997]:
+              - generic [ref=e998]: t
+              - generic [ref=e999]: o
+            - generic [ref=e1000]:
+              - generic [ref=e1001]: f
+              - generic [ref=e1002]: e
+              - generic [ref=e1003]: e
+              - generic [ref=e1004]: l
+            - generic [ref=e1005]:
+              - generic [ref=e1006]: c
+              - generic [ref=e1007]: l
+              - generic [ref=e1008]: e
+              - generic [ref=e1009]: a
+              - generic [ref=e1010]: "n"
+              - generic [ref=e1011]: ","
+            - generic [ref=e1012]:
+              - generic [ref=e1013]: o
+              - generic [ref=e1014]: p
+              - generic [ref=e1015]: e
+              - generic [ref=e1016]: "n"
+              - generic [ref=e1017]: ","
+            - generic [ref=e1018]:
+              - generic [ref=e1019]: a
+              - generic [ref=e1020]: "n"
+              - generic [ref=e1021]: d
+            - generic [ref=e1022]:
+              - generic [ref=e1023]: f
+              - generic [ref=e1024]: u
+              - generic [ref=e1025]: "n"
+              - generic [ref=e1026]: c
+              - generic [ref=e1027]: t
+              - generic [ref=e1028]: i
+              - generic [ref=e1029]: o
+              - generic [ref=e1030]: "n"
+              - generic [ref=e1031]: a
+              - generic [ref=e1032]: l
+              - generic [ref=e1033]: .
+        - list [ref=e1042]:
+          - listitem [ref=e1043]:
+            - generic [ref=e1047]:
+              - heading "Explore Homes" [level=2] [ref=e1049]
+              - heading "Live Better" [level=2] [ref=e1052]
+              - heading "Modern Spaces" [level=2] [ref=e1055]
+          - listitem [ref=e1057]:
+            - generic [ref=e1061]:
+              - heading "Explore Homes" [level=2] [ref=e1063]
+              - heading "Live Better" [level=2] [ref=e1066]
+              - heading "Modern Spaces" [level=2] [ref=e1069]
+      - generic [ref=e1072]:
+        - generic [ref=e1073]:
+          - generic [ref=e1074]:
+            - paragraph [ref=e1081]: CLIENT REVIEWS
+            - heading "What people say about their home search" [level=3] [ref=e1083]:
+              - generic [ref=e1084]: What
+              - generic [ref=e1085]: people
+              - generic [ref=e1086]: say
+              - generic [ref=e1087]: about
+              - generic [ref=e1088]: their
+              - generic [ref=e1089]: home
+              - generic [ref=e1090]: search
+          - paragraph [ref=e1092]:
+            - generic [ref=e1093]:
+              - generic [ref=e1094]: R
+              - generic [ref=e1095]: e
+              - generic [ref=e1096]: a
+              - generic [ref=e1097]: l
+            - generic [ref=e1098]:
+              - generic [ref=e1099]: f
+              - generic [ref=e1100]: e
+              - generic [ref=e1101]: e
+              - generic [ref=e1102]: d
+              - generic [ref=e1103]: b
+              - generic [ref=e1104]: a
+              - generic [ref=e1105]: c
+              - generic [ref=e1106]: k
+            - generic [ref=e1107]:
+              - generic [ref=e1108]: f
+              - generic [ref=e1109]: r
+              - generic [ref=e1110]: o
+              - generic [ref=e1111]: m
+            - generic [ref=e1112]:
+              - generic [ref=e1113]: u
+              - generic [ref=e1114]: s
+              - generic [ref=e1115]: e
+              - generic [ref=e1116]: r
+              - generic [ref=e1117]: s
+            - generic [ref=e1118]:
+              - generic [ref=e1119]: w
+              - generic [ref=e1120]: h
+              - generic [ref=e1121]: o
+            - generic [ref=e1122]:
+              - generic [ref=e1123]: e
+              - generic [ref=e1124]: x
+              - generic [ref=e1125]: p
+              - generic [ref=e1126]: l
+              - generic [ref=e1127]: o
+              - generic [ref=e1128]: r
+              - generic [ref=e1129]: e
+              - generic [ref=e1130]: d
+            - generic [ref=e1131]:
+              - generic [ref=e1132]: h
+              - generic [ref=e1133]: o
+              - generic [ref=e1134]: m
+              - generic [ref=e1135]: e
+              - generic [ref=e1136]: s
+            - generic [ref=e1137]:
+              - generic [ref=e1138]: a
+              - generic [ref=e1139]: "n"
+              - generic [ref=e1140]: d
+            - generic [ref=e1141]:
+              - generic [ref=e1142]: f
+              - generic [ref=e1143]: o
+              - generic [ref=e1144]: u
+              - generic [ref=e1145]: "n"
+              - generic [ref=e1146]: d
+            - generic [ref=e1147]:
+              - generic [ref=e1148]: t
+              - generic [ref=e1149]: h
+              - generic [ref=e1150]: e
+            - generic [ref=e1151]:
+              - generic [ref=e1152]: r
+              - generic [ref=e1153]: i
+              - generic [ref=e1154]: g
+              - generic [ref=e1155]: h
+              - generic [ref=e1156]: t
+            - generic [ref=e1157]:
+              - generic [ref=e1158]: p
+              - generic [ref=e1159]: l
+              - generic [ref=e1160]: a
+              - generic [ref=e1161]: c
+              - generic [ref=e1162]: e
+            - generic [ref=e1163]:
+              - generic [ref=e1164]: w
+              - generic [ref=e1165]: i
+              - generic [ref=e1166]: t
+              - generic [ref=e1167]: h
+            - generic [ref=e1168]:
+              - generic [ref=e1169]: c
+              - generic [ref=e1170]: o
+              - generic [ref=e1171]: "n"
+              - generic [ref=e1172]: f
+              - generic [ref=e1173]: i
+              - generic [ref=e1174]: d
+              - generic [ref=e1175]: e
+              - generic [ref=e1176]: "n"
+              - generic [ref=e1177]: c
+              - generic [ref=e1178]: e
+              - generic [ref=e1179]: .
+        - generic [ref=e1184]:
+          - list [ref=e1188]:
+            - listitem [aria-hidden] [ref=e1189]:
+              - generic [ref=e1192]:
+                - paragraph [ref=e1198]: I was able to find a home that matched my needs perfectly. The overall experience was smooth and very easy to follow.
+                - generic [ref=e1203]:
+                  - heading [level=6] [ref=e1206]: Olivia Bennett
+                  - paragraph [ref=e1209]: Interior Designer
+            - listitem [aria-hidden] [ref=e1210]:
+              - generic [ref=e1213]:
+                - paragraph [ref=e1219]: Clean interface and useful details helped me make better decisions. It saved time and made the process much easier.
+                - generic [ref=e1224]:
+                  - heading [level=6] [ref=e1227]: Liam Carter
+                  - paragraph [ref=e1230]: Real Estate Investor
+            - listitem [aria-hidden] [ref=e1231]:
+              - generic [ref=e1234]:
+                - paragraph [ref=e1240]: From browsing to shortlisting properties, everything felt intuitive. It helped me move forward with confidence.
+                - generic [ref=e1245]:
+                  - heading [level=6] [ref=e1248]: Sophia Turner
+                  - paragraph [ref=e1251]: Marketing Manager
+            - listitem [aria-hidden] [ref=e1252]:
+              - generic [ref=e1255]:
+                - paragraph [ref=e1261]: The way homes are presented makes it easy to understand value and compare options without feeling overwhelmed.
+                - generic [ref=e1266]:
+                  - heading [level=6] [ref=e1269]: Noah Mitchell
+                  - paragraph [ref=e1272]: Software Engineer
+            - listitem [aria-hidden] [ref=e1273]:
+              - generic [ref=e1276]:
+                - paragraph [ref=e1282]: A very well-designed experience that made finding the right home simple. Everything was clear and easy to navigate.
+                - generic [ref=e1287]:
+                  - heading [level=6] [ref=e1290]: Emma Collins
+                  - paragraph [ref=e1293]: Business Analyst
+            - listitem [aria-hidden] [ref=e1294]:
+              - generic [ref=e1297]:
+                - paragraph [ref=e1303]: The experience felt clean and thoughtfully designed. It helped me explore options clearly and choose a home with confidence.
+                - generic [ref=e1308]:
+                  - heading [level=6] [ref=e1311]: Lucas Anderson
+                  - paragraph [ref=e1314]: Architect
+            - listitem [aria-hidden] [ref=e1315]:
+              - generic [ref=e1318]:
+                - paragraph [ref=e1324]: I was able to find a home that matched my needs perfectly. The overall experience was smooth and very easy to follow.
+                - generic [ref=e1329]:
+                  - heading [level=6] [ref=e1332]: Olivia Bennett
+                  - paragraph [ref=e1335]: Interior Designer
+            - listitem [aria-hidden] [ref=e1336]:
+              - generic [ref=e1339]:
+                - paragraph [ref=e1345]: Clean interface and useful details helped me make better decisions. It saved time and made the process much easier.
+                - generic [ref=e1350]:
+                  - heading [level=6] [ref=e1353]: Liam Carter
+                  - paragraph [ref=e1356]: Real Estate Investor
+            - listitem [aria-hidden] [ref=e1357]:
+              - generic [ref=e1360]:
+                - paragraph [ref=e1366]: From browsing to shortlisting properties, everything felt intuitive. It helped me move forward with confidence.
+                - generic [ref=e1371]:
+                  - heading [level=6] [ref=e1374]: Sophia Turner
+                  - paragraph [ref=e1377]: Marketing Manager
+            - listitem [aria-hidden] [ref=e1378]:
+              - generic [ref=e1381]:
+                - paragraph [ref=e1387]: The way homes are presented makes it easy to understand value and compare options without feeling overwhelmed.
+                - generic [ref=e1392]:
+                  - heading [level=6] [ref=e1395]: Noah Mitchell
+                  - paragraph [ref=e1398]: Software Engineer
+            - listitem [aria-hidden] [ref=e1399]:
+              - generic [ref=e1402]:
+                - paragraph [ref=e1408]: A very well-designed experience that made finding the right home simple. Everything was clear and easy to navigate.
+                - generic [ref=e1413]:
+                  - heading [level=6] [ref=e1416]: Emma Collins
+                  - paragraph [ref=e1419]: Business Analyst
+            - listitem [aria-hidden] [ref=e1420]:
+              - generic [ref=e1423]:
+                - paragraph [ref=e1429]: The experience felt clean and thoughtfully designed. It helped me explore options clearly and choose a home with confidence.
+                - generic [ref=e1434]:
+                  - heading [level=6] [ref=e1437]: Lucas Anderson
+                  - paragraph [ref=e1440]: Architect
+            - listitem [aria-hidden] [ref=e1441]:
+              - generic [ref=e1444]:
+                - paragraph [ref=e1450]: I was able to find a home that matched my needs perfectly. The overall experience was smooth and very easy to follow.
+                - generic [ref=e1455]:
+                  - heading [level=6] [ref=e1458]: Olivia Bennett
+                  - paragraph [ref=e1461]: Interior Designer
+            - listitem [aria-hidden] [ref=e1462]:
+              - generic [ref=e1465]:
+                - paragraph [ref=e1471]: Clean interface and useful details helped me make better decisions. It saved time and made the process much easier.
+                - generic [ref=e1476]:
+                  - heading [level=6] [ref=e1479]: Liam Carter
+                  - paragraph [ref=e1482]: Real Estate Investor
+            - listitem [aria-hidden] [ref=e1483]:
+              - generic [ref=e1486]:
+                - paragraph [ref=e1492]: From browsing to shortlisting properties, everything felt intuitive. It helped me move forward with confidence.
+                - generic [ref=e1497]:
+                  - heading [level=6] [ref=e1500]: Sophia Turner
+                  - paragraph [ref=e1503]: Marketing Manager
+            - listitem [aria-hidden] [ref=e1504]:
+              - generic [ref=e1507]:
+                - paragraph [ref=e1513]: The way homes are presented makes it easy to understand value and compare options without feeling overwhelmed.
+                - generic [ref=e1518]:
+                  - heading [level=6] [ref=e1521]: Noah Mitchell
+                  - paragraph [ref=e1524]: Software Engineer
+            - listitem [aria-hidden] [ref=e1525]:
+              - generic [ref=e1528]:
+                - paragraph [ref=e1534]: A very well-designed experience that made finding the right home simple. Everything was clear and easy to navigate.
+                - generic [ref=e1539]:
+                  - heading [level=6] [ref=e1542]: Emma Collins
+                  - paragraph [ref=e1545]: Business Analyst
+            - listitem [aria-hidden] [ref=e1546]:
+              - generic [ref=e1549]:
+                - paragraph [ref=e1555]: The experience felt clean and thoughtfully designed. It helped me explore options clearly and choose a home with confidence.
+                - generic [ref=e1560]:
+                  - heading [level=6] [ref=e1563]: Lucas Anderson
+                  - paragraph [ref=e1566]: Architect
+          - generic [ref=e1567]:
+            - img "Lady smiling" [ref=e1570]
+            - generic:
+              - generic:
+                - heading "Ethan Walker" [level=4]
+              - generic:
+                - paragraph: Property Consultant
+    - generic [ref=e1572]:
+      - generic [ref=e1573]:
+        - paragraph [ref=e1580]: FAQ
+        - heading "Things You Should Know" [level=3] [ref=e1582]:
+          - generic [ref=e1583]: Things
+          - generic [ref=e1584]: You
+          - generic [ref=e1585]: Should
+          - generic [ref=e1586]: Know
+        - paragraph [ref=e1588]:
+          - generic [ref=e1589]:
+            - generic [ref=e1590]: W
+            - generic [ref=e1591]: e
+            - generic [ref=e1592]: ’
+            - generic [ref=e1593]: v
+            - generic [ref=e1594]: e
+          - generic [ref=e1595]:
+            - generic [ref=e1596]: a
+            - generic [ref=e1597]: "n"
+            - generic [ref=e1598]: s
+            - generic [ref=e1599]: w
+            - generic [ref=e1600]: e
+            - generic [ref=e1601]: r
+            - generic [ref=e1602]: e
+            - generic [ref=e1603]: d
+          - generic [ref=e1604]:
+            - generic [ref=e1605]: t
+            - generic [ref=e1606]: h
+            - generic [ref=e1607]: e
+          - generic [ref=e1608]:
+            - generic [ref=e1609]: m
+            - generic [ref=e1610]: o
+            - generic [ref=e1611]: s
+            - generic [ref=e1612]: t
+          - generic [ref=e1613]:
+            - generic [ref=e1614]: c
+            - generic [ref=e1615]: o
+            - generic [ref=e1616]: m
+            - generic [ref=e1617]: m
+            - generic [ref=e1618]: o
+            - generic [ref=e1619]: "n"
+          - generic [ref=e1620]:
+            - generic [ref=e1621]: q
+            - generic [ref=e1622]: u
+            - generic [ref=e1623]: e
+            - generic [ref=e1624]: s
+            - generic [ref=e1625]: t
+            - generic [ref=e1626]: i
+            - generic [ref=e1627]: o
+            - generic [ref=e1628]: "n"
+            - generic [ref=e1629]: s
+          - generic [ref=e1630]:
+            - generic [ref=e1631]: t
+            - generic [ref=e1632]: o
+          - generic [ref=e1633]:
+            - generic [ref=e1634]: h
+            - generic [ref=e1635]: e
+            - generic [ref=e1636]: l
+            - generic [ref=e1637]: p
+          - generic [ref=e1638]:
+            - generic [ref=e1639]: "y"
+            - generic [ref=e1640]: o
+            - generic [ref=e1641]: u
+          - generic [ref=e1642]:
+            - generic [ref=e1643]: g
+            - generic [ref=e1644]: e
+            - generic [ref=e1645]: t
+          - generic [ref=e1646]:
+            - generic [ref=e1647]: s
+            - generic [ref=e1648]: t
+            - generic [ref=e1649]: a
+            - generic [ref=e1650]: r
+            - generic [ref=e1651]: t
+            - generic [ref=e1652]: e
+            - generic [ref=e1653]: d
+          - generic [ref=e1654]:
+            - generic [ref=e1655]: w
+            - generic [ref=e1656]: i
+            - generic [ref=e1657]: t
+            - generic [ref=e1658]: h
+          - generic [ref=e1659]:
+            - generic [ref=e1660]: c
+            - generic [ref=e1661]: l
+            - generic [ref=e1662]: a
+            - generic [ref=e1663]: r
+            - generic [ref=e1664]: i
+            - generic [ref=e1665]: t
+            - generic [ref=e1666]: "y"
+            - generic [ref=e1667]: .
+      - generic [ref=e1671]:
+        - generic [ref=e1673] [cursor=pointer]:
+          - paragraph [ref=e1676]: How do I start searching for a home?
+          - paragraph [ref=e1683]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=e1685] [cursor=pointer]:
+          - paragraph [ref=e1688]: Can I filter homes by budget & location?
+          - paragraph [ref=e1695]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=e1697] [cursor=pointer]:
+          - paragraph [ref=e1700]: Are the property details accurate?
+          - paragraph [ref=e1707]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=e1709] [cursor=pointer]:
+          - paragraph [ref=e1712]: How do I contact a owner or agent?
+          - paragraph [ref=e1719]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=e1721] [cursor=pointer]:
+          - paragraph [ref=e1724]: Can I explore rental and buying options
+          - paragraph [ref=e1731]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=e1733] [cursor=pointer]:
+          - paragraph [ref=e1736]: Do I need an account to use platform
+          - paragraph [ref=e1743]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=e1745] [cursor=pointer]:
+          - paragraph [ref=e1748]: How do I know if a property is available?
+          - paragraph [ref=e1755]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - contentinfo [ref=e1758]:
+      - generic [ref=e1760]:
+        - generic [ref=e1761]:
+          - generic [ref=e1762]:
+            - paragraph [ref=e1768]: Find your next home
+            - heading "Discover homes designed for your lifestyle" [level=3] [ref=e1770]:
+              - generic [ref=e1771]: Discover
+              - generic [ref=e1772]: homes
+              - generic [ref=e1773]: designed
+              - generic [ref=e1774]: for
+              - generic [ref=e1775]: your
+              - generic [ref=e1776]: lifestyle
+            - paragraph [ref=e1778]:
+              - generic [ref=e1779]:
+                - generic [ref=e1780]: E
+                - generic [ref=e1781]: x
+                - generic [ref=e1782]: p
+                - generic [ref=e1783]: l
+                - generic [ref=e1784]: o
+                - generic [ref=e1785]: r
+                - generic [ref=e1786]: e
+              - generic [ref=e1787]:
+                - generic [ref=e1788]: p
+                - generic [ref=e1789]: r
+                - generic [ref=e1790]: o
+                - generic [ref=e1791]: p
+                - generic [ref=e1792]: e
+                - generic [ref=e1793]: r
+                - generic [ref=e1794]: t
+                - generic [ref=e1795]: i
+                - generic [ref=e1796]: e
+                - generic [ref=e1797]: s
+                - generic [ref=e1798]: ","
+              - generic [ref=e1799]:
+                - generic [ref=e1800]: c
+                - generic [ref=e1801]: o
+                - generic [ref=e1802]: m
+                - generic [ref=e1803]: p
+                - generic [ref=e1804]: a
+                - generic [ref=e1805]: r
+                - generic [ref=e1806]: e
+              - generic [ref=e1807]:
+                - generic [ref=e1808]: o
+                - generic [ref=e1809]: p
+                - generic [ref=e1810]: t
+                - generic [ref=e1811]: i
+                - generic [ref=e1812]: o
+                - generic [ref=e1813]: "n"
+                - generic [ref=e1814]: s
+                - generic [ref=e1815]: ","
+              - generic [ref=e1816]:
+                - generic [ref=e1817]: a
+                - generic [ref=e1818]: "n"
+                - generic [ref=e1819]: d
+              - generic [ref=e1820]:
+                - generic [ref=e1821]: m
+                - generic [ref=e1822]: o
+                - generic [ref=e1823]: v
+                - generic [ref=e1824]: e
+              - generic [ref=e1825]:
+                - generic [ref=e1826]: f
+                - generic [ref=e1827]: o
+                - generic [ref=e1828]: r
+                - generic [ref=e1829]: w
+                - generic [ref=e1830]: a
+                - generic [ref=e1831]: r
+                - generic [ref=e1832]: d
+              - generic [ref=e1833]:
+                - generic [ref=e1834]: w
+                - generic [ref=e1835]: i
+                - generic [ref=e1836]: t
+                - generic [ref=e1837]: h
+              - generic [ref=e1838]:
+                - generic [ref=e1839]: c
+                - generic [ref=e1840]: o
+                - generic [ref=e1841]: "n"
+                - generic [ref=e1842]: f
+                - generic [ref=e1843]: i
+                - generic [ref=e1844]: d
+                - generic [ref=e1845]: e
+                - generic [ref=e1846]: "n"
+                - generic [ref=e1847]: c
+                - generic [ref=e1848]: e
+              - generic [ref=e1849]: "-"
+              - generic [ref=e1851]:
+                - generic [ref=e1852]: e
+                - generic [ref=e1853]: v
+                - generic [ref=e1854]: e
+                - generic [ref=e1855]: r
+                - generic [ref=e1856]: "y"
+                - generic [ref=e1857]: t
+                - generic [ref=e1858]: h
+                - generic [ref=e1859]: i
+                - generic [ref=e1860]: "n"
+                - generic [ref=e1861]: g
+              - generic [ref=e1862]:
+                - generic [ref=e1863]: "y"
+                - generic [ref=e1864]: o
+                - generic [ref=e1865]: u
+              - generic [ref=e1866]:
+                - generic [ref=e1867]: "n"
+                - generic [ref=e1868]: e
+                - generic [ref=e1869]: e
+                - generic [ref=e1870]: d
+              - generic [ref=e1871]:
+                - generic [ref=e1872]: i
+                - generic [ref=e1873]: "n"
+              - generic [ref=e1874]:
+                - generic [ref=e1875]: o
+                - generic [ref=e1876]: "n"
+                - generic [ref=e1877]: e
+              - generic [ref=e1878]:
+                - generic [ref=e1879]: p
+                - generic [ref=e1880]: l
+                - generic [ref=e1881]: a
+                - generic [ref=e1882]: c
+                - generic [ref=e1883]: e
+                - generic [ref=e1884]: .
+            - link [ref=e1886] [cursor=pointer]:
+              - /url: ./contact-us
+              - paragraph [ref=e1888]: Get in Touch
+          - img "Modern, glass-walled house at night, reflecting on a wet driveway." [ref=e1894]
+          - img "Cloudy sky with grey-blue overcast and soft light." [ref=e1897]
+        - generic [ref=e1903]:
+          - generic [ref=e1904]:
+            - generic [ref=e1905]:
+              - generic [ref=e1906]:
+                - link [ref=e1908] [cursor=pointer]:
+                  - /url: ./#hero
+                - paragraph [ref=e1914]: Find, explore, and choose your next home with a simple and modern experience.
+              - generic [ref=e1915]:
+                - link [ref=e1916] [cursor=pointer]:
+                  - /url: https://www.instagram.com/
+                - link [ref=e1918] [cursor=pointer]:
+                  - /url: https://www.facebook.com/
+                - link [ref=e1920] [cursor=pointer]:
+                  - /url: https://x.com/
+                - link [ref=e1922] [cursor=pointer]:
+                  - /url: https://www.youtube.com/
+            - generic [ref=e1924]:
+              - generic [ref=e1925]:
+                - paragraph [ref=e1927]: Explore
+                - generic [ref=e1928]:
+                  - link [ref=e1930] [cursor=pointer]:
+                    - /url: ./properties
+                    - paragraph [ref=e1932]: Properties
+                  - link [ref=e1936] [cursor=pointer]:
+                    - /url: ./#services
+                    - paragraph [ref=e1938]: Services
+                  - link [ref=e1942] [cursor=pointer]:
+                    - /url: ./about-us
+                    - paragraph [ref=e1944]: About
+                  - link [ref=e1948] [cursor=pointer]:
+                    - /url: ./contact-us
+                    - paragraph [ref=e1950]: Contact Us
+              - generic [ref=e1953]:
+                - paragraph [ref=e1955]: Contact
+                - generic [ref=e1956]:
+                  - link [ref=e1962] [cursor=pointer]:
+                    - /url: mailto:homy@yopmail.com
+                    - paragraph [ref=e1964]: homy@yopmail.com
+                  - link [ref=e1972] [cursor=pointer]:
+                    - /url: tel:+123 456 000
+                    - paragraph [ref=e1974]: +123 456 000
+                  - link [ref=e1982] [cursor=pointer]:
+                    - /url: https://www.google.com/maps
+                    - paragraph [ref=e1984]: New York, USA
+          - generic [ref=e1988]:
+            - paragraph [ref=e1990]: Copyright@2026
+            - link "Crafted by" [ref=e1992] [cursor=pointer]:
+              - /url: https://www.framergeeks.com/
+            - link [ref=e1998] [cursor=pointer]:
+              - /url: ./privacy-policy
+              - paragraph [ref=e2000]: Privacy Policy
+  - link [ref=e2003] [cursor=pointer]:
+    - /url: https://www.framer.com
+    - paragraph [ref=e2008]: Create a free website with Framer, the website builder loved by startups, designers and agencies.

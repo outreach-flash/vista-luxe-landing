@@ -1,0 +1,785 @@
+- generic [active] [ref=f8e1]:
+  - generic [ref=f8e3]:
+    - navigation [ref=f8e6]:
+      - generic [ref=f8e7]:
+        - link [ref=f8e9] [cursor=pointer]:
+          - /url: ./
+        - generic [ref=f8e14]:
+          - generic [ref=f8e15]:
+            - link [ref=f8e17] [cursor=pointer]:
+              - /url: ./properties
+              - paragraph [ref=f8e19]: PROPERTIES
+            - link [ref=f8e23] [cursor=pointer]:
+              - /url: ./#services
+              - paragraph [ref=f8e25]: SERVICES
+            - link [ref=f8e29] [cursor=pointer]:
+              - /url: ./about-us
+              - paragraph [ref=f8e31]: ABOUT
+          - link [ref=f8e35] [cursor=pointer]:
+            - /url: ./contact-us
+            - paragraph [ref=f8e37]: Contact us
+    - generic [ref=f8e41]:
+      - main [ref=f8e42]:
+        - generic [ref=f8e44]:
+          - generic [ref=f8e45]:
+            - paragraph [ref=f8e52]: PROPERTY LISTINGS
+            - heading "Discover homes that fit your lifestyle" [level=1] [ref=f8e54]:
+              - generic [ref=f8e55]: Discover
+              - generic [ref=f8e56]: homes
+              - generic [ref=f8e57]: that
+              - generic [ref=f8e58]: fit
+              - generic [ref=f8e59]: your
+              - generic [ref=f8e60]: lifestyle
+          - paragraph [ref=f8e62]:
+            - generic [ref=f8e63]:
+              - generic [ref=f8e64]: E
+              - generic [ref=f8e65]: x
+              - generic [ref=f8e66]: p
+              - generic [ref=f8e67]: l
+              - generic [ref=f8e68]: o
+              - generic [ref=f8e69]: r
+              - generic [ref=f8e70]: e
+            - generic [ref=f8e71]: a
+            - generic [ref=f8e73]:
+              - generic [ref=f8e74]: r
+              - generic [ref=f8e75]: a
+              - generic [ref=f8e76]: "n"
+              - generic [ref=f8e77]: g
+              - generic [ref=f8e78]: e
+            - generic [ref=f8e79]:
+              - generic [ref=f8e80]: o
+              - generic [ref=f8e81]: f
+            - generic [ref=f8e82]:
+              - generic [ref=f8e83]: p
+              - generic [ref=f8e84]: r
+              - generic [ref=f8e85]: o
+              - generic [ref=f8e86]: p
+              - generic [ref=f8e87]: e
+              - generic [ref=f8e88]: r
+              - generic [ref=f8e89]: t
+              - generic [ref=f8e90]: i
+              - generic [ref=f8e91]: e
+              - generic [ref=f8e92]: s
+            - generic [ref=f8e93]:
+              - generic [ref=f8e94]: b
+              - generic [ref=f8e95]: u
+              - generic [ref=f8e96]: i
+              - generic [ref=f8e97]: l
+              - generic [ref=f8e98]: t
+            - generic [ref=f8e99]:
+              - generic [ref=f8e100]: f
+              - generic [ref=f8e101]: o
+              - generic [ref=f8e102]: r
+            - generic [ref=f8e103]:
+              - generic [ref=f8e104]: c
+              - generic [ref=f8e105]: o
+              - generic [ref=f8e106]: m
+              - generic [ref=f8e107]: f
+              - generic [ref=f8e108]: o
+              - generic [ref=f8e109]: r
+              - generic [ref=f8e110]: t
+              - generic [ref=f8e111]: ","
+            - generic [ref=f8e112]:
+              - generic [ref=f8e113]: l
+              - generic [ref=f8e114]: o
+              - generic [ref=f8e115]: c
+              - generic [ref=f8e116]: a
+              - generic [ref=f8e117]: t
+              - generic [ref=f8e118]: i
+              - generic [ref=f8e119]: o
+              - generic [ref=f8e120]: "n"
+              - generic [ref=f8e121]: ","
+            - generic [ref=f8e122]:
+              - generic [ref=f8e123]: a
+              - generic [ref=f8e124]: "n"
+              - generic [ref=f8e125]: d
+            - generic [ref=f8e126]:
+              - generic [ref=f8e127]: e
+              - generic [ref=f8e128]: v
+              - generic [ref=f8e129]: e
+              - generic [ref=f8e130]: r
+              - generic [ref=f8e131]: "y"
+              - generic [ref=f8e132]: d
+              - generic [ref=f8e133]: a
+              - generic [ref=f8e134]: "y"
+            - generic [ref=f8e135]:
+              - generic [ref=f8e136]: l
+              - generic [ref=f8e137]: i
+              - generic [ref=f8e138]: v
+              - generic [ref=f8e139]: i
+              - generic [ref=f8e140]: "n"
+              - generic [ref=f8e141]: g
+              - generic [ref=f8e142]: .
+      - generic [ref=f8e144]:
+        - generic [ref=f8e145]:
+          - generic [ref=f8e146]:
+            - paragraph [ref=f8e148]: Filters
+            - paragraph [ref=f8e153] [cursor=pointer]: Clear all
+          - generic [ref=f8e156]:
+            - textbox [ref=f8e159]:
+              - /placeholder: Search…
+            - generic [ref=f8e160]:
+              - paragraph [ref=f8e162]: Property Status
+              - combobox "Property Status" [ref=f8e165]:
+                - option "All" [selected]
+                - option "For Rent"
+                - option "For Buy"
+          - generic [ref=f8e166]:
+            - paragraph [ref=f8e168]: Location
+            - generic [ref=f8e169]:
+              - paragraph [ref=f8e173] [cursor=pointer]: All
+              - paragraph [ref=f8e177] [cursor=pointer]: New York
+              - paragraph [ref=f8e181] [cursor=pointer]: Los Angeles
+              - paragraph [ref=f8e185] [cursor=pointer]: Miami
+              - paragraph [ref=f8e189] [cursor=pointer]: Chicago
+              - paragraph [ref=f8e193] [cursor=pointer]: Seattle
+              - paragraph [ref=f8e197] [cursor=pointer]: San Francisco
+          - generic [ref=f8e198]:
+            - paragraph [ref=f8e200]: Price Range
+            - generic [ref=f8e201]:
+              - paragraph [ref=f8e205] [cursor=pointer]: All
+              - paragraph [ref=f8e209] [cursor=pointer]: $0 – $10,000
+              - paragraph [ref=f8e213] [cursor=pointer]: $10,000 – $25,000
+              - paragraph [ref=f8e217] [cursor=pointer]: $25,000 – $50,000
+              - paragraph [ref=f8e221] [cursor=pointer]: $50,000+
+          - generic [ref=f8e222]:
+            - generic [ref=f8e223]:
+              - paragraph [ref=f8e225]: Property Type
+              - generic [ref=f8e226]:
+                - paragraph [ref=f8e231] [cursor=pointer]: Apartment
+                - paragraph [ref=f8e236] [cursor=pointer]: House
+                - paragraph [ref=f8e241] [cursor=pointer]: Condo
+                - paragraph [ref=f8e246] [cursor=pointer]: Villa
+                - paragraph [ref=f8e251] [cursor=pointer]: Townhouse
+            - generic [ref=f8e252]:
+              - paragraph [ref=f8e254]: Bedrooms
+              - generic [ref=f8e255]:
+                - paragraph [ref=f8e260] [cursor=pointer]: "1"
+                - paragraph [ref=f8e265] [cursor=pointer]: "2"
+                - paragraph [ref=f8e270] [cursor=pointer]: "3"
+                - paragraph [ref=f8e275] [cursor=pointer]: 4+
+        - generic [ref=f8e277]:
+          - link "Modern oceanfront house with infinity pool F o r R e n t Hillside View House $9,200 4+ 3 2,400 sq ft" [ref=f8e281] [cursor=pointer]:
+            - /url: ./properties/hillside-view-house
+            - generic [ref=f8e282]:
+              - img "Modern oceanfront house with infinity pool" [ref=f8e284]
+              - paragraph [ref=f8e291]:
+                - generic [ref=f8e292]:
+                  - generic [ref=f8e293]: F
+                  - generic [ref=f8e294]: o
+                  - generic [ref=f8e295]: r
+                - generic [ref=f8e296]:
+                  - generic [ref=f8e297]: R
+                  - generic [ref=f8e298]: e
+                  - generic [ref=f8e299]: "n"
+                  - generic [ref=f8e300]: t
+              - generic [ref=f8e302]:
+                - paragraph [ref=f8e304]: Hillside View House
+                - heading "$9,200" [level=5] [ref=f8e306]
+                - generic [ref=f8e307]:
+                  - paragraph [ref=f8e311]: 4+
+                  - paragraph [ref=f8e316]: "3"
+                  - generic [ref=f8e320]:
+                    - paragraph [ref=f8e322]: 2,400
+                    - paragraph [ref=f8e324]: sq ft
+          - link "Modern two-story house with garden and wooden pergola at sunset. F o r B u y Modern Hillside Home $58,000 3 2 3,100 sq ft" [ref=f8e331] [cursor=pointer]:
+            - /url: ./properties/modern-hillside-home
+            - generic [ref=f8e332]:
+              - img "Modern two-story house with garden and wooden pergola at sunset." [ref=f8e334]
+              - paragraph [ref=f8e341]:
+                - generic [ref=f8e342]:
+                  - generic [ref=f8e343]: F
+                  - generic [ref=f8e344]: o
+                  - generic [ref=f8e345]: r
+                - generic [ref=f8e346]:
+                  - generic [ref=f8e347]: B
+                  - generic [ref=f8e348]: u
+                  - generic [ref=f8e349]: "y"
+              - generic [ref=f8e351]:
+                - paragraph [ref=f8e353]: Modern Hillside Home
+                - heading "$58,000" [level=5] [ref=f8e355]
+                - generic [ref=f8e356]:
+                  - paragraph [ref=f8e360]: "3"
+                  - paragraph [ref=f8e365]: "2"
+                  - generic [ref=f8e369]:
+                    - paragraph [ref=f8e371]: 3,100
+                    - paragraph [ref=f8e373]: sq ft
+          - link "Yellow cottage in lush forest, with a wooden bridge and pathway leading to it. F o r B u y Dallas Townhouse $9,800 3 2 980 sq ft" [ref=f8e380] [cursor=pointer]:
+            - /url: ./properties/dallas-townhouse
+            - generic [ref=f8e381]:
+              - img "Yellow cottage in lush forest, with a wooden bridge and pathway leading to it." [ref=f8e383]
+              - paragraph [ref=f8e390]:
+                - generic [ref=f8e391]:
+                  - generic [ref=f8e392]: F
+                  - generic [ref=f8e393]: o
+                  - generic [ref=f8e394]: r
+                - generic [ref=f8e395]:
+                  - generic [ref=f8e396]: B
+                  - generic [ref=f8e397]: u
+                  - generic [ref=f8e398]: "y"
+              - generic [ref=f8e400]:
+                - paragraph [ref=f8e402]: Dallas Townhouse
+                - heading "$9,800" [level=5] [ref=f8e404]
+                - generic [ref=f8e405]:
+                  - paragraph [ref=f8e409]: "3"
+                  - paragraph [ref=f8e414]: "2"
+                  - generic [ref=f8e418]:
+                    - paragraph [ref=f8e420]: "980"
+                    - paragraph [ref=f8e422]: sq ft
+          - link "Modern two-story house with large windows and a car in the driveway. F o r B u y Urban Modern House $34,000 4+ 3 4,200 sq ft" [ref=f8e429] [cursor=pointer]:
+            - /url: ./properties/urban-modern-house
+            - generic [ref=f8e430]:
+              - img "Modern two-story house with large windows and a car in the driveway." [ref=f8e432]
+              - paragraph [ref=f8e439]:
+                - generic [ref=f8e440]:
+                  - generic [ref=f8e441]: F
+                  - generic [ref=f8e442]: o
+                  - generic [ref=f8e443]: r
+                - generic [ref=f8e444]:
+                  - generic [ref=f8e445]: B
+                  - generic [ref=f8e446]: u
+                  - generic [ref=f8e447]: "y"
+              - generic [ref=f8e449]:
+                - paragraph [ref=f8e451]: Urban Modern House
+                - heading "$34,000" [level=5] [ref=f8e453]
+                - generic [ref=f8e454]:
+                  - paragraph [ref=f8e458]: 4+
+                  - paragraph [ref=f8e463]: "3"
+                  - generic [ref=f8e467]:
+                    - paragraph [ref=f8e469]: 4,200
+                    - paragraph [ref=f8e471]: sq ft
+          - link "Modern glass-fronted house at sunset with a car in the driveway. F o r B u y Forest Side Residence $28,500 3 2 3,800 sq ft" [ref=f8e478] [cursor=pointer]:
+            - /url: ./properties/forest-side-residence
+            - generic [ref=f8e479]:
+              - img "Modern glass-fronted house at sunset with a car in the driveway." [ref=f8e481]
+              - paragraph [ref=f8e488]:
+                - generic [ref=f8e489]:
+                  - generic [ref=f8e490]: F
+                  - generic [ref=f8e491]: o
+                  - generic [ref=f8e492]: r
+                - generic [ref=f8e493]:
+                  - generic [ref=f8e494]: B
+                  - generic [ref=f8e495]: u
+                  - generic [ref=f8e496]: "y"
+              - generic [ref=f8e498]:
+                - paragraph [ref=f8e500]: Forest Side Residence
+                - heading "$28,500" [level=5] [ref=f8e502]
+                - generic [ref=f8e503]:
+                  - paragraph [ref=f8e507]: "3"
+                  - paragraph [ref=f8e512]: "2"
+                  - generic [ref=f8e516]:
+                    - paragraph [ref=f8e518]: 3,800
+                    - paragraph [ref=f8e520]: sq ft
+          - link "Futuristic round house with glass facade, reflecting on a serene pond. F o r R e n t SoMa Studio $2,800 1 1 1,050 sq ft" [ref=f8e527] [cursor=pointer]:
+            - /url: ./properties/soma-studio
+            - generic [ref=f8e528]:
+              - img "Futuristic round house with glass facade, reflecting on a serene pond." [ref=f8e530]
+              - paragraph [ref=f8e537]:
+                - generic [ref=f8e538]:
+                  - generic [ref=f8e539]: F
+                  - generic [ref=f8e540]: o
+                  - generic [ref=f8e541]: r
+                - generic [ref=f8e542]:
+                  - generic [ref=f8e543]: R
+                  - generic [ref=f8e544]: e
+                  - generic [ref=f8e545]: "n"
+                  - generic [ref=f8e546]: t
+              - generic [ref=f8e548]:
+                - paragraph [ref=f8e550]: SoMa Studio
+                - heading "$2,800" [level=5] [ref=f8e552]
+                - generic [ref=f8e553]:
+                  - paragraph [ref=f8e557]: "1"
+                  - paragraph [ref=f8e562]: "1"
+                  - generic [ref=f8e566]:
+                    - paragraph [ref=f8e568]: 1,050
+                    - paragraph [ref=f8e570]: sq ft
+          - link "Modern glass house with a pool and two parked cars. F o r R e n t Sky High Condo $7,800 2 2 1,850 sq ft" [ref=f8e577] [cursor=pointer]:
+            - /url: ./properties/sky-high-condo
+            - generic [ref=f8e578]:
+              - img "Modern glass house with a pool and two parked cars." [ref=f8e580]
+              - paragraph [ref=f8e587]:
+                - generic [ref=f8e588]:
+                  - generic [ref=f8e589]: F
+                  - generic [ref=f8e590]: o
+                  - generic [ref=f8e591]: r
+                - generic [ref=f8e592]:
+                  - generic [ref=f8e593]: R
+                  - generic [ref=f8e594]: e
+                  - generic [ref=f8e595]: "n"
+                  - generic [ref=f8e596]: t
+              - generic [ref=f8e598]:
+                - paragraph [ref=f8e600]: Sky High Condo
+                - heading "$7,800" [level=5] [ref=f8e602]
+                - generic [ref=f8e603]:
+                  - paragraph [ref=f8e607]: "2"
+                  - paragraph [ref=f8e612]: "2"
+                  - generic [ref=f8e616]:
+                    - paragraph [ref=f8e618]: 1,850
+                    - paragraph [ref=f8e620]: sq ft
+          - link "Modern two-story house with large windows and lush greenery. F o r B u y Beachfront Villa $72,000 4+ 4 5,600 sq ft" [ref=f8e627] [cursor=pointer]:
+            - /url: ./properties/beachfront-villa
+            - generic [ref=f8e628]:
+              - img "Modern two-story house with large windows and lush greenery." [ref=f8e630]
+              - paragraph [ref=f8e637]:
+                - generic [ref=f8e638]:
+                  - generic [ref=f8e639]: F
+                  - generic [ref=f8e640]: o
+                  - generic [ref=f8e641]: r
+                - generic [ref=f8e642]:
+                  - generic [ref=f8e643]: B
+                  - generic [ref=f8e644]: u
+                  - generic [ref=f8e645]: "y"
+              - generic [ref=f8e647]:
+                - paragraph [ref=f8e649]: Beachfront Villa
+                - heading "$72,000" [level=5] [ref=f8e651]
+                - generic [ref=f8e652]:
+                  - paragraph [ref=f8e656]: 4+
+                  - paragraph [ref=f8e661]: "4"
+                  - generic [ref=f8e665]:
+                    - paragraph [ref=f8e667]: 5,600
+                    - paragraph [ref=f8e669]: sq ft
+          - link "Charming country house with glowing windows and lush garden at sunset. F o r R e n t Downtown Loft $3,200 1 1 1,200 sq ft" [ref=f8e676] [cursor=pointer]:
+            - /url: ./properties/downtown-loft
+            - generic [ref=f8e677]:
+              - img "Charming country house with glowing windows and lush garden at sunset." [ref=f8e679]
+              - paragraph [ref=f8e686]:
+                - generic [ref=f8e687]:
+                  - generic [ref=f8e688]: F
+                  - generic [ref=f8e689]: o
+                  - generic [ref=f8e690]: r
+                - generic [ref=f8e691]:
+                  - generic [ref=f8e692]: R
+                  - generic [ref=f8e693]: e
+                  - generic [ref=f8e694]: "n"
+                  - generic [ref=f8e695]: t
+              - generic [ref=f8e697]:
+                - paragraph [ref=f8e699]: Downtown Loft
+                - heading "$3,200" [level=5] [ref=f8e701]
+                - generic [ref=f8e702]:
+                  - paragraph [ref=f8e706]: "1"
+                  - paragraph [ref=f8e711]: "1"
+                  - generic [ref=f8e715]:
+                    - paragraph [ref=f8e717]: 1,200
+                    - paragraph [ref=f8e719]: sq ft
+          - link "Wooden lakeside house with large windows, surrounded by trees and greenery. F o r B u y Sunset Townhouse $40,000 3 23 2,900 sq ft" [ref=f8e726] [cursor=pointer]:
+            - /url: ./properties/sunset-townhouse
+            - generic [ref=f8e727]:
+              - img "Wooden lakeside house with large windows, surrounded by trees and greenery." [ref=f8e729]
+              - paragraph [ref=f8e736]:
+                - generic [ref=f8e737]:
+                  - generic [ref=f8e738]: F
+                  - generic [ref=f8e739]: o
+                  - generic [ref=f8e740]: r
+                - generic [ref=f8e741]:
+                  - generic [ref=f8e742]: B
+                  - generic [ref=f8e743]: u
+                  - generic [ref=f8e744]: "y"
+              - generic [ref=f8e746]:
+                - paragraph [ref=f8e748]: Sunset Townhouse
+                - heading "$40,000" [level=5] [ref=f8e750]
+                - generic [ref=f8e751]:
+                  - paragraph [ref=f8e755]: "3"
+                  - paragraph [ref=f8e760]: "23"
+                  - generic [ref=f8e764]:
+                    - paragraph [ref=f8e766]: 2,900
+                    - paragraph [ref=f8e768]: sq ft
+          - link "Elegant villa with arched windows, stone path, and lush garden at dusk. F o r R e n t Palm Springs Villa $14,500 4+ 3 4,800 sq ft" [ref=f8e775] [cursor=pointer]:
+            - /url: ./properties/palm-springs-villa
+            - generic [ref=f8e776]:
+              - img "Elegant villa with arched windows, stone path, and lush garden at dusk." [ref=f8e778]
+              - paragraph [ref=f8e785]:
+                - generic [ref=f8e786]:
+                  - generic [ref=f8e787]: F
+                  - generic [ref=f8e788]: o
+                  - generic [ref=f8e789]: r
+                - generic [ref=f8e790]:
+                  - generic [ref=f8e791]: R
+                  - generic [ref=f8e792]: e
+                  - generic [ref=f8e793]: "n"
+                  - generic [ref=f8e794]: t
+              - generic [ref=f8e796]:
+                - paragraph [ref=f8e798]: Palm Springs Villa
+                - heading "$14,500" [level=5] [ref=f8e800]
+                - generic [ref=f8e801]:
+                  - paragraph [ref=f8e805]: 4+
+                  - paragraph [ref=f8e810]: "3"
+                  - generic [ref=f8e814]:
+                    - paragraph [ref=f8e816]: 4,800
+                    - paragraph [ref=f8e818]: sq ft
+          - link "Modern house with ocean views and lush gardens on a rainy day. F o r R e n t Midtown Apartment $5,500 2 1 1,400 sq ft" [ref=f8e825] [cursor=pointer]:
+            - /url: ./properties/midtown-apartment
+            - generic [ref=f8e826]:
+              - img "Modern house with ocean views and lush gardens on a rainy day." [ref=f8e828]
+              - paragraph [ref=f8e835]:
+                - generic [ref=f8e836]:
+                  - generic [ref=f8e837]: F
+                  - generic [ref=f8e838]: o
+                  - generic [ref=f8e839]: r
+                - generic [ref=f8e840]:
+                  - generic [ref=f8e841]: R
+                  - generic [ref=f8e842]: e
+                  - generic [ref=f8e843]: "n"
+                  - generic [ref=f8e844]: t
+              - generic [ref=f8e846]:
+                - paragraph [ref=f8e848]: Midtown Apartment
+                - heading "$5,500" [level=5] [ref=f8e850]
+                - generic [ref=f8e851]:
+                  - paragraph [ref=f8e855]: "2"
+                  - paragraph [ref=f8e860]: "1"
+                  - generic [ref=f8e864]:
+                    - paragraph [ref=f8e866]: 1,400
+                    - paragraph [ref=f8e868]: sq ft
+          - link "Modern house at dusk with lit pathway and manicured garden. F o r B u y Lakefront Condo $8,900 2 2 2,100 sq ft" [ref=f8e875] [cursor=pointer]:
+            - /url: ./properties/lakefront-condo
+            - generic [ref=f8e876]:
+              - img "Modern house at dusk with lit pathway and manicured garden." [ref=f8e878]
+              - paragraph [ref=f8e885]:
+                - generic [ref=f8e886]:
+                  - generic [ref=f8e887]: F
+                  - generic [ref=f8e888]: o
+                  - generic [ref=f8e889]: r
+                - generic [ref=f8e890]:
+                  - generic [ref=f8e891]: B
+                  - generic [ref=f8e892]: u
+                  - generic [ref=f8e893]: "y"
+              - generic [ref=f8e895]:
+                - paragraph [ref=f8e897]: Lakefront Condo
+                - heading "$8,900" [level=5] [ref=f8e899]
+                - generic [ref=f8e900]:
+                  - paragraph [ref=f8e904]: "2"
+                  - paragraph [ref=f8e909]: "2"
+                  - generic [ref=f8e913]:
+                    - paragraph [ref=f8e915]: 2,100
+                    - paragraph [ref=f8e917]: sq ft
+          - link "Elegant villa with green roof, surrounded by lush garden and trees. F o r B u y Coral Gables Home $27,000 4+ 3 3,500 sq ft" [ref=f8e924] [cursor=pointer]:
+            - /url: ./properties/coral-gables-home
+            - generic [ref=f8e925]:
+              - img "Elegant villa with green roof, surrounded by lush garden and trees." [ref=f8e927]
+              - paragraph [ref=f8e934]:
+                - generic [ref=f8e935]:
+                  - generic [ref=f8e936]: F
+                  - generic [ref=f8e937]: o
+                  - generic [ref=f8e938]: r
+                - generic [ref=f8e939]:
+                  - generic [ref=f8e940]: B
+                  - generic [ref=f8e941]: u
+                  - generic [ref=f8e942]: "y"
+              - generic [ref=f8e944]:
+                - paragraph [ref=f8e946]: Coral Gables Home
+                - heading "$27,000" [level=5] [ref=f8e948]
+                - generic [ref=f8e949]:
+                  - paragraph [ref=f8e953]: 4+
+                  - paragraph [ref=f8e958]: "3"
+                  - generic [ref=f8e962]:
+                    - paragraph [ref=f8e964]: 3,500
+                    - paragraph [ref=f8e966]: sq ft
+          - link "Modern curved glass house by a reflective pond, surrounded by trees. F o r R e n t Emerald Bay Villa $22,000 4+ 4 5,200 sq ft" [ref=f8e973] [cursor=pointer]:
+            - /url: ./properties/emerald-bay-villa
+            - generic [ref=f8e974]:
+              - img "Modern curved glass house by a reflective pond, surrounded by trees." [ref=f8e976]
+              - paragraph [ref=f8e983]:
+                - generic [ref=f8e984]:
+                  - generic [ref=f8e985]: F
+                  - generic [ref=f8e986]: o
+                  - generic [ref=f8e987]: r
+                - generic [ref=f8e988]:
+                  - generic [ref=f8e989]: R
+                  - generic [ref=f8e990]: e
+                  - generic [ref=f8e991]: "n"
+                  - generic [ref=f8e992]: t
+              - generic [ref=f8e994]:
+                - paragraph [ref=f8e996]: Emerald Bay Villa
+                - heading "$22,000" [level=5] [ref=f8e998]
+                - generic [ref=f8e999]:
+                  - paragraph [ref=f8e1003]: 4+
+                  - paragraph [ref=f8e1008]: "4"
+                  - generic [ref=f8e1012]:
+                    - paragraph [ref=f8e1014]: 5,200
+                    - paragraph [ref=f8e1016]: sq ft
+    - generic [ref=f8e1021]:
+      - generic [ref=f8e1022]:
+        - paragraph [ref=f8e1029]: FAQ
+        - heading "Things You Should Know" [level=3] [ref=f8e1031]:
+          - generic [ref=f8e1032]: Things
+          - generic [ref=f8e1033]: You
+          - generic [ref=f8e1034]: Should
+          - generic [ref=f8e1035]: Know
+        - paragraph [ref=f8e1037]:
+          - generic [ref=f8e1038]:
+            - generic [ref=f8e1039]: W
+            - generic [ref=f8e1040]: e
+            - generic [ref=f8e1041]: ’
+            - generic [ref=f8e1042]: v
+            - generic [ref=f8e1043]: e
+          - generic [ref=f8e1044]:
+            - generic [ref=f8e1045]: a
+            - generic [ref=f8e1046]: "n"
+            - generic [ref=f8e1047]: s
+            - generic [ref=f8e1048]: w
+            - generic [ref=f8e1049]: e
+            - generic [ref=f8e1050]: r
+            - generic [ref=f8e1051]: e
+            - generic [ref=f8e1052]: d
+          - generic [ref=f8e1053]:
+            - generic [ref=f8e1054]: t
+            - generic [ref=f8e1055]: h
+            - generic [ref=f8e1056]: e
+          - generic [ref=f8e1057]:
+            - generic [ref=f8e1058]: m
+            - generic [ref=f8e1059]: o
+            - generic [ref=f8e1060]: s
+            - generic [ref=f8e1061]: t
+          - generic [ref=f8e1062]:
+            - generic [ref=f8e1063]: c
+            - generic [ref=f8e1064]: o
+            - generic [ref=f8e1065]: m
+            - generic [ref=f8e1066]: m
+            - generic [ref=f8e1067]: o
+            - generic [ref=f8e1068]: "n"
+          - generic [ref=f8e1069]:
+            - generic [ref=f8e1070]: q
+            - generic [ref=f8e1071]: u
+            - generic [ref=f8e1072]: e
+            - generic [ref=f8e1073]: s
+            - generic [ref=f8e1074]: t
+            - generic [ref=f8e1075]: i
+            - generic [ref=f8e1076]: o
+            - generic [ref=f8e1077]: "n"
+            - generic [ref=f8e1078]: s
+          - generic [ref=f8e1079]:
+            - generic [ref=f8e1080]: t
+            - generic [ref=f8e1081]: o
+          - generic [ref=f8e1082]:
+            - generic [ref=f8e1083]: h
+            - generic [ref=f8e1084]: e
+            - generic [ref=f8e1085]: l
+            - generic [ref=f8e1086]: p
+          - generic [ref=f8e1087]:
+            - generic [ref=f8e1088]: "y"
+            - generic [ref=f8e1089]: o
+            - generic [ref=f8e1090]: u
+          - generic [ref=f8e1091]:
+            - generic [ref=f8e1092]: g
+            - generic [ref=f8e1093]: e
+            - generic [ref=f8e1094]: t
+          - generic [ref=f8e1095]:
+            - generic [ref=f8e1096]: s
+            - generic [ref=f8e1097]: t
+            - generic [ref=f8e1098]: a
+            - generic [ref=f8e1099]: r
+            - generic [ref=f8e1100]: t
+            - generic [ref=f8e1101]: e
+            - generic [ref=f8e1102]: d
+          - generic [ref=f8e1103]:
+            - generic [ref=f8e1104]: w
+            - generic [ref=f8e1105]: i
+            - generic [ref=f8e1106]: t
+            - generic [ref=f8e1107]: h
+          - generic [ref=f8e1108]:
+            - generic [ref=f8e1109]: c
+            - generic [ref=f8e1110]: l
+            - generic [ref=f8e1111]: a
+            - generic [ref=f8e1112]: r
+            - generic [ref=f8e1113]: i
+            - generic [ref=f8e1114]: t
+            - generic [ref=f8e1115]: "y"
+            - generic [ref=f8e1116]: .
+      - generic [ref=f8e1120]:
+        - generic [ref=f8e1122] [cursor=pointer]:
+          - paragraph [ref=f8e1125]: How do I start searching for a home?
+          - paragraph [ref=f8e1132]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=f8e1134] [cursor=pointer]:
+          - paragraph [ref=f8e1137]: Can I filter homes by budget & location?
+          - paragraph [ref=f8e1144]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=f8e1146] [cursor=pointer]:
+          - paragraph [ref=f8e1149]: Are the property details accurate?
+          - paragraph [ref=f8e1156]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=f8e1158] [cursor=pointer]:
+          - paragraph [ref=f8e1161]: How do I contact a owner or agent?
+          - paragraph [ref=f8e1168]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=f8e1170] [cursor=pointer]:
+          - paragraph [ref=f8e1173]: Can I explore rental and buying options
+          - paragraph [ref=f8e1180]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=f8e1182] [cursor=pointer]:
+          - paragraph [ref=f8e1185]: Do I need an account to use platform
+          - paragraph [ref=f8e1192]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=f8e1194] [cursor=pointer]:
+          - paragraph [ref=f8e1197]: How do I know if a property is available?
+          - paragraph [ref=f8e1204]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - contentinfo [ref=f8e1207]:
+      - generic [ref=f8e1209]:
+        - generic [ref=f8e1210]:
+          - generic [ref=f8e1211]:
+            - paragraph [ref=f8e1217]: Find your next home
+            - heading "Discover homes designed for your lifestyle" [level=3] [ref=f8e1219]:
+              - generic [ref=f8e1220]: Discover
+              - generic [ref=f8e1221]: homes
+              - generic [ref=f8e1222]: designed
+              - generic [ref=f8e1223]: for
+              - generic [ref=f8e1224]: your
+              - generic [ref=f8e1225]: lifestyle
+            - paragraph [ref=f8e1227]:
+              - generic [ref=f8e1228]:
+                - generic [ref=f8e1229]: E
+                - generic [ref=f8e1230]: x
+                - generic [ref=f8e1231]: p
+                - generic [ref=f8e1232]: l
+                - generic [ref=f8e1233]: o
+                - generic [ref=f8e1234]: r
+                - generic [ref=f8e1235]: e
+              - generic [ref=f8e1236]:
+                - generic [ref=f8e1237]: p
+                - generic [ref=f8e1238]: r
+                - generic [ref=f8e1239]: o
+                - generic [ref=f8e1240]: p
+                - generic [ref=f8e1241]: e
+                - generic [ref=f8e1242]: r
+                - generic [ref=f8e1243]: t
+                - generic [ref=f8e1244]: i
+                - generic [ref=f8e1245]: e
+                - generic [ref=f8e1246]: s
+                - generic [ref=f8e1247]: ","
+              - generic [ref=f8e1248]:
+                - generic [ref=f8e1249]: c
+                - generic [ref=f8e1250]: o
+                - generic [ref=f8e1251]: m
+                - generic [ref=f8e1252]: p
+                - generic [ref=f8e1253]: a
+                - generic [ref=f8e1254]: r
+                - generic [ref=f8e1255]: e
+              - generic [ref=f8e1256]:
+                - generic [ref=f8e1257]: o
+                - generic [ref=f8e1258]: p
+                - generic [ref=f8e1259]: t
+                - generic [ref=f8e1260]: i
+                - generic [ref=f8e1261]: o
+                - generic [ref=f8e1262]: "n"
+                - generic [ref=f8e1263]: s
+                - generic [ref=f8e1264]: ","
+              - generic [ref=f8e1265]:
+                - generic [ref=f8e1266]: a
+                - generic [ref=f8e1267]: "n"
+                - generic [ref=f8e1268]: d
+              - generic [ref=f8e1269]:
+                - generic [ref=f8e1270]: m
+                - generic [ref=f8e1271]: o
+                - generic [ref=f8e1272]: v
+                - generic [ref=f8e1273]: e
+              - generic [ref=f8e1274]:
+                - generic [ref=f8e1275]: f
+                - generic [ref=f8e1276]: o
+                - generic [ref=f8e1277]: r
+                - generic [ref=f8e1278]: w
+                - generic [ref=f8e1279]: a
+                - generic [ref=f8e1280]: r
+                - generic [ref=f8e1281]: d
+              - generic [ref=f8e1282]:
+                - generic [ref=f8e1283]: w
+                - generic [ref=f8e1284]: i
+                - generic [ref=f8e1285]: t
+                - generic [ref=f8e1286]: h
+              - generic [ref=f8e1287]:
+                - generic [ref=f8e1288]: c
+                - generic [ref=f8e1289]: o
+                - generic [ref=f8e1290]: "n"
+                - generic [ref=f8e1291]: f
+                - generic [ref=f8e1292]: i
+                - generic [ref=f8e1293]: d
+                - generic [ref=f8e1294]: e
+                - generic [ref=f8e1295]: "n"
+                - generic [ref=f8e1296]: c
+                - generic [ref=f8e1297]: e
+              - generic [ref=f8e1298]: "-"
+              - generic [ref=f8e1300]:
+                - generic [ref=f8e1301]: e
+                - generic [ref=f8e1302]: v
+                - generic [ref=f8e1303]: e
+                - generic [ref=f8e1304]: r
+                - generic [ref=f8e1305]: "y"
+                - generic [ref=f8e1306]: t
+                - generic [ref=f8e1307]: h
+                - generic [ref=f8e1308]: i
+                - generic [ref=f8e1309]: "n"
+                - generic [ref=f8e1310]: g
+              - generic [ref=f8e1311]:
+                - generic [ref=f8e1312]: "y"
+                - generic [ref=f8e1313]: o
+                - generic [ref=f8e1314]: u
+              - generic [ref=f8e1315]:
+                - generic [ref=f8e1316]: "n"
+                - generic [ref=f8e1317]: e
+                - generic [ref=f8e1318]: e
+                - generic [ref=f8e1319]: d
+              - generic [ref=f8e1320]:
+                - generic [ref=f8e1321]: i
+                - generic [ref=f8e1322]: "n"
+              - generic [ref=f8e1323]:
+                - generic [ref=f8e1324]: o
+                - generic [ref=f8e1325]: "n"
+                - generic [ref=f8e1326]: e
+              - generic [ref=f8e1327]:
+                - generic [ref=f8e1328]: p
+                - generic [ref=f8e1329]: l
+                - generic [ref=f8e1330]: a
+                - generic [ref=f8e1331]: c
+                - generic [ref=f8e1332]: e
+                - generic [ref=f8e1333]: .
+            - link [ref=f8e1335] [cursor=pointer]:
+              - /url: ./contact-us
+              - paragraph [ref=f8e1337]: Get in Touch
+          - img "Modern, glass-walled house at night, reflecting on a wet driveway." [ref=f8e1343]
+          - img "Cloudy sky with grey-blue overcast and soft light." [ref=f8e1346]
+        - generic [ref=f8e1352]:
+          - generic [ref=f8e1353]:
+            - generic [ref=f8e1354]:
+              - generic [ref=f8e1355]:
+                - link [ref=f8e1357] [cursor=pointer]:
+                  - /url: ./#hero
+                - paragraph [ref=f8e1363]: Find, explore, and choose your next home with a simple and modern experience.
+              - generic [ref=f8e1364]:
+                - link [ref=f8e1365] [cursor=pointer]:
+                  - /url: https://www.instagram.com/
+                - link [ref=f8e1367] [cursor=pointer]:
+                  - /url: https://www.facebook.com/
+                - link [ref=f8e1369] [cursor=pointer]:
+                  - /url: https://x.com/
+                - link [ref=f8e1371] [cursor=pointer]:
+                  - /url: https://www.youtube.com/
+            - generic [ref=f8e1373]:
+              - generic [ref=f8e1374]:
+                - paragraph [ref=f8e1376]: Explore
+                - generic [ref=f8e1377]:
+                  - link [ref=f8e1379] [cursor=pointer]:
+                    - /url: ./properties
+                    - paragraph [ref=f8e1381]: Properties
+                  - link [ref=f8e1385] [cursor=pointer]:
+                    - /url: ./#services
+                    - paragraph [ref=f8e1387]: Services
+                  - link [ref=f8e1391] [cursor=pointer]:
+                    - /url: ./about-us
+                    - paragraph [ref=f8e1393]: About
+                  - link [ref=f8e1397] [cursor=pointer]:
+                    - /url: ./contact-us
+                    - paragraph [ref=f8e1399]: Contact Us
+              - generic [ref=f8e1402]:
+                - paragraph [ref=f8e1404]: Contact
+                - generic [ref=f8e1405]:
+                  - link [ref=f8e1411] [cursor=pointer]:
+                    - /url: mailto:homy@yopmail.com
+                    - paragraph [ref=f8e1413]: homy@yopmail.com
+                  - link [ref=f8e1421] [cursor=pointer]:
+                    - /url: tel:+123 456 000
+                    - paragraph [ref=f8e1423]: +123 456 000
+                  - link [ref=f8e1431] [cursor=pointer]:
+                    - /url: https://www.google.com/maps
+                    - paragraph [ref=f8e1433]: New York, USA
+          - generic [ref=f8e1437]:
+            - paragraph [ref=f8e1439]: Copyright@2026
+            - link "Crafted by" [ref=f8e1441] [cursor=pointer]:
+              - /url: https://www.framergeeks.com/
+            - link [ref=f8e1447] [cursor=pointer]:
+              - /url: ./privacy-policy
+              - paragraph [ref=f8e1449]: Privacy Policy
+  - link [ref=f8e1452] [cursor=pointer]:
+    - /url: https://www.framer.com
+    - paragraph [ref=f8e1457]: Create a free website with Framer, the website builder loved by startups, designers and agencies.

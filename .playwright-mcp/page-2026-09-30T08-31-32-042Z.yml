@@ -1,0 +1,299 @@
+- generic [active] [ref=f12e1]:
+  - banner [ref=f12e2]:
+    - generic [ref=f12e3]:
+      - link "Homy Homy" [ref=f12e4] [cursor=pointer]:
+        - /url: /
+        - img "Homy" [ref=f12e5]
+        - generic [ref=f12e6]: Homy
+      - navigation [ref=f12e7]:
+        - link "Properties" [ref=f12e8] [cursor=pointer]:
+          - /url: /properties
+        - link "Services" [ref=f12e9] [cursor=pointer]:
+          - /url: /#services
+        - link "About" [ref=f12e10] [cursor=pointer]:
+          - /url: /about-us
+        - link [ref=f12e11] [cursor=pointer]:
+          - /url: /contact-us
+  - main [ref=f12e15]:
+    - generic [ref=f12e16]:
+      - generic [ref=f12e17]: Property Listings
+      - generic [ref=f12e21]:
+        - heading "Discover homes that fit your lifestyle" [level=1] [ref=f12e22]
+        - paragraph [ref=f12e23]: Explore a range of properties built for comfort, location, and everyday living.
+      - generic [ref=f12e24]:
+        - complementary [ref=f12e25]:
+          - generic [ref=f12e26]:
+            - generic [ref=f12e27]:
+              - heading "Filters" [level=2] [ref=f12e28]
+              - button "Clear all" [ref=f12e29]
+            - textbox "Search..." [ref=f12e35]
+            - generic [ref=f12e36]:
+              - text: Property Status
+              - combobox [ref=f12e38]:
+                - option "All" [selected]
+                - option "For Rent"
+                - option "For Buy"
+            - generic [ref=f12e39]:
+              - text: Location
+              - generic [ref=f12e40]:
+                - button "All" [ref=f12e41]
+                - button "New York" [ref=f12e42]
+                - button "Los Angeles" [ref=f12e43]
+                - button "Miami" [ref=f12e44]
+                - button "Chicago" [ref=f12e45]
+                - button "Seattle" [ref=f12e46]
+                - button "San Francisco" [ref=f12e47]
+            - generic [ref=f12e48]:
+              - text: Price Range
+              - generic [ref=f12e49]:
+                - button "All" [ref=f12e50]
+                - button "$0 - $10,000" [ref=f12e51]
+                - button "$10,000 - $25,000" [ref=f12e52]
+                - button "$25,000 - $50,000" [ref=f12e53]
+                - button "$50,000+" [ref=f12e54]
+            - generic [ref=f12e55]:
+              - text: Property Type
+              - generic [ref=f12e56]:
+                - button "Apartment" [ref=f12e57]
+                - button "House" [ref=f12e58]
+                - button "Condo" [ref=f12e59]
+                - button "Villa" [ref=f12e60]
+                - button "Townhouse" [ref=f12e61]
+            - generic [ref=f12e62]:
+              - text: Bedrooms
+              - generic [ref=f12e63]:
+                - button "1" [ref=f12e64]
+                - button "2" [ref=f12e65]
+                - button "3" [ref=f12e66]
+                - button "4+" [ref=f12e67]
+        - generic [ref=f12e69]:
+          - link [ref=f12e71] [cursor=pointer]:
+            - /url: /properties/asmo-apartments
+            - img "Dallas Townhouse" [ref=f12e73]
+            - generic [ref=f12e74]: For Buy
+            - generic [ref=f12e77]:
+              - heading "Dallas Townhouse" [level=3] [ref=f12e78]
+              - paragraph [ref=f12e79]: $9,800
+              - generic [ref=f12e80]:
+                - generic [ref=f12e81]: "3"
+                - generic [ref=f12e86]: "2"
+                - generic [ref=f12e92]: 980 sq ft
+          - link [ref=f12e97] [cursor=pointer]:
+            - /url: /properties/casa-al-mar
+            - img "Hillside View House" [ref=f12e99]
+            - generic [ref=f12e100]: For Rent
+            - generic [ref=f12e103]:
+              - heading "Hillside View House" [level=3] [ref=f12e104]
+              - paragraph [ref=f12e105]: $9,200
+              - generic [ref=f12e106]:
+                - generic [ref=f12e107]: 4+
+                - generic [ref=f12e112]: "3"
+                - generic [ref=f12e118]: 2,400 sq ft
+          - link [ref=f12e123] [cursor=pointer]:
+            - /url: /properties/casa-de-luxe-chogum-road
+            - img "Downtown Loft" [ref=f12e125]
+            - generic [ref=f12e126]: For Rent
+            - generic [ref=f12e129]:
+              - heading "Downtown Loft" [level=3] [ref=f12e130]
+              - paragraph [ref=f12e131]: $3,200
+              - generic [ref=f12e132]:
+                - generic [ref=f12e133]: "1"
+                - generic [ref=f12e138]: "1"
+                - generic [ref=f12e144]: 1,200 sq ft
+          - link [ref=f12e149] [cursor=pointer]:
+            - /url: /properties/donepaula
+            - img "Midtown Apartment" [ref=f12e151]
+            - generic [ref=f12e152]: For Rent
+            - generic [ref=f12e155]:
+              - heading "Midtown Apartment" [level=3] [ref=f12e156]
+              - paragraph [ref=f12e157]: $5,500
+              - generic [ref=f12e158]:
+                - generic [ref=f12e159]: "2"
+                - generic [ref=f12e164]: "1"
+                - generic [ref=f12e170]: 1,400 sq ft
+          - link [ref=f12e175] [cursor=pointer]:
+            - /url: /properties/floretta-by-ellora
+            - img "Lakefront Condo" [ref=f12e177]
+            - generic [ref=f12e178]: For Buy
+            - generic [ref=f12e181]:
+              - heading "Lakefront Condo" [level=3] [ref=f12e182]
+              - paragraph [ref=f12e183]: $8,900
+              - generic [ref=f12e184]:
+                - generic [ref=f12e185]: "2"
+                - generic [ref=f12e190]: "2"
+                - generic [ref=f12e196]: 2,100 sq ft
+          - link [ref=f12e201] [cursor=pointer]:
+            - /url: /properties/pine-cliff-parra
+            - img "Modern Hillside Home" [ref=f12e203]
+            - generic [ref=f12e204]: For Buy
+            - generic [ref=f12e207]:
+              - heading "Modern Hillside Home" [level=3] [ref=f12e208]
+              - paragraph [ref=f12e209]: $58,000
+              - generic [ref=f12e210]:
+                - generic [ref=f12e211]: "3"
+                - generic [ref=f12e216]: "2"
+                - generic [ref=f12e222]: 3,100 sq ft
+          - link [ref=f12e227] [cursor=pointer]:
+            - /url: /properties/porvorim-bali-style-villas
+            - img "Forest Side Residence" [ref=f12e229]
+            - generic [ref=f12e230]: For Buy
+            - generic [ref=f12e233]:
+              - heading "Forest Side Residence" [level=3] [ref=f12e234]
+              - paragraph [ref=f12e235]: $28,500
+              - generic [ref=f12e236]:
+                - generic [ref=f12e237]: "3"
+                - generic [ref=f12e242]: "2"
+                - generic [ref=f12e248]: 3,800 sq ft
+          - link [ref=f12e253] [cursor=pointer]:
+            - /url: /properties/sea-view-dona-paula-apartments
+            - img "Coral Gables Home" [ref=f12e255]
+            - generic [ref=f12e256]: For Buy
+            - generic [ref=f12e259]:
+              - heading "Coral Gables Home" [level=3] [ref=f12e260]
+              - paragraph [ref=f12e261]: $27,000
+              - generic [ref=f12e262]:
+                - generic [ref=f12e263]: 4+
+                - generic [ref=f12e268]: "3"
+                - generic [ref=f12e274]: 3,500 sq ft
+          - link [ref=f12e279] [cursor=pointer]:
+            - /url: /properties/socorro-flats-and-row-villas
+            - img "Beachfront Villa" [ref=f12e281]
+            - generic [ref=f12e282]: For Buy
+            - generic [ref=f12e285]:
+              - heading "Beachfront Villa" [level=3] [ref=f12e286]
+              - paragraph [ref=f12e287]: $72,000
+              - generic [ref=f12e288]:
+                - generic [ref=f12e289]: 4+
+                - generic [ref=f12e294]: "4"
+                - generic [ref=f12e300]: 5,600 sq ft
+          - link [ref=f12e305] [cursor=pointer]:
+            - /url: /properties/villa-34---socorro-porvorim
+            - img "Emerald Bay Villa" [ref=f12e307]
+            - generic [ref=f12e308]: For Rent
+            - generic [ref=f12e311]:
+              - heading "Emerald Bay Villa" [level=3] [ref=f12e312]
+              - paragraph [ref=f12e313]: $22,000
+              - generic [ref=f12e314]:
+                - generic [ref=f12e315]: 4+
+                - generic [ref=f12e320]: "4"
+                - generic [ref=f12e326]: 5,200 sq ft
+          - link [ref=f12e331] [cursor=pointer]:
+            - /url: /properties/arpora-villa
+            - img "Arpora Villa" [ref=f12e333]
+            - generic [ref=f12e334]: For Buy
+            - generic [ref=f12e337]:
+              - heading "Arpora Villa" [level=3] [ref=f12e338]
+              - paragraph [ref=f12e339]: $55,000,000
+              - generic [ref=f12e340]:
+                - generic [ref=f12e341]: "2"
+                - generic [ref=f12e346]: "2"
+                - generic [ref=f12e352]: 1,850 sq ft
+          - link [ref=f12e357] [cursor=pointer]:
+            - /url: /properties/palm-springs-villa
+            - img "Palm Springs Villa" [ref=f12e359]
+            - generic [ref=f12e360]: For Rent
+            - generic [ref=f12e363]:
+              - heading "Palm Springs Villa" [level=3] [ref=f12e364]
+              - paragraph [ref=f12e365]: $14,500
+              - generic [ref=f12e366]:
+                - generic [ref=f12e367]: 4+
+                - generic [ref=f12e372]: "3"
+                - generic [ref=f12e378]: 4,800 sq ft
+    - generic [ref=f12e383]:
+      - generic [ref=f12e384]:
+        - generic [ref=f12e385]: FAQ
+        - heading "Things You Should Know" [level=2] [ref=f12e389]
+        - paragraph [ref=f12e390]: We've answered the most common questions to help you get started with clarity.
+        - link "Get in Touch" [ref=f12e392] [cursor=pointer]:
+          - /url: /contact-us
+      - generic [ref=f12e396]:
+        - generic [ref=f12e397]:
+          - button "How do I start searching for a home? −" [ref=f12e398]:
+            - generic [ref=f12e399]: How do I start searching for a home?
+            - generic [ref=f12e400]: −
+          - paragraph [ref=f12e402]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=f12e403]:
+          - button "Can I filter homes by budget & location? +" [ref=f12e404]:
+            - generic [ref=f12e405]: Can I filter homes by budget & location?
+            - generic [ref=f12e406]: +
+          - paragraph [ref=f12e407]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=f12e408]:
+          - button "Are the property details accurate? +" [ref=f12e409]:
+            - generic [ref=f12e410]: Are the property details accurate?
+            - generic [ref=f12e411]: +
+          - paragraph [ref=f12e412]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=f12e413]:
+          - button "How do I contact a owner or agent? +" [ref=f12e414]:
+            - generic [ref=f12e415]: How do I contact a owner or agent?
+            - generic [ref=f12e416]: +
+          - paragraph [ref=f12e417]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=f12e418]:
+          - button "Can I explore rental and buying options +" [ref=f12e419]:
+            - generic [ref=f12e420]: Can I explore rental and buying options
+            - generic [ref=f12e421]: +
+          - paragraph [ref=f12e422]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=f12e423]:
+          - button "Do I need an account to use platform +" [ref=f12e424]:
+            - generic [ref=f12e425]: Do I need an account to use platform
+            - generic [ref=f12e426]: +
+          - paragraph [ref=f12e427]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=f12e428]:
+          - button "How do I know if a property is available? +" [ref=f12e429]:
+            - generic [ref=f12e430]: How do I know if a property is available?
+            - generic [ref=f12e431]: +
+          - paragraph [ref=f12e432]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - generic [ref=f12e435]:
+      - generic [ref=f12e436]: Find your next home
+      - heading "Discover homes designed for your lifestyle" [level=2] [ref=f12e441]
+      - paragraph [ref=f12e442]: Explore properties, compare options, and move forward with confidence - everything you need in one place.
+      - link [ref=f12e444] [cursor=pointer]:
+        - /url: /contact-us
+      - img "Modern round house at dusk" [ref=f12e449]
+  - contentinfo [ref=f12e450]:
+    - generic [ref=f12e451]:
+      - generic [ref=f12e452]:
+        - img "Modern home at dusk" [ref=f12e453]
+        - generic [ref=f12e455]: HOMY
+      - generic [ref=f12e456]:
+        - generic [ref=f12e457]:
+          - generic [ref=f12e458]:
+            - link "Homy Homy" [ref=f12e459] [cursor=pointer]:
+              - /url: /
+              - img "Homy" [ref=f12e460]
+              - generic [ref=f12e461]: Homy
+            - paragraph [ref=f12e462]: Find, explore, and choose your next home with a simple and modern experience.
+            - generic [ref=f12e463]:
+              - link "Instagram" [ref=f12e464] [cursor=pointer]:
+                - /url: "#"
+              - link "Facebook" [ref=f12e467] [cursor=pointer]:
+                - /url: "#"
+              - link "X" [ref=f12e470] [cursor=pointer]:
+                - /url: "#"
+              - link "YouTube" [ref=f12e473] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=f12e476]:
+            - heading "Explore" [level=4] [ref=f12e477]
+            - list [ref=f12e478]:
+              - listitem [ref=f12e479]:
+                - link "Properties" [ref=f12e480] [cursor=pointer]:
+                  - /url: /properties
+              - listitem [ref=f12e481]:
+                - link "Services" [ref=f12e482] [cursor=pointer]:
+                  - /url: /#services
+              - listitem [ref=f12e483]:
+                - link "About" [ref=f12e484] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=f12e485]:
+                - link "Contact Us" [ref=f12e486] [cursor=pointer]:
+                  - /url: /contact-us
+          - generic [ref=f12e487]:
+            - heading "Contact" [level=4] [ref=f12e488]
+            - list [ref=f12e489]:
+              - listitem [ref=f12e490]: homy@yopmail.com
+              - listitem [ref=f12e495]: +123 456 000
+              - listitem [ref=f12e499]: New York, USA
+        - generic [ref=f12e504]:
+          - generic [ref=f12e505]: Copyright@2026
+          - generic [ref=f12e506]: Crafted by
+          - link "Privacy Policy" [ref=f12e509] [cursor=pointer]:
+            - /url: "#"

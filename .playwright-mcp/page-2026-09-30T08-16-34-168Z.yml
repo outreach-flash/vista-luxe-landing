@@ -1,0 +1,181 @@
+- generic [active] [ref=f6e1]:
+  - banner [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - link "Homy Homy" [ref=f6e4] [cursor=pointer]:
+        - /url: /
+        - img "Homy" [ref=f6e5]
+        - generic [ref=f6e6]: Homy
+      - navigation [ref=f6e7]:
+        - link "Properties" [ref=f6e8] [cursor=pointer]:
+          - /url: /properties
+        - link "Services" [ref=f6e9] [cursor=pointer]:
+          - /url: /#services
+        - link "About" [ref=f6e10] [cursor=pointer]:
+          - /url: /about-us
+        - link [ref=f6e11] [cursor=pointer]:
+          - /url: /contact-us
+  - main [ref=f6e15]:
+    - generic [ref=f6e16]:
+      - generic [ref=f6e17]:
+        - generic [ref=f6e18]:
+          - generic [ref=f6e19]: About Us
+          - heading "Discover homes that fit your lifestyle" [level=1] [ref=f6e23]
+          - paragraph [ref=f6e24]: We help people discover, explore, and choose homes with clarity - combining design, data, and a modern real estate experience.
+        - img "A-frame modern home" [ref=f6e28]
+      - generic [ref=f6e29]:
+        - generic [ref=f6e30]: Our Clients
+        - generic [ref=f6e33]:
+          - generic [ref=f6e34]:
+            - img "client logo" [ref=f6e36]
+            - img "client logo" [ref=f6e41]
+            - img "client logo" [ref=f6e51]
+            - img "client logo" [ref=f6e57]
+            - img "client logo" [ref=f6e80]
+          - generic [ref=f6e86]:
+            - img "client logo" [ref=f6e88]
+            - img "client logo" [ref=f6e93]
+            - img "client logo" [ref=f6e103]
+            - img "client logo" [ref=f6e109]
+            - img "client logo" [ref=f6e132]
+          - generic [ref=f6e138]:
+            - img "client logo" [ref=f6e140]
+            - img "client logo" [ref=f6e145]
+            - img "client logo" [ref=f6e155]
+            - img "client logo" [ref=f6e161]
+            - img "client logo" [ref=f6e184]
+    - generic [ref=f6e191]:
+      - heading "Smarter choices behind every home decision" [level=2] [ref=f6e192]
+      - paragraph [ref=f6e193]: Designed to make your home search simple, clear, and more confident at every step, helping you explore properties with better understanding and make decisions that truly fit your lifestyle.
+    - generic [ref=f6e194]:
+      - generic [ref=f6e195]:
+        - heading "Built for Better Living" [level=2] [ref=f6e196]
+        - generic [ref=f6e197]:
+          - paragraph [ref=f6e198]: We do more than list homes - we create a smoother way to discover spaces that feel right for your lifestyle.
+          - link [ref=f6e200] [cursor=pointer]:
+            - /url: /contact-us
+      - generic [ref=f6e204]:
+        - img "Confident homeowner" [ref=f6e206]
+        - img "Couple receiving keys" [ref=f6e208]
+        - img "Signing a contract" [ref=f6e210]
+        - img "Couple entering new home" [ref=f6e212]
+        - img "Consultation with agent" [ref=f6e214]
+      - generic:
+        - img "Moving into a new home"
+    - generic [ref=f6e219]:
+      - generic [ref=f6e220]:
+        - heading "Our Mission" [level=3] [ref=f6e221]
+        - paragraph [ref=f6e222]: To make home discovery simple, clear, and accessible - helping people explore properties with confidence and make decisions without confusion.
+      - generic [ref=f6e223]:
+        - heading "Our Vision" [level=3] [ref=f6e224]
+        - paragraph [ref=f6e225]: To create a modern real estate experience where finding the right home feels effortless, transparent, and truly aligned with how people live today.
+    - generic [ref=f6e226]:
+      - generic [ref=f6e227]: Trust & Confidence
+      - generic [ref=f6e231]:
+        - heading "Confidence behind every property decision" [level=2] [ref=f6e232]
+        - generic [ref=f6e233]:
+          - paragraph [ref=f6e234]: Built to make modern home discovery simple, transparent, and more confident for every user.
+          - link [ref=f6e236] [cursor=pointer]:
+            - /url: /contact-us
+    - generic [ref=f6e241]:
+      - generic [ref=f6e242]:
+        - generic [ref=f6e243]: FAQ
+        - heading "Things You Should Know" [level=2] [ref=f6e247]
+        - paragraph [ref=f6e248]: We've answered the most common questions to help you get started with clarity.
+        - link "Get in Touch" [ref=f6e250] [cursor=pointer]:
+          - /url: /contact-us
+      - generic [ref=f6e254]:
+        - generic [ref=f6e255]:
+          - button "How do I start searching for a home? −" [ref=f6e256]:
+            - generic [ref=f6e257]: How do I start searching for a home?
+            - generic [ref=f6e258]: −
+          - paragraph [ref=f6e260]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=f6e261]:
+          - button "Can I filter homes by budget & location? +" [ref=f6e262]:
+            - generic [ref=f6e263]: Can I filter homes by budget & location?
+            - generic [ref=f6e264]: +
+          - paragraph [ref=f6e265]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=f6e266]:
+          - button "Are the property details accurate? +" [ref=f6e267]:
+            - generic [ref=f6e268]: Are the property details accurate?
+            - generic [ref=f6e269]: +
+          - paragraph [ref=f6e270]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=f6e271]:
+          - button "How do I contact a owner or agent? +" [ref=f6e272]:
+            - generic [ref=f6e273]: How do I contact a owner or agent?
+            - generic [ref=f6e274]: +
+          - paragraph [ref=f6e275]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=f6e276]:
+          - button "Can I explore rental and buying options +" [ref=f6e277]:
+            - generic [ref=f6e278]: Can I explore rental and buying options
+            - generic [ref=f6e279]: +
+          - paragraph [ref=f6e280]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=f6e281]:
+          - button "Do I need an account to use platform +" [ref=f6e282]:
+            - generic [ref=f6e283]: Do I need an account to use platform
+            - generic [ref=f6e284]: +
+          - paragraph [ref=f6e285]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=f6e286]:
+          - button "How do I know if a property is available? +" [ref=f6e287]:
+            - generic [ref=f6e288]: How do I know if a property is available?
+            - generic [ref=f6e289]: +
+          - paragraph [ref=f6e290]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - generic [ref=f6e293]:
+      - generic [ref=f6e294]: Find your next home
+      - heading "Discover homes designed for your lifestyle" [level=2] [ref=f6e299]
+      - paragraph [ref=f6e300]: Explore properties, compare options, and move forward with confidence - everything you need in one place.
+      - link [ref=f6e302] [cursor=pointer]:
+        - /url: /contact-us
+      - img "Modern round house at dusk" [ref=f6e307]
+  - contentinfo [ref=f6e308]:
+    - generic [ref=f6e309]:
+      - generic [ref=f6e310]:
+        - img "Modern home at dusk" [ref=f6e311]
+        - generic [ref=f6e313]: HOMY
+      - generic [ref=f6e314]:
+        - generic [ref=f6e315]:
+          - generic [ref=f6e316]:
+            - link "Homy Homy" [ref=f6e317] [cursor=pointer]:
+              - /url: /
+              - img "Homy" [ref=f6e318]
+              - generic [ref=f6e319]: Homy
+            - paragraph [ref=f6e320]: Find, explore, and choose your next home with a simple and modern experience.
+            - generic [ref=f6e321]:
+              - link "Instagram" [ref=f6e322] [cursor=pointer]:
+                - /url: "#"
+              - link "Facebook" [ref=f6e325] [cursor=pointer]:
+                - /url: "#"
+              - link "X" [ref=f6e328] [cursor=pointer]:
+                - /url: "#"
+              - link "YouTube" [ref=f6e331] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=f6e334]:
+            - heading "Explore" [level=4] [ref=f6e335]
+            - list [ref=f6e336]:
+              - listitem [ref=f6e337]:
+                - link "Properties" [ref=f6e338] [cursor=pointer]:
+                  - /url: /properties
+              - listitem [ref=f6e339]:
+                - link "Services" [ref=f6e340] [cursor=pointer]:
+                  - /url: /#services
+              - listitem [ref=f6e341]:
+                - link "About" [ref=f6e342] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=f6e343]:
+                - link "Contact Us" [ref=f6e344] [cursor=pointer]:
+                  - /url: /contact-us
+          - generic [ref=f6e345]:
+            - heading "Contact" [level=4] [ref=f6e346]
+            - list [ref=f6e347]:
+              - listitem [ref=f6e348]: homy@yopmail.com
+              - listitem [ref=f6e353]: +123 456 000
+              - listitem [ref=f6e357]: New York, USA
+        - generic [ref=f6e362]:
+          - generic [ref=f6e363]: Copyright@2026
+          - generic [ref=f6e364]: Crafted by
+          - link "Privacy Policy" [ref=f6e367] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=f6e370]:
+    - button [ref=f6e371]
+    - button [ref=f6e377]
+    - button [ref=f6e381]
+    - button [ref=f6e386]

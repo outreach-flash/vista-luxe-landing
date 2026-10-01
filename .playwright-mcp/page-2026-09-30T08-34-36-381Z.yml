@@ -1,0 +1,172 @@
+- generic [active] [ref=f16e1]:
+  - banner [ref=f16e2]:
+    - generic [ref=f16e3]:
+      - link "Homy Homy" [ref=f16e4] [cursor=pointer]:
+        - /url: /
+        - img "Homy" [ref=f16e5]
+        - generic [ref=f16e6]: Homy
+      - navigation [ref=f16e7]:
+        - link "Properties" [ref=f16e8] [cursor=pointer]:
+          - /url: /properties
+        - link "Services" [ref=f16e9] [cursor=pointer]:
+          - /url: /#services
+        - link "About" [ref=f16e10] [cursor=pointer]:
+          - /url: /about-us
+        - link [ref=f16e11] [cursor=pointer]:
+          - /url: /contact-us
+  - main [ref=f16e15]:
+    - generic [ref=f16e16]:
+      - generic [ref=f16e17]: For Rent
+      - generic [ref=f16e20]:
+        - generic [ref=f16e21]:
+          - heading "Downtown Loft" [level=1] [ref=f16e22]
+          - paragraph [ref=f16e23]: West Loop Street, Fulton Market, Chicago
+        - paragraph [ref=f16e28]: ₹3,200
+      - generic [ref=f16e29]:
+        - img "Downtown Loft" [ref=f16e31]
+        - generic [ref=f16e32]:
+          - img "Downtown Loft" [ref=f16e34]
+          - img "Downtown Loft" [ref=f16e36]
+      - generic [ref=f16e37]:
+        - generic [ref=f16e38]:
+          - heading "Description" [level=2] [ref=f16e39]
+          - paragraph [ref=f16e40]: Industrial-chic loft in the heart of the West Loop with exposed brick, high ceilings, and walkable access to dining.
+          - generic [ref=f16e42]:
+            - generic [ref=f16e43]:
+              - generic [ref=f16e44]: Bedrooms
+              - generic [ref=f16e45]: "1"
+            - generic [ref=f16e46]:
+              - generic [ref=f16e47]: Bathrooms
+              - generic [ref=f16e48]: "1"
+            - generic [ref=f16e49]:
+              - generic [ref=f16e50]: Square Area
+              - generic [ref=f16e51]: 1,200 sq ft
+            - generic [ref=f16e52]:
+              - generic [ref=f16e53]: Year Built
+              - generic [ref=f16e54]: "2025"
+            - generic [ref=f16e55]:
+              - generic [ref=f16e56]: Property Type
+              - generic [ref=f16e57]: Apartment
+          - generic [ref=f16e58]:
+            - heading "Amenities & Features" [level=2] [ref=f16e59]
+            - generic [ref=f16e60]:
+              - generic [ref=f16e61]: Elevator
+              - generic [ref=f16e62]: Security
+              - generic [ref=f16e63]: Parking
+              - generic [ref=f16e64]: Air Conditioning
+              - generic [ref=f16e65]: Balcony
+          - generic [ref=f16e66]:
+            - heading "Floor Plans" [level=2] [ref=f16e67]
+            - img "Downtown Loft floor plan" [ref=f16e69]
+        - generic [ref=f16e71]:
+          - heading "Like this property?" [level=3] [ref=f16e72]
+          - paragraph [ref=f16e73]: We'd love to help you explore this home. Reach out to get more details or book a visit.
+          - generic [ref=f16e74]:
+            - generic [ref=f16e75]: Verified Property Listings
+            - generic [ref=f16e78]: Quality Living Spaces
+            - generic [ref=f16e81]: Smart Real Estate Choice
+          - link [ref=f16e84] [cursor=pointer]:
+            - /url: /contact-us
+    - generic [ref=f16e89]:
+      - generic [ref=f16e90]:
+        - generic [ref=f16e91]: FAQ
+        - heading "Things You Should Know" [level=2] [ref=f16e95]
+        - paragraph [ref=f16e96]: We've answered the most common questions to help you get started with clarity.
+        - link "Get in Touch" [ref=f16e98] [cursor=pointer]:
+          - /url: /contact-us
+      - generic [ref=f16e102]:
+        - generic [ref=f16e103]:
+          - button "How do I start searching for a home? −" [ref=f16e104]:
+            - generic [ref=f16e105]: How do I start searching for a home?
+            - generic [ref=f16e106]: −
+          - paragraph [ref=f16e108]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=f16e109]:
+          - button "Can I filter homes by budget & location? +" [ref=f16e110]:
+            - generic [ref=f16e111]: Can I filter homes by budget & location?
+            - generic [ref=f16e112]: +
+          - paragraph [ref=f16e113]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=f16e114]:
+          - button "Are the property details accurate? +" [ref=f16e115]:
+            - generic [ref=f16e116]: Are the property details accurate?
+            - generic [ref=f16e117]: +
+          - paragraph [ref=f16e118]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=f16e119]:
+          - button "How do I contact a owner or agent? +" [ref=f16e120]:
+            - generic [ref=f16e121]: How do I contact a owner or agent?
+            - generic [ref=f16e122]: +
+          - paragraph [ref=f16e123]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=f16e124]:
+          - button "Can I explore rental and buying options +" [ref=f16e125]:
+            - generic [ref=f16e126]: Can I explore rental and buying options
+            - generic [ref=f16e127]: +
+          - paragraph [ref=f16e128]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=f16e129]:
+          - button "Do I need an account to use platform +" [ref=f16e130]:
+            - generic [ref=f16e131]: Do I need an account to use platform
+            - generic [ref=f16e132]: +
+          - paragraph [ref=f16e133]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=f16e134]:
+          - button "How do I know if a property is available? +" [ref=f16e135]:
+            - generic [ref=f16e136]: How do I know if a property is available?
+            - generic [ref=f16e137]: +
+          - paragraph [ref=f16e138]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - generic [ref=f16e141]:
+      - generic [ref=f16e142]: Find your next home
+      - heading "Discover homes designed for your lifestyle" [level=2] [ref=f16e147]
+      - paragraph [ref=f16e148]: Explore properties, compare options, and move forward with confidence - everything you need in one place.
+      - link [ref=f16e150] [cursor=pointer]:
+        - /url: /contact-us
+      - img "Modern round house at dusk" [ref=f16e155]
+  - contentinfo [ref=f16e156]:
+    - generic [ref=f16e157]:
+      - generic [ref=f16e158]:
+        - img "Modern home at dusk" [ref=f16e159]
+        - generic [ref=f16e161]: HOMY
+      - generic [ref=f16e162]:
+        - generic [ref=f16e163]:
+          - generic [ref=f16e164]:
+            - link "Homy Homy" [ref=f16e165] [cursor=pointer]:
+              - /url: /
+              - img "Homy" [ref=f16e166]
+              - generic [ref=f16e167]: Homy
+            - paragraph [ref=f16e168]: Find, explore, and choose your next home with a simple and modern experience.
+            - generic [ref=f16e169]:
+              - link "Instagram" [ref=f16e170] [cursor=pointer]:
+                - /url: "#"
+              - link "Facebook" [ref=f16e173] [cursor=pointer]:
+                - /url: "#"
+              - link "X" [ref=f16e176] [cursor=pointer]:
+                - /url: "#"
+              - link "YouTube" [ref=f16e179] [cursor=pointer]:
+                - /url: "#"
+          - generic [ref=f16e182]:
+            - heading "Explore" [level=4] [ref=f16e183]
+            - list [ref=f16e184]:
+              - listitem [ref=f16e185]:
+                - link "Properties" [ref=f16e186] [cursor=pointer]:
+                  - /url: /properties
+              - listitem [ref=f16e187]:
+                - link "Services" [ref=f16e188] [cursor=pointer]:
+                  - /url: /#services
+              - listitem [ref=f16e189]:
+                - link "About" [ref=f16e190] [cursor=pointer]:
+                  - /url: /about-us
+              - listitem [ref=f16e191]:
+                - link "Contact Us" [ref=f16e192] [cursor=pointer]:
+                  - /url: /contact-us
+          - generic [ref=f16e193]:
+            - heading "Contact" [level=4] [ref=f16e194]
+            - list [ref=f16e195]:
+              - listitem [ref=f16e196]: homy@yopmail.com
+              - listitem [ref=f16e201]: +123 456 000
+              - listitem [ref=f16e205]: New York, USA
+        - generic [ref=f16e210]:
+          - generic [ref=f16e211]: Copyright@2026
+          - generic [ref=f16e212]: Crafted by
+          - link "Privacy Policy" [ref=f16e215] [cursor=pointer]:
+            - /url: "#"
+  - generic [ref=f16e218]:
+    - button [ref=f16e219]
+    - button [ref=f16e225]
+    - button [ref=f16e229]
+    - button [ref=f16e234]

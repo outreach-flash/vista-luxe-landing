@@ -1,0 +1,384 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - navigation [ref=e6]:
+      - generic [ref=e7]:
+        - link [ref=e9] [cursor=pointer]:
+          - /url: ../
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - link [ref=e17] [cursor=pointer]:
+              - /url: ../properties
+              - paragraph [ref=e19]: PROPERTIES
+            - link [ref=e23] [cursor=pointer]:
+              - /url: ../#services
+              - paragraph [ref=e25]: SERVICES
+            - link [ref=e29] [cursor=pointer]:
+              - /url: ../about-us
+              - paragraph [ref=e31]: ABOUT
+          - link [ref=e35] [cursor=pointer]:
+            - /url: ../contact-us
+            - paragraph [ref=e37]: Contact us
+    - generic [ref=e41]:
+      - main [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]:
+            - generic [ref=e45]:
+              - paragraph [ref=e52]:
+                - generic [ref=e53]:
+                  - generic [ref=e54]: F
+                  - generic [ref=e55]: o
+                  - generic [ref=e56]: r
+                - generic [ref=e57]:
+                  - generic [ref=e58]: R
+                  - generic [ref=e59]: e
+                  - generic [ref=e60]: "n"
+                  - generic [ref=e61]: t
+              - heading "Downtown Loft" [level=1] [ref=e63]
+              - generic [ref=e64]:
+                - paragraph [ref=e67]: West Loop Street, Fulton Market
+                - paragraph [ref=e69]: ","
+                - paragraph [ref=e71]: Chicago
+            - heading "$3,200" [level=3] [ref=e73]
+          - generic [ref=e75]:
+            - img "Charming country house with glowing windows and lush garden at sunset." [ref=e79]
+            - generic [ref=e80]:
+              - img "Modern living room with large windows, stone accents, and wooden floors, featuring a cozy seating area and dining space." [ref=e84]
+              - img "Cozy bedroom with warm lighting, large windows, a plush bed, and wooden accents, creating a serene atmosphere." [ref=e88]
+      - generic [ref=e89]:
+        - generic [ref=e90]:
+          - generic [ref=e91]:
+            - heading "Description" [level=5] [ref=e93]
+            - paragraph [ref=e96]: Industrial-chic loft in the heart of the West Loop with exposed brick, high ceilings, and walkable access to dining.
+          - generic [ref=e97]:
+            - generic [ref=e98]:
+              - paragraph [ref=e103]: Bedrooms
+              - paragraph [ref=e105]: "1"
+            - generic [ref=e107]:
+              - paragraph [ref=e112]: Bathrooms
+              - paragraph [ref=e114]: "1"
+            - generic [ref=e116]:
+              - paragraph [ref=e121]: Square Area
+              - paragraph [ref=e123]: 1,200
+            - generic [ref=e125]:
+              - paragraph [ref=e130]: Year Built
+              - paragraph [ref=e132]: "2025"
+            - generic [ref=e134]:
+              - paragraph [ref=e139]: Property Type
+              - paragraph [ref=e141]: Apartment
+            - generic [ref=e143]:
+              - paragraph [ref=e148]: Property Type
+              - paragraph [ref=e150]: Apartment
+          - generic [ref=e151]:
+            - heading "Amenities & Features" [level=5] [ref=e153]:
+              - generic [ref=e154]: Amenities
+              - generic [ref=e155]: "&"
+              - generic [ref=e156]: Features
+            - generic [ref=e157]:
+              - paragraph [ref=e161]: Elevator
+              - paragraph [ref=e165]: Security
+              - paragraph [ref=e169]: Parking
+              - paragraph [ref=e173]: Air Conditioning
+              - paragraph [ref=e177]: Balcony
+          - generic [ref=e178]:
+            - heading "Floor Plans" [level=5] [ref=e180]:
+              - generic [ref=e181]: Floor
+              - generic [ref=e182]: Plans
+            - img "Modern apartment floor plan with pool, patio, and garden." [ref=e186]
+        - generic [ref=e189]:
+          - generic [ref=e192]:
+            - heading "Like this property?" [level=5] [ref=e194]
+            - paragraph [ref=e196]: We’d love to help you explore this home. Reach out to get more details or book a visit.
+          - generic [ref=e197]:
+            - paragraph [ref=e200]: Verified Property Listings
+            - paragraph [ref=e203]: Quality Living Spaces
+            - paragraph [ref=e206]: Smart Real Estate Choice
+            - link [ref=e208] [cursor=pointer]:
+              - /url: ../contact-us
+              - paragraph [ref=e210]: Get More Details
+    - generic [ref=e215]:
+      - generic [ref=e216]:
+        - paragraph [ref=e223]: FAQ
+        - heading "Things You Should Know" [level=3] [ref=e225]:
+          - generic [ref=e226]: Things
+          - generic [ref=e227]: You
+          - generic [ref=e228]: Should
+          - generic [ref=e229]: Know
+        - paragraph [ref=e231]:
+          - generic [ref=e232]:
+            - generic [ref=e233]: W
+            - generic [ref=e234]: e
+            - generic [ref=e235]: ’
+            - generic [ref=e236]: v
+            - generic [ref=e237]: e
+          - generic [ref=e238]:
+            - generic [ref=e239]: a
+            - generic [ref=e240]: "n"
+            - generic [ref=e241]: s
+            - generic [ref=e242]: w
+            - generic [ref=e243]: e
+            - generic [ref=e244]: r
+            - generic [ref=e245]: e
+            - generic [ref=e246]: d
+          - generic [ref=e247]:
+            - generic [ref=e248]: t
+            - generic [ref=e249]: h
+            - generic [ref=e250]: e
+          - generic [ref=e251]:
+            - generic [ref=e252]: m
+            - generic [ref=e253]: o
+            - generic [ref=e254]: s
+            - generic [ref=e255]: t
+          - generic [ref=e256]:
+            - generic [ref=e257]: c
+            - generic [ref=e258]: o
+            - generic [ref=e259]: m
+            - generic [ref=e260]: m
+            - generic [ref=e261]: o
+            - generic [ref=e262]: "n"
+          - generic [ref=e263]:
+            - generic [ref=e264]: q
+            - generic [ref=e265]: u
+            - generic [ref=e266]: e
+            - generic [ref=e267]: s
+            - generic [ref=e268]: t
+            - generic [ref=e269]: i
+            - generic [ref=e270]: o
+            - generic [ref=e271]: "n"
+            - generic [ref=e272]: s
+          - generic [ref=e273]:
+            - generic [ref=e274]: t
+            - generic [ref=e275]: o
+          - generic [ref=e276]:
+            - generic [ref=e277]: h
+            - generic [ref=e278]: e
+            - generic [ref=e279]: l
+            - generic [ref=e280]: p
+          - generic [ref=e281]:
+            - generic [ref=e282]: "y"
+            - generic [ref=e283]: o
+            - generic [ref=e284]: u
+          - generic [ref=e285]:
+            - generic [ref=e286]: g
+            - generic [ref=e287]: e
+            - generic [ref=e288]: t
+          - generic [ref=e289]:
+            - generic [ref=e290]: s
+            - generic [ref=e291]: t
+            - generic [ref=e292]: a
+            - generic [ref=e293]: r
+            - generic [ref=e294]: t
+            - generic [ref=e295]: e
+            - generic [ref=e296]: d
+          - generic [ref=e297]:
+            - generic [ref=e298]: w
+            - generic [ref=e299]: i
+            - generic [ref=e300]: t
+            - generic [ref=e301]: h
+          - generic [ref=e302]:
+            - generic [ref=e303]: c
+            - generic [ref=e304]: l
+            - generic [ref=e305]: a
+            - generic [ref=e306]: r
+            - generic [ref=e307]: i
+            - generic [ref=e308]: t
+            - generic [ref=e309]: "y"
+            - generic [ref=e310]: .
+      - generic [ref=e314]:
+        - generic [ref=e316] [cursor=pointer]:
+          - paragraph [ref=e319]: How do I start searching for a home?
+          - paragraph [ref=e326]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=e328] [cursor=pointer]:
+          - paragraph [ref=e331]: Can I filter homes by budget & location?
+          - paragraph [ref=e338]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=e340] [cursor=pointer]:
+          - paragraph [ref=e343]: Are the property details accurate?
+          - paragraph [ref=e350]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=e352] [cursor=pointer]:
+          - paragraph [ref=e355]: How do I contact a owner or agent?
+          - paragraph [ref=e362]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=e364] [cursor=pointer]:
+          - paragraph [ref=e367]: Can I explore rental and buying options
+          - paragraph [ref=e374]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=e376] [cursor=pointer]:
+          - paragraph [ref=e379]: Do I need an account to use platform
+          - paragraph [ref=e386]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=e388] [cursor=pointer]:
+          - paragraph [ref=e391]: How do I know if a property is available?
+          - paragraph [ref=e398]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - contentinfo [ref=e401]:
+      - generic [ref=e403]:
+        - generic [ref=e404]:
+          - generic [ref=e405]:
+            - paragraph [ref=e411]: Find your next home
+            - heading "Discover homes designed for your lifestyle" [level=3] [ref=e413]:
+              - generic [ref=e414]: Discover
+              - generic [ref=e415]: homes
+              - generic [ref=e416]: designed
+              - generic [ref=e417]: for
+              - generic [ref=e418]: your
+              - generic [ref=e419]: lifestyle
+            - paragraph [ref=e421]:
+              - generic [ref=e422]:
+                - generic [ref=e423]: E
+                - generic [ref=e424]: x
+                - generic [ref=e425]: p
+                - generic [ref=e426]: l
+                - generic [ref=e427]: o
+                - generic [ref=e428]: r
+                - generic [ref=e429]: e
+              - generic [ref=e430]:
+                - generic [ref=e431]: p
+                - generic [ref=e432]: r
+                - generic [ref=e433]: o
+                - generic [ref=e434]: p
+                - generic [ref=e435]: e
+                - generic [ref=e436]: r
+                - generic [ref=e437]: t
+                - generic [ref=e438]: i
+                - generic [ref=e439]: e
+                - generic [ref=e440]: s
+                - generic [ref=e441]: ","
+              - generic [ref=e442]:
+                - generic [ref=e443]: c
+                - generic [ref=e444]: o
+                - generic [ref=e445]: m
+                - generic [ref=e446]: p
+                - generic [ref=e447]: a
+                - generic [ref=e448]: r
+                - generic [ref=e449]: e
+              - generic [ref=e450]:
+                - generic [ref=e451]: o
+                - generic [ref=e452]: p
+                - generic [ref=e453]: t
+                - generic [ref=e454]: i
+                - generic [ref=e455]: o
+                - generic [ref=e456]: "n"
+                - generic [ref=e457]: s
+                - generic [ref=e458]: ","
+              - generic [ref=e459]:
+                - generic [ref=e460]: a
+                - generic [ref=e461]: "n"
+                - generic [ref=e462]: d
+              - generic [ref=e463]:
+                - generic [ref=e464]: m
+                - generic [ref=e465]: o
+                - generic [ref=e466]: v
+                - generic [ref=e467]: e
+              - generic [ref=e468]:
+                - generic [ref=e469]: f
+                - generic [ref=e470]: o
+                - generic [ref=e471]: r
+                - generic [ref=e472]: w
+                - generic [ref=e473]: a
+                - generic [ref=e474]: r
+                - generic [ref=e475]: d
+              - generic [ref=e476]:
+                - generic [ref=e477]: w
+                - generic [ref=e478]: i
+                - generic [ref=e479]: t
+                - generic [ref=e480]: h
+              - generic [ref=e481]:
+                - generic [ref=e482]: c
+                - generic [ref=e483]: o
+                - generic [ref=e484]: "n"
+                - generic [ref=e485]: f
+                - generic [ref=e486]: i
+                - generic [ref=e487]: d
+                - generic [ref=e488]: e
+                - generic [ref=e489]: "n"
+                - generic [ref=e490]: c
+                - generic [ref=e491]: e
+              - generic [ref=e492]: "-"
+              - generic [ref=e494]:
+                - generic [ref=e495]: e
+                - generic [ref=e496]: v
+                - generic [ref=e497]: e
+                - generic [ref=e498]: r
+                - generic [ref=e499]: "y"
+                - generic [ref=e500]: t
+                - generic [ref=e501]: h
+                - generic [ref=e502]: i
+                - generic [ref=e503]: "n"
+                - generic [ref=e504]: g
+              - generic [ref=e505]:
+                - generic [ref=e506]: "y"
+                - generic [ref=e507]: o
+                - generic [ref=e508]: u
+              - generic [ref=e509]:
+                - generic [ref=e510]: "n"
+                - generic [ref=e511]: e
+                - generic [ref=e512]: e
+                - generic [ref=e513]: d
+              - generic [ref=e514]:
+                - generic [ref=e515]: i
+                - generic [ref=e516]: "n"
+              - generic [ref=e517]:
+                - generic [ref=e518]: o
+                - generic [ref=e519]: "n"
+                - generic [ref=e520]: e
+              - generic [ref=e521]:
+                - generic [ref=e522]: p
+                - generic [ref=e523]: l
+                - generic [ref=e524]: a
+                - generic [ref=e525]: c
+                - generic [ref=e526]: e
+                - generic [ref=e527]: .
+            - link [ref=e529] [cursor=pointer]:
+              - /url: ../contact-us
+              - paragraph [ref=e531]: Get in Touch
+          - img "Modern, glass-walled house at night, reflecting on a wet driveway." [ref=e537]
+          - img "Cloudy sky with grey-blue overcast and soft light." [ref=e540]
+        - generic [ref=e546]:
+          - generic [ref=e547]:
+            - generic [ref=e548]:
+              - generic [ref=e549]:
+                - link [ref=e551] [cursor=pointer]:
+                  - /url: ../#hero
+                - paragraph [ref=e557]: Find, explore, and choose your next home with a simple and modern experience.
+              - generic [ref=e558]:
+                - link [ref=e559] [cursor=pointer]:
+                  - /url: https://www.instagram.com/
+                - link [ref=e561] [cursor=pointer]:
+                  - /url: https://www.facebook.com/
+                - link [ref=e563] [cursor=pointer]:
+                  - /url: https://x.com/
+                - link [ref=e565] [cursor=pointer]:
+                  - /url: https://www.youtube.com/
+            - generic [ref=e567]:
+              - generic [ref=e568]:
+                - paragraph [ref=e570]: Explore
+                - generic [ref=e571]:
+                  - link [ref=e573] [cursor=pointer]:
+                    - /url: ../properties
+                    - paragraph [ref=e575]: Properties
+                  - link [ref=e579] [cursor=pointer]:
+                    - /url: ../#services
+                    - paragraph [ref=e581]: Services
+                  - link [ref=e585] [cursor=pointer]:
+                    - /url: ../about-us
+                    - paragraph [ref=e587]: About
+                  - link [ref=e591] [cursor=pointer]:
+                    - /url: ../contact-us
+                    - paragraph [ref=e593]: Contact Us
+              - generic [ref=e596]:
+                - paragraph [ref=e598]: Contact
+                - generic [ref=e599]:
+                  - link [ref=e605] [cursor=pointer]:
+                    - /url: mailto:homy@yopmail.com
+                    - paragraph [ref=e607]: homy@yopmail.com
+                  - link [ref=e615] [cursor=pointer]:
+                    - /url: tel:+123 456 000
+                    - paragraph [ref=e617]: +123 456 000
+                  - link [ref=e625] [cursor=pointer]:
+                    - /url: https://www.google.com/maps
+                    - paragraph [ref=e627]: New York, USA
+          - generic [ref=e631]:
+            - paragraph [ref=e633]: Copyright@2026
+            - link "Crafted by" [ref=e635] [cursor=pointer]:
+              - /url: https://www.framergeeks.com/
+            - link [ref=e641] [cursor=pointer]:
+              - /url: ../privacy-policy
+              - paragraph [ref=e643]: Privacy Policy
+  - link [ref=e646] [cursor=pointer]:
+    - /url: https://www.framer.com
+    - paragraph [ref=e651]: Create a free website with Framer, the website builder loved by startups, designers and agencies.

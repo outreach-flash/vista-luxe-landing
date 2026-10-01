@@ -1,0 +1,448 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e3]:
+    - navigation [ref=f12e6]:
+      - generic [ref=f12e7]:
+        - link [ref=f12e9] [cursor=pointer]:
+          - /url: ./
+        - generic [ref=f12e14]:
+          - generic [ref=f12e15]:
+            - link [ref=f12e17] [cursor=pointer]:
+              - /url: ./properties
+              - paragraph [ref=f12e19]: PROPERTIES
+            - link [ref=f12e23] [cursor=pointer]:
+              - /url: ./#services
+              - paragraph [ref=f12e25]: SERVICES
+            - link [ref=f12e29] [cursor=pointer]:
+              - /url: ./about-us
+              - paragraph [ref=f12e31]: ABOUT
+          - link [ref=f12e35] [cursor=pointer]:
+            - /url: ./contact-us
+            - paragraph [ref=f12e37]: Contact us
+    - generic [ref=f12e41]:
+      - main [ref=f12e42]:
+        - generic [ref=f12e44]:
+          - generic [ref=f12e45]:
+            - paragraph [ref=f12e52]: CONTACT US
+            - heading "Let’s help you find the right home" [level=1] [ref=f12e54]:
+              - generic [ref=f12e55]: Let’s
+              - generic [ref=f12e56]: help
+              - generic [ref=f12e57]: you
+              - generic [ref=f12e58]: find
+              - generic [ref=f12e59]: the
+              - generic [ref=f12e60]: right
+              - generic [ref=f12e61]: home
+          - paragraph [ref=f12e63]:
+            - generic [ref=f12e64]:
+              - generic [ref=f12e65]: W
+              - generic [ref=f12e66]: h
+              - generic [ref=f12e67]: e
+              - generic [ref=f12e68]: t
+              - generic [ref=f12e69]: h
+              - generic [ref=f12e70]: e
+              - generic [ref=f12e71]: r
+            - generic [ref=f12e72]:
+              - generic [ref=f12e73]: "y"
+              - generic [ref=f12e74]: o
+              - generic [ref=f12e75]: u
+              - generic [ref=f12e76]: "'"
+              - generic [ref=f12e77]: r
+              - generic [ref=f12e78]: e
+            - generic [ref=f12e79]:
+              - generic [ref=f12e80]: l
+              - generic [ref=f12e81]: o
+              - generic [ref=f12e82]: o
+              - generic [ref=f12e83]: k
+              - generic [ref=f12e84]: i
+              - generic [ref=f12e85]: "n"
+              - generic [ref=f12e86]: g
+            - generic [ref=f12e87]:
+              - generic [ref=f12e88]: t
+              - generic [ref=f12e89]: o
+            - generic [ref=f12e90]:
+              - generic [ref=f12e91]: b
+              - generic [ref=f12e92]: u
+              - generic [ref=f12e93]: "y"
+              - generic [ref=f12e94]: ","
+            - generic [ref=f12e95]:
+              - generic [ref=f12e96]: r
+              - generic [ref=f12e97]: e
+              - generic [ref=f12e98]: "n"
+              - generic [ref=f12e99]: t
+              - generic [ref=f12e100]: ","
+            - generic [ref=f12e101]:
+              - generic [ref=f12e102]: o
+              - generic [ref=f12e103]: r
+            - generic [ref=f12e104]:
+              - generic [ref=f12e105]: j
+              - generic [ref=f12e106]: u
+              - generic [ref=f12e107]: s
+              - generic [ref=f12e108]: t
+            - generic [ref=f12e109]:
+              - generic [ref=f12e110]: e
+              - generic [ref=f12e111]: x
+              - generic [ref=f12e112]: p
+              - generic [ref=f12e113]: l
+              - generic [ref=f12e114]: o
+              - generic [ref=f12e115]: r
+              - generic [ref=f12e116]: e
+              - generic [ref=f12e117]: ","
+            - generic [ref=f12e118]:
+              - generic [ref=f12e119]: w
+              - generic [ref=f12e120]: e
+              - generic [ref=f12e121]: ’
+              - generic [ref=f12e122]: l
+              - generic [ref=f12e123]: l
+            - generic [ref=f12e124]:
+              - generic [ref=f12e125]: g
+              - generic [ref=f12e126]: u
+              - generic [ref=f12e127]: i
+              - generic [ref=f12e128]: d
+              - generic [ref=f12e129]: e
+            - generic [ref=f12e130]:
+              - generic [ref=f12e131]: e
+              - generic [ref=f12e132]: v
+              - generic [ref=f12e133]: e
+              - generic [ref=f12e134]: r
+              - generic [ref=f12e135]: "y"
+            - generic [ref=f12e136]:
+              - generic [ref=f12e137]: s
+              - generic [ref=f12e138]: t
+              - generic [ref=f12e139]: e
+              - generic [ref=f12e140]: p
+            - generic [ref=f12e141]:
+              - generic [ref=f12e142]: w
+              - generic [ref=f12e143]: i
+              - generic [ref=f12e144]: t
+              - generic [ref=f12e145]: h
+            - generic [ref=f12e146]:
+              - generic [ref=f12e147]: c
+              - generic [ref=f12e148]: l
+              - generic [ref=f12e149]: a
+              - generic [ref=f12e150]: r
+              - generic [ref=f12e151]: i
+              - generic [ref=f12e152]: t
+              - generic [ref=f12e153]: "y"
+              - generic [ref=f12e154]: .
+      - generic [ref=f12e155]:
+        - generic [ref=f12e156]:
+          - generic [ref=f12e159]:
+            - heading "Our Commitment" [level=6] [ref=f12e161]
+            - paragraph [ref=f12e163]: Helping you discover homes that truly match your lifestyle - with clarity, trust, and simplicity.
+          - img "Two-story white house with a porch and dark roof against a black background." [ref=f12e167]
+        - generic [ref=f12e169]:
+          - generic [ref=f12e171]:
+            - generic [ref=f12e172]: Full Name*
+            - textbox "Full Name*" [ref=f12e175]:
+              - /placeholder: Jhon Doe
+          - generic [ref=f12e177]:
+            - generic [ref=f12e178]: Email*
+            - textbox "Email*" [ref=f12e181]:
+              - /placeholder: johon@gamil.cpm
+          - generic [ref=f12e183]:
+            - generic [ref=f12e184]: Subject
+            - textbox "Subject" [ref=f12e187]:
+              - /placeholder: Enter subject...
+          - generic [ref=f12e189]:
+            - generic [ref=f12e190]: Message*
+            - textbox "Message*" [ref=f12e193]:
+              - /placeholder: Enter your message...
+          - button [ref=f12e196] [cursor=pointer]:
+            - paragraph [ref=f12e198]: Submit
+      - region "Map with multiple locations" [ref=f12e200]:
+        - generic:
+          - button "Marker" [ref=f12e201] [cursor=pointer]
+          - generic [ref=f12e202]:
+            - generic [ref=f12e205]:
+              - generic [ref=f12e206]: New York Office
+              - generic [ref=f12e207]: Broadway
+            - button "Close popup" [ref=f12e209] [cursor=pointer]: ×
+        - generic [ref=f12e210]:
+          - button "Zoom in" [ref=f12e211] [cursor=pointer]: +
+          - button "Zoom out" [ref=f12e212] [cursor=pointer]: −
+    - generic [ref=f12e214]:
+      - generic [ref=f12e215]:
+        - paragraph [ref=f12e222]: FAQ
+        - heading "Things You Should Know" [level=3] [ref=f12e224]:
+          - generic [ref=f12e225]: Things
+          - generic [ref=f12e226]: You
+          - generic [ref=f12e227]: Should
+          - generic [ref=f12e228]: Know
+        - paragraph [ref=f12e230]:
+          - generic [ref=f12e231]:
+            - generic [ref=f12e232]: W
+            - generic [ref=f12e233]: e
+            - generic [ref=f12e234]: ’
+            - generic [ref=f12e235]: v
+            - generic [ref=f12e236]: e
+          - generic [ref=f12e237]:
+            - generic [ref=f12e238]: a
+            - generic [ref=f12e239]: "n"
+            - generic [ref=f12e240]: s
+            - generic [ref=f12e241]: w
+            - generic [ref=f12e242]: e
+            - generic [ref=f12e243]: r
+            - generic [ref=f12e244]: e
+            - generic [ref=f12e245]: d
+          - generic [ref=f12e246]:
+            - generic [ref=f12e247]: t
+            - generic [ref=f12e248]: h
+            - generic [ref=f12e249]: e
+          - generic [ref=f12e250]:
+            - generic [ref=f12e251]: m
+            - generic [ref=f12e252]: o
+            - generic [ref=f12e253]: s
+            - generic [ref=f12e254]: t
+          - generic [ref=f12e255]:
+            - generic [ref=f12e256]: c
+            - generic [ref=f12e257]: o
+            - generic [ref=f12e258]: m
+            - generic [ref=f12e259]: m
+            - generic [ref=f12e260]: o
+            - generic [ref=f12e261]: "n"
+          - generic [ref=f12e262]:
+            - generic [ref=f12e263]: q
+            - generic [ref=f12e264]: u
+            - generic [ref=f12e265]: e
+            - generic [ref=f12e266]: s
+            - generic [ref=f12e267]: t
+            - generic [ref=f12e268]: i
+            - generic [ref=f12e269]: o
+            - generic [ref=f12e270]: "n"
+            - generic [ref=f12e271]: s
+          - generic [ref=f12e272]:
+            - generic [ref=f12e273]: t
+            - generic [ref=f12e274]: o
+          - generic [ref=f12e275]:
+            - generic [ref=f12e276]: h
+            - generic [ref=f12e277]: e
+            - generic [ref=f12e278]: l
+            - generic [ref=f12e279]: p
+          - generic [ref=f12e280]:
+            - generic [ref=f12e281]: "y"
+            - generic [ref=f12e282]: o
+            - generic [ref=f12e283]: u
+          - generic [ref=f12e284]:
+            - generic [ref=f12e285]: g
+            - generic [ref=f12e286]: e
+            - generic [ref=f12e287]: t
+          - generic [ref=f12e288]:
+            - generic [ref=f12e289]: s
+            - generic [ref=f12e290]: t
+            - generic [ref=f12e291]: a
+            - generic [ref=f12e292]: r
+            - generic [ref=f12e293]: t
+            - generic [ref=f12e294]: e
+            - generic [ref=f12e295]: d
+          - generic [ref=f12e296]:
+            - generic [ref=f12e297]: w
+            - generic [ref=f12e298]: i
+            - generic [ref=f12e299]: t
+            - generic [ref=f12e300]: h
+          - generic [ref=f12e301]:
+            - generic [ref=f12e302]: c
+            - generic [ref=f12e303]: l
+            - generic [ref=f12e304]: a
+            - generic [ref=f12e305]: r
+            - generic [ref=f12e306]: i
+            - generic [ref=f12e307]: t
+            - generic [ref=f12e308]: "y"
+            - generic [ref=f12e309]: .
+      - generic [ref=f12e313]:
+        - generic [ref=f12e315] [cursor=pointer]:
+          - paragraph [ref=f12e318]: How do I start searching for a home?
+          - paragraph [ref=f12e325]: You can browse available properties, apply filters, and explore listings based on your needs and location.
+        - generic [ref=f12e327] [cursor=pointer]:
+          - paragraph [ref=f12e330]: Can I filter homes by budget & location?
+          - paragraph [ref=f12e337]: Yes, you can easily filter properties by price range, location, and other preferences.
+        - generic [ref=f12e339] [cursor=pointer]:
+          - paragraph [ref=f12e342]: Are the property details accurate?
+          - paragraph [ref=f12e349]: We provide updated and verified details to help you make informed decisions.
+        - generic [ref=f12e351] [cursor=pointer]:
+          - paragraph [ref=f12e354]: How do I contact a owner or agent?
+          - paragraph [ref=f12e361]: Each listing includes contact options so you can directly connect for more information.
+        - generic [ref=f12e363] [cursor=pointer]:
+          - paragraph [ref=f12e366]: Can I explore rental and buying options
+          - paragraph [ref=f12e373]: Yes, you can browse both rental and purchase options in one place.
+        - generic [ref=f12e375] [cursor=pointer]:
+          - paragraph [ref=f12e378]: Do I need an account to use platform
+          - paragraph [ref=f12e385]: You can browse freely, but creating an account helps you save and manage your preferences.
+        - generic [ref=f12e387] [cursor=pointer]:
+          - paragraph [ref=f12e390]: How do I know if a property is available?
+          - paragraph [ref=f12e397]: Availability is updated regularly, but we recommend contacting the listing for confirmation.
+    - contentinfo [ref=f12e400]:
+      - generic [ref=f12e402]:
+        - generic [ref=f12e403]:
+          - generic [ref=f12e404]:
+            - paragraph [ref=f12e410]: Find your next home
+            - heading "Discover homes designed for your lifestyle" [level=3] [ref=f12e412]:
+              - generic [ref=f12e413]: Discover
+              - generic [ref=f12e414]: homes
+              - generic [ref=f12e415]: designed
+              - generic [ref=f12e416]: for
+              - generic [ref=f12e417]: your
+              - generic [ref=f12e418]: lifestyle
+            - paragraph [ref=f12e420]:
+              - generic [ref=f12e421]:
+                - generic [ref=f12e422]: E
+                - generic [ref=f12e423]: x
+                - generic [ref=f12e424]: p
+                - generic [ref=f12e425]: l
+                - generic [ref=f12e426]: o
+                - generic [ref=f12e427]: r
+                - generic [ref=f12e428]: e
+              - generic [ref=f12e429]:
+                - generic [ref=f12e430]: p
+                - generic [ref=f12e431]: r
+                - generic [ref=f12e432]: o
+                - generic [ref=f12e433]: p
+                - generic [ref=f12e434]: e
+                - generic [ref=f12e435]: r
+                - generic [ref=f12e436]: t
+                - generic [ref=f12e437]: i
+                - generic [ref=f12e438]: e
+                - generic [ref=f12e439]: s
+                - generic [ref=f12e440]: ","
+              - generic [ref=f12e441]:
+                - generic [ref=f12e442]: c
+                - generic [ref=f12e443]: o
+                - generic [ref=f12e444]: m
+                - generic [ref=f12e445]: p
+                - generic [ref=f12e446]: a
+                - generic [ref=f12e447]: r
+                - generic [ref=f12e448]: e
+              - generic [ref=f12e449]:
+                - generic [ref=f12e450]: o
+                - generic [ref=f12e451]: p
+                - generic [ref=f12e452]: t
+                - generic [ref=f12e453]: i
+                - generic [ref=f12e454]: o
+                - generic [ref=f12e455]: "n"
+                - generic [ref=f12e456]: s
+                - generic [ref=f12e457]: ","
+              - generic [ref=f12e458]:
+                - generic [ref=f12e459]: a
+                - generic [ref=f12e460]: "n"
+                - generic [ref=f12e461]: d
+              - generic [ref=f12e462]:
+                - generic [ref=f12e463]: m
+                - generic [ref=f12e464]: o
+                - generic [ref=f12e465]: v
+                - generic [ref=f12e466]: e
+              - generic [ref=f12e467]:
+                - generic [ref=f12e468]: f
+                - generic [ref=f12e469]: o
+                - generic [ref=f12e470]: r
+                - generic [ref=f12e471]: w
+                - generic [ref=f12e472]: a
+                - generic [ref=f12e473]: r
+                - generic [ref=f12e474]: d
+              - generic [ref=f12e475]:
+                - generic [ref=f12e476]: w
+                - generic [ref=f12e477]: i
+                - generic [ref=f12e478]: t
+                - generic [ref=f12e479]: h
+              - generic [ref=f12e480]:
+                - generic [ref=f12e481]: c
+                - generic [ref=f12e482]: o
+                - generic [ref=f12e483]: "n"
+                - generic [ref=f12e484]: f
+                - generic [ref=f12e485]: i
+                - generic [ref=f12e486]: d
+                - generic [ref=f12e487]: e
+                - generic [ref=f12e488]: "n"
+                - generic [ref=f12e489]: c
+                - generic [ref=f12e490]: e
+              - generic [ref=f12e491]: "-"
+              - generic [ref=f12e493]:
+                - generic [ref=f12e494]: e
+                - generic [ref=f12e495]: v
+                - generic [ref=f12e496]: e
+                - generic [ref=f12e497]: r
+                - generic [ref=f12e498]: "y"
+                - generic [ref=f12e499]: t
+                - generic [ref=f12e500]: h
+                - generic [ref=f12e501]: i
+                - generic [ref=f12e502]: "n"
+                - generic [ref=f12e503]: g
+              - generic [ref=f12e504]:
+                - generic [ref=f12e505]: "y"
+                - generic [ref=f12e506]: o
+                - generic [ref=f12e507]: u
+              - generic [ref=f12e508]:
+                - generic [ref=f12e509]: "n"
+                - generic [ref=f12e510]: e
+                - generic [ref=f12e511]: e
+                - generic [ref=f12e512]: d
+              - generic [ref=f12e513]:
+                - generic [ref=f12e514]: i
+                - generic [ref=f12e515]: "n"
+              - generic [ref=f12e516]:
+                - generic [ref=f12e517]: o
+                - generic [ref=f12e518]: "n"
+                - generic [ref=f12e519]: e
+              - generic [ref=f12e520]:
+                - generic [ref=f12e521]: p
+                - generic [ref=f12e522]: l
+                - generic [ref=f12e523]: a
+                - generic [ref=f12e524]: c
+                - generic [ref=f12e525]: e
+                - generic [ref=f12e526]: .
+            - link [ref=f12e528] [cursor=pointer]:
+              - /url: ./contact-us
+              - paragraph [ref=f12e530]: Get in Touch
+          - img "Modern, glass-walled house at night, reflecting on a wet driveway." [ref=f12e536]
+          - img "Cloudy sky with grey-blue overcast and soft light." [ref=f12e539]
+        - generic [ref=f12e545]:
+          - generic [ref=f12e546]:
+            - generic [ref=f12e547]:
+              - generic [ref=f12e548]:
+                - link [ref=f12e550] [cursor=pointer]:
+                  - /url: ./#hero
+                - paragraph [ref=f12e556]: Find, explore, and choose your next home with a simple and modern experience.
+              - generic [ref=f12e557]:
+                - link [ref=f12e558] [cursor=pointer]:
+                  - /url: https://www.instagram.com/
+                - link [ref=f12e560] [cursor=pointer]:
+                  - /url: https://www.facebook.com/
+                - link [ref=f12e562] [cursor=pointer]:
+                  - /url: https://x.com/
+                - link [ref=f12e564] [cursor=pointer]:
+                  - /url: https://www.youtube.com/
+            - generic [ref=f12e566]:
+              - generic [ref=f12e567]:
+                - paragraph [ref=f12e569]: Explore
+                - generic [ref=f12e570]:
+                  - link [ref=f12e572] [cursor=pointer]:
+                    - /url: ./properties
+                    - paragraph [ref=f12e574]: Properties
+                  - link [ref=f12e578] [cursor=pointer]:
+                    - /url: ./#services
+                    - paragraph [ref=f12e580]: Services
+                  - link [ref=f12e584] [cursor=pointer]:
+                    - /url: ./about-us
+                    - paragraph [ref=f12e586]: About
+                  - link [ref=f12e590] [cursor=pointer]:
+                    - /url: ./contact-us
+                    - paragraph [ref=f12e592]: Contact Us
+              - generic [ref=f12e595]:
+                - paragraph [ref=f12e597]: Contact
+                - generic [ref=f12e598]:
+                  - link [ref=f12e604] [cursor=pointer]:
+                    - /url: mailto:homy@yopmail.com
+                    - paragraph [ref=f12e606]: homy@yopmail.com
+                  - link [ref=f12e614] [cursor=pointer]:
+                    - /url: tel:+123 456 000
+                    - paragraph [ref=f12e616]: +123 456 000
+                  - link [ref=f12e624] [cursor=pointer]:
+                    - /url: https://www.google.com/maps
+                    - paragraph [ref=f12e626]: New York, USA
+          - generic [ref=f12e630]:
+            - paragraph [ref=f12e632]: Copyright@2026
+            - link "Crafted by" [ref=f12e634] [cursor=pointer]:
+              - /url: https://www.framergeeks.com/
+            - link [ref=f12e640] [cursor=pointer]:
+              - /url: ./privacy-policy
+              - paragraph [ref=f12e642]: Privacy Policy
+  - link [ref=f12e645] [cursor=pointer]:
+    - /url: https://www.framer.com
+    - paragraph [ref=f12e650]: Create a free website with Framer, the website builder loved by startups, designers and agencies.
