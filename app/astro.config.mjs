@@ -13,5 +13,10 @@ export default defineConfig({
   integrations: [react(), ...(isDev ? [keystatic()] : [])],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      watch: {
+        usePolling: true,
+      },
+    },
   },
 });

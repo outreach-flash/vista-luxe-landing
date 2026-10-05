@@ -4,7 +4,7 @@ interface Props {
   title: string;
   status: string;
   price: number;
-  cardImage: string;
+  cardImage?: string | null;
   bedrooms?: string | null;
   bathrooms?: string | null;
   squareArea?: number | null;
@@ -26,12 +26,16 @@ const stats = [
   data-title={title.toLowerCase()}
 >
   <div class="aspect-[4/3.4] w-full overflow-hidden">
-    <img
-      src={cardImage}
-      alt={title}
-      loading="lazy"
-      class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-    />
+    {cardImage ? (
+      <img
+        src={cardImage}
+        alt={title}
+        loading="lazy"
+        class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+      />
+    ) : (
+      <div class="h-full w-full bg-white/10 flex items-center justify-center text-white/40 text-sm">No Image</div>
+    )}
   </div>
 
   <span class="absolute right-4 top-4 flex items-center gap-1.5 rounded-full bg-white px-3.5 py-2 text-[12px] font-medium text-ink">
@@ -45,21 +49,19 @@ const stats = [
     {stats.length > 0 && (
       <div class="mt-3 flex items-center gap-5 text-[13px] font-medium text-white/90">
         {stats.map((s, i) => (
-          <>
-            {i > 0 && <span class="h-4 w-px bg-white/30"></span>}
-            <span class="flex items-center gap-2">
-              {s.icon === 'bed' && (
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 20h20"/></svg>
-              )}
-              {s.icon === 'bath' && (
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2Z"/><path d="M6 12V5a2 2 0 0 1 4 0"/><path d="M8 21l-1 1M17 21l1 1"/></svg>
-              )}
-              {s.icon === 'area' && (
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>
-              )}
-              {s.text}
-            </span>
-          </>
+          <span class="flex items-center gap-2">
+            {i > 0 && <span class="h-4 w-px bg-white/30 mr-3"></span>}
+            {s.icon === 'bed' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><path d="M2 20h20"/></svg>
+            )}
+            {s.icon === 'bath' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12h16v2a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-2Z"/><path d="M6 12V5a2 2 0 0 1 4 0"/><path d="M8 21l-1 1M17 21l1 1"/></svg>
+            )}
+            {s.icon === 'area' && (
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M8 21H5a2 2 0 0 1-2-2v-3M16 21h3a2 2 0 0 0 2-2v-3"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg>
+            )}
+            {s.text}
+          </span>
         ))}
       </div>
     )}
