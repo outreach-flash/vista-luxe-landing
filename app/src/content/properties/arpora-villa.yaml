@@ -2,25 +2,57 @@ title: Arpora Villa
 status: For Buy
 featured: true
 price: 55000000
-street: Fifth Avenue
-area: North Goa
-city: New York
+street: ''
+area: Arpora, North Goa
+city: Goa
 propertyType: Villa
-bedrooms: '2'
-bathrooms: '2'
-squareArea: 1850
-yearBuilt: 2017
+squareArea: 1792
+numberOfFloors: 2
+plotArea:
+  sqM: 316
+  sqFt: 3401
+netEffectiveArea:
+  sqM: 303
+  sqFt: 3261
+groundFloorArea:
+  sqM: 100.31
+  sqFt: 1080
+firstFloorArea:
+  sqM: 66.14
+  sqFt: 712
+totalFloorArea:
+  sqM: 166.45
+  sqFt: 1792
+proximityLocations:
+- location: Saturday Night Market, Arpora
+  distance: approx. 1 km
+- location: Baga Beach
+  distance: approx. 2.5-3 km
+- location: Calangute Beach
+  distance: approx. 3-3.5 km
+- location: Tito's Lane, Baga
+  distance: approx. 3 km
+- location: Anjuna Beach
+  distance: approx. 5 km
+- location: Candolim
+  distance: approx. 6 km
+- location: Vagator Beach
+  distance: approx. 6-7 km
+- location: Chapora Fort
+  distance: approx. 7 km
+- location: Mapusa
+  distance: approx. 7-8 km
+- location: Panaji
+  distance: approx. 17 km
 gallery:
   - null
   - null
   - null
-amenities:
-  - Gym
-  - Elevator
-  - Security
-  - Parking
-  - Air Conditioning
-  - Balcony
+amenities: []
 description: >-
-  High-floor Manhattan condo with iconic skyline views, premium finishes, and
-  full building amenities in a prime location.
+  A prime North Goa property in Arpora, priced at ₹5.50 Crore (slightly negotiable).
+  Set between the energy of Baga and Calangute and the laid-back charm of Anjuna and
+  Vagator, it is an ideal location for a luxury holiday home, private villa, boutique
+  stay or investment property. The property sits on a 316 sq m plot with a net effective
+  area of 303 sq m and a total existing floor area of 166.45 sq m across the ground
+  floor (100.31 sq m) and first floor (66.14 sq m).

@@ -1,15 +1,34 @@
-title: Coral Gables Home
+title: Sea View Dona Paula Apartments
 status: For Buy
 featured: false
-price: 27000
-street: Alhambra Circle
-area: Coral Way
-city: Miami
-propertyType: House
-bedrooms: 4+
-bathrooms: '3'
-squareArea: 3500
-yearBuilt: 2017
+price: 50000000
+street: RK Luxuria
+area: Dona Paula
+city: Goa
+propertyType: Apartment
+configuration: 3 BHK
+bedrooms: '3'
+parking: 2 Car Parks per Apartment
+numberOfFloors: 5
+floors:
+- label: First Floor
+  description: ₹4.20 Cr
+- label: Second Floor
+  description: ₹4.50 Cr (Sold Out)
+- label: Third Floor
+  description: ₹5.25 Cr
+- label: Penthouse (4th and 5th Floor)
+  description: ₹7.50 Cr
+squareArea: 2992
+builtUpArea:
+  sqM: 278
+  sqFt: 2992
+carpetArea:
+  sqM: 205
+  sqFt: 2207
+terraceArea:
+  sqM: 100
+  sqFt: 1076
 cardImage: /assets/img/v0B6j2jKVhCiB43Z9GKJVlYgtpc.png
 gallery:
 - /assets/img/v0B6j2jKVhCiB43Z9GKJVlYgtpc.png
@@ -17,11 +36,17 @@ gallery:
 - /assets/img/1IzIUI53MTxkf7oWY5y0mQjEJ3Y.png
 floorPlan: /assets/img/i9XlWb9aJJQDgMht6TzoJMdflZY.jpg
 amenities:
-- Swimming Pool
+- Sea Views
 - Parking
-- Garden
-- Pet Friendly
-- Security
-- Air Conditioning
-description: Classic Mediterranean-style home in Coral Gables with arched doorways,
-  lush landscaping, and a private backyard pool.
+- Powder Room
+- Hidden Wardrobes
+- Staff Studio
+description: RK Luxuria, Dona Paula. A rare opportunity to own a full-floor residence
+  with uninterrupted 180 degree views of Miramar Bay. One apartment per floor for
+  complete privacy, 3 BHK layouts with optimal light and ventilation, defined dining
+  and powder room, hidden wardrobes in the bedrooms, 2 car parks and an independent
+  staff studio per unit, in greenhouse-inspired architecture. First to third floors
+  have 278 sq m built-up and 205 sq m carpet area. The penthouse (4th and 5th floor)
+  has 278 sq m built-up, a 100 sq m extra covered terrace and a 100 sq m open terrace.
+  Prices - First floor ₹4.20 Cr, Second floor ₹4.50 Cr (sold out), Third floor ₹5.25
+  Cr, Penthouse ₹7.50 Cr.

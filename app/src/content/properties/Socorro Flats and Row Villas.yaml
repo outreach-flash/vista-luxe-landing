@@ -1,15 +1,20 @@
-title: Beachfront Villa
+title: Socorro Flats and Row Villas
 status: For Buy
 featured: false
-price: 72000
-street: Ocean Drive
-area: South Beach
-city: Miami
-propertyType: Villa
-bedrooms: 4+
-bathrooms: '4'
-squareArea: 5600
-yearBuilt: 2022
+price: 8300000
+street: ''
+area: Socorro, Porvorim
+city: Goa
+propertyType: Apartment
+configuration: 1 BHK
+bedrooms: '1'
+squareArea: 861
+totalSuperArea:
+  sqM: 80
+  sqFt: 861
+numberOfBalconies: 1
+parking: 1 Stack Car Parking
+numberOfFloors: 3
 cardImage: /assets/img/gVIlNTQjcuqa95nEf0rjan1Z8.png
 gallery:
 - /assets/img/gVIlNTQjcuqa95nEf0rjan1Z8.png
@@ -18,9 +23,20 @@ gallery:
 floorPlan: /assets/img/i9XlWb9aJJQDgMht6TzoJMdflZY.jpg
 amenities:
 - Swimming Pool
-- Garden
-- Parking
+- Senior Citizen Area
+- Children's Play Area
+- Jacuzzi
+- Steam Room
+- Sauna
+- Amphitheatre
+- Box Cricket
+- Gazebo Sitouts
+- Clubhouse
 - Gym
-- Pet Friendly
-description: Luxurious beachfront villa with private pool, direct ocean access, and
-  expansive terraces ideal for upscale coastal living.
+- Barbeque Area
+- Landscaped Gardens
+- Sunken Deck
+- Karaoke Space
+description: Brand-new furnished 1 BHK ground-floor sample flat in a gated Gr + 2
+  storey complex in Socorro, Porvorim. 80 sq m saleable area, one balcony and one
+  stack car parking. OC received. Price ₹83 Lakhs, negotiable.

@@ -1,15 +1,51 @@
-title: Dallas Townhouse
+title: ASMO Apartments
 status: For Buy
 featured: false
-price: 9800
-street: Uptown Dallas Road
-area: Dallas
-city: Seattle
-propertyType: Townhouse
+price: 26000000
+street: ''
+area: ''
+city: Goa
+propertyType: Apartment
+configuration: 3 BHK
 bedrooms: '3'
-bathrooms: '2'
-squareArea: 980
-yearBuilt: 2021
+squareArea: 2228
+builtUpArea:
+  sqM: 165
+  sqFt: 1776
+totalSuperBuiltUpArea:
+  sqM: 207
+  sqFt: 2228
+numberOfFloors: 4
+floors:
+- label: 1st Floor
+  description: ₹2.35 Cr
+- label: 2nd Floor
+  description: ₹2.60 Cr
+- label: 3rd Floor
+  description: Booked
+- label: 4th Floor
+  description: Booked
+proximityLocations:
+- location: Mall De Goa
+  distance: 5 mins
+- location: Mapusa Market
+  distance: 15 mins
+- location: Panjim City
+  distance: 15 mins
+- location: Casinos & Panjim Riverfront
+  distance: 15 mins
+- location: Miramar Beach
+  distance: 20 mins
+- location: Candolim Beach
+  distance: 20 mins
+- location: Calangute Beach
+  distance: 20 mins
+- location: Goa Medical College
+  distance: 20 mins
+- location: Baga Beach
+  distance: 25 mins
+- location: Dona Paula
+  distance: 25 mins
 cardImage: /assets/img/Hs28VYJsumw25Bf01iFhauVh6U.png
 gallery:
 - /assets/img/Hs28VYJsumw25Bf01iFhauVh6U.png
@@ -17,10 +53,16 @@ gallery:
 - /assets/img/fpaYDfZrIl7dyaMkII2rkOs.png
 floorPlan: /assets/img/wj6eGC6ENPfWRW1HCoX0PVMwHs.jpg
 amenities:
+- Swimming Pool
+- Lift Access
 - Parking
 - Balcony
-- Security
-- Air Conditioning
-- Garden
-description: Modern Uptown townhouse with rooftop deck, high-end appliances, and a
-  private garage in a walkable Dallas neighbourhood.
+- CCTV & Security
+- Landscaped Entrance
+description: Premium 3 BHK residences by Luxescape Realty, where Indo-Portuguese elegance
+  meets modern Goan living. Built-up area 165 sq m and super built-up area 207 sq
+  m. Available units - 1st floor ₹2.35 Cr and 2nd floor ₹2.60 Cr; 3rd and 4th floors
+  are booked, with only 2 units remaining. Highlights include elegant balconies and
+  large windows, lift access on every floor, dedicated parking, a swimming pool, a
+  landscaped entrance, CCTV and security, and premium common spaces. Developed by
+  Luxescape Realty LLP, marketed exclusively by Vistaluxe Realty LLP.

@@ -1,15 +1,33 @@
-title: Forest Side Residence
+title: Porvorim Bali Style Villas
 status: For Buy
 featured: false
-price: 28500
-street: Evergreen Trail
-area: Maple Valley
-city: Seattle
-propertyType: Apartment
+price: 45000000
+street: ''
+area: Porvorim
+city: Goa
+propertyType: Villa
+configuration: Luxury 3 BHK Villas
 bedrooms: '3'
-bathrooms: '2'
-squareArea: 3800
-yearBuilt: 2018
+squareArea: 2000
+plotArea:
+  sqM: 185.8
+  sqFt: 2000
+privatePoolAndGarden: true
+parking: 1 Private Car Park
+terraceArea:
+  sqM: 27.9
+  sqFt: 300
+proximityLocations:
+- location: Mandovi River & Yacht Club
+  distance: Walkable
+- location: Torda Lake
+  distance: 5 mins
+- location: New DLF Mall
+  distance: 10 mins
+- location: Panjim City
+  distance: 10 mins
+- location: Assagao
+  distance: 20 mins
 cardImage: /assets/img/Nj9OjAPTRZNiNkRnthqiVOPzc.png
 gallery:
 - /assets/img/Nj9OjAPTRZNiNkRnthqiVOPzc.png
@@ -17,9 +35,15 @@ gallery:
 - /assets/img/f4k0JwNZ9omcXddLqPYhPeWerM.png
 floorPlan: /assets/img/ew3w3dkVTebxlHtkHZTi8mdEu1U.jpg
 amenities:
-- Pet Friendly
-- Garden
-- Swimming Pool
+- Private Swimming Pool
+- Private Garden
+- Private Lift
+- Private Terrace
+- Semi-Furnished
+- Parking
 - Security
-description: Elegant forest-facing home with warm timber accents, a wrap-around deck,
-  and a tranquil natural setting.
+- Gated Community
+description: Ready-to-move-in Bali-style luxury 3 BHK villas in Porvorim, North Goa,
+  on plots of 2,000 - 2,500 sq ft, priced from ₹4.5 Cr to ₹5.0 Cr. Each villa has
+  a private pool and garden, private lift, 300+ sq ft private terrace and one private
+  car park, within a secure gated community surrounded by lush greenery.

@@ -1,15 +1,56 @@
-title: Modern Hillside Home
+title: Pine Cliff, Parra
 status: For Buy
 featured: false
-price: 58000
-street: Sunset Canyon Drive
-area: Bel Air
-city: Los Angeles
-propertyType: House
-bedrooms: '3'
-bathrooms: '2'
-squareArea: 3100
-yearBuilt: 2021
+price: 90000000
+street: ''
+area: Parra
+city: Goa
+propertyType: Villa
+configuration: 3 Luxury Villas (A, B, C)
+squareArea: 8603
+plotArea:
+  sqM: 1892
+  sqFt: 20365
+plotRoadCommonArea:
+  sqM: 944.52
+  sqFt: 10166.28
+builtUpArea:
+  sqM: 357.48
+  sqFt: 3847.81
+entranceDeckVerandahBalconies:
+  sqM: 108.17
+  sqFt: 1164.34
+doubleHeightArea:
+  sqM: 10.52
+  sqFt: 113.24
+halfAreaOfTerrace:
+  sqM: 62.66
+  sqFt: 674.47
+swimmingPool:
+  sqM: 42.45
+  sqFt: 456.93
+lawnArea33Percent:
+  sqM: 217.93
+  sqFt: 2345.8
+totalSuperArea:
+  sqM: 799.23
+  sqFt: 8602.59
+floors:
+- label: Villa A
+  description: 'Plot + road & common area 4,856.93 sq ft; built-up 3,952.54 sq ft;
+    entrance, deck, verandah & balconies 1,154.55 sq ft; double height 145.74 sq ft;
+    half terrace 658.97 sq ft; swimming pool 456.93 sq ft; 33% lawn 552.19 sq ft;
+    total super area 6,920.93 sq ft.'
+- label: Villa B
+  description: 'Plot + road & common area 4,283.75 sq ft; built-up 3,952.54 sq ft;
+    entrance, deck, verandah & balconies 1,109.23 sq ft; double height 145.74 sq ft;
+    half terrace 645.09 sq ft; swimming pool 456.93 sq ft; 33% lawn 379.86 sq ft;
+    total super area 6,689.40 sq ft.'
+- label: Villa C (The Largest)
+  description: 'Plot + road & common area 10,166.28 sq ft; built-up 3,847.81 sq ft;
+    entrance, deck, verandah & balconies 1,164.34 sq ft; double height 113.24 sq ft;
+    half terrace 674.47 sq ft; swimming pool 456.93 sq ft; 33% lawn 2,345.80 sq ft;
+    total super area 8,602.59 sq ft.'
 cardImage: /assets/img/mb3QlyCAPbWtOk03gQVAadvWA.jpeg
 gallery:
 - /assets/img/mb3QlyCAPbWtOk03gQVAadvWA.jpeg
@@ -17,10 +58,13 @@ gallery:
 - /assets/img/d4bbsGsDJ56Bv0X0Sl8WimIeHzA.jpg
 floorPlan: /assets/img/uKPfK08ywsUpIeGt9kmBfaVJfE.jpg
 amenities:
-- Parking
-- Security
-- Gym
-- Elevator
-- Air Conditioning
-description: Contemporary hillside residence offering breathtaking valley views, floor-to-ceiling
-  glass walls, and a rooftop terrace.
+- Swimming Pool
+- Landscaped Lawn
+- Terrace
+- Deck & Verandah
+- Double-Height Spaces
+description: Exclusive luxury villa development in Parra, North Goa, on a 1,892 sq
+  m plot. Only 3 villas, each with expansive built-up areas, private outdoor spaces,
+  a swimming pool and landscaped lawns. Villa C is the largest, with 8,602.59 sq ft
+  total super area. Ideal for luxury living, a holiday home or investment. Areas
+  shown are for Villa C; see the floor details for Villas A and B.

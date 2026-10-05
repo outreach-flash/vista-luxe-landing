@@ -1,15 +1,32 @@
-title: Lakefront Condo
+title: Floretta By Ellora
 status: For Buy
 featured: false
-price: 8900
-street: Lakeshore Drive
-area: Streeterville
-city: Chicago
-propertyType: Condo
-bedrooms: '2'
-bathrooms: '2'
-squareArea: 2100
-yearBuilt: 2019
+price: 55000000
+semiFurnishedPrice: 55000000
+fullyFurnishedPrice: 65000000
+street: ''
+area: Parra
+city: Goa
+propertyType: Villa
+configuration: 4 BHK Independent Villas
+bedrooms: '4'
+squareArea: 2241
+carpetArea:
+  sqM: 186.96
+  sqFt: 2012
+builtUpArea:
+  sqM: 208.2
+  sqFt: 2241
+terraceArea:
+  sqM: 53.72
+  sqFt: 578
+privatePoolAndGarden: true
+privatePoolAndGardenArea:
+  sqM: 58.39
+  sqFt: 628
+totalSuperBuiltUpArea:
+  sqM: 335.73
+  sqFt: 3614
 cardImage: /assets/img/nqti5jqskQeUgczkdkSddvHLITw.png
 gallery:
 - /assets/img/nqti5jqskQeUgczkdkSddvHLITw.png
@@ -17,11 +34,13 @@ gallery:
 - /assets/img/KQ1RmHeD1Z0nY2GeaDA4G0mwC4.png
 floorPlan: /assets/img/uKPfK08ywsUpIeGt9kmBfaVJfE.jpg
 amenities:
-- Gym
-- Elevator
-- Parking
-- Security
-- Swimming Pool
+- Private Swimming Pool
+- Private Garden
+- Terrace
 - Balcony
-description: Bright lakefront condo with stunning Michigan lake views, open-plan layout,
-  and premium building amenities included.
+description: An exclusive collection of 8 spacious 4 BHK independent villas in Parra,
+  Goa, with a private pool and garden for every villa. Carpet area 186.96 sq m, built-up
+  area 208.20 sq m, terrace 53.72 sq m, balcony 15.42 sq m. Private pool and garden
+  area ranges from 58.39 to 109.07 sq m and total super built-up area from 335.73
+  to 386.41 sq m. Pricing - semi-furnished ₹5.50 Cr, fully furnished ₹6.50 Cr. Ideal
+  as a luxury holiday home, private residence or premium investment in North Goa.

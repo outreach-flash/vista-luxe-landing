@@ -1,15 +1,36 @@
-title: Downtown Loft
-status: For Rent
+title: 'Casa De Luxe: Chogum Road'
+status: For Buy
 featured: true
-price: 3200
-street: West Loop Street
-area: Fulton Market
-city: Chicago
-propertyType: Apartment
-bedrooms: '1'
-bathrooms: '1'
-squareArea: 1200
-yearBuilt: 2025
+price: 80000000
+street: Chogum Road
+area: Porvorim
+city: Goa
+propertyType: Villa
+configuration: 5 BHK Ultra-Luxury Villa
+bedrooms: '5'
+parking: 3-4 Cars
+numberOfFloors: 3
+squareArea: 5246
+plotArea:
+  sqM: 415
+  sqFt: 4467
+builtUpArea:
+  sqM: 487.4
+  sqFt: 5246
+poolDeckArea:
+  sqM: 79.27
+  sqFt: 853
+floors:
+- label: Ground Floor (173.70 sq m)
+  description: Elegant guest bedroom suite, grand double-height living room, spacious
+    dining area, modern kitchen with premium cabinetry and granite countertops, stylish
+    powder room.
+- label: First Floor (182.20 sq m)
+  description: Three generously sized bedrooms, designer wardrobes and premium finishes,
+    well-appointed bathrooms, private balconies with open views.
+- label: Second Floor (120.80 sq m)
+  description: One spacious bedroom, dedicated entertainment and party area, powder
+    room, direct access to the private rooftop leisure zone.
 cardImage: /assets/img/SCmPl4wPCIenDO4rrG5EsNrpsJg.png
 gallery:
 - /assets/img/SCmPl4wPCIenDO4rrG5EsNrpsJg.png
@@ -17,10 +38,14 @@ gallery:
 - /assets/img/H60YpTAa5us5AApAOCS67i9xqY.png
 floorPlan: /assets/img/FJc6EtVgxBKchv6O2r10j83ilII.jpg
 amenities:
-- Elevator
-- Security
+- Private Lift
+- Pool Deck
+- Rooftop Leisure Zone
 - Parking
-- Air Conditioning
 - Balcony
-description: Industrial-chic loft in the heart of the West Loop with exposed brick,
-  high ceilings, and walkable access to dining.
+description: Exclusive 5 BHK ultra-luxury corner villa in the heart of Porvorim, set
+  on a 415 sq m plot. Total built-up area of 487.40 sq m (approx. 5,246 sq ft) with
+  a 79.27 sq m private pool deck, spread across three levels and connected by a rose-gold
+  private lift. Parking for 3-4 cars. Features a double-height living room, modern
+  kitchen, three bedrooms with designer wardrobes on the first floor, and an entertainment
+  area with direct access to the private rooftop leisure zone.

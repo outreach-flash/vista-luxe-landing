@@ -72,7 +72,7 @@ const hasFloorPlan = !!d.floorPlan;
 const hasGallery = d.gallery && d.gallery.length > 0;
 ---
 
-<Layout title={`${d.title} — Homy`} description={d.description ?? d.title}>
+<Layout title={`${d.title} — Vista Luxe`} description={d.description ?? d.title}>
   <section class="mx-auto max-w-[1320px] px-6 pt-32 md:px-10 md:pt-44">
     <span class="inline-flex items-center gap-1.5 rounded-full bg-mist px-4 py-2 text-[13px] font-medium text-ink">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 12h3v8h6v-6h2v6h6v-8h3z"/></svg>
@@ -108,19 +108,116 @@ const hasGallery = d.gallery && d.gallery.length > 0;
 
     <!-- Gallery -->
     {hasGallery && (
-      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-12">
-        <div class="overflow-hidden rounded-2xl md:col-span-8">
-          <img src={d.gallery[0]} alt={d.title} class="h-full max-h-[560px] w-full object-cover" />
-        </div>
-        {d.gallery.length > 1 && (
-          <div class="flex flex-col gap-4 md:col-span-4">
-            {d.gallery.slice(1, 3).map((g) => (
-              <div class="flex-1 overflow-hidden rounded-2xl">
-                <img src={g} alt={d.title} loading="lazy" class="h-full max-h-[272px] w-full object-cover" />
-              </div>
-            ))}
+      <div class="relative mt-10">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-12">
+          <div class="overflow-hidden rounded-2xl md:col-span-8 cursor-pointer group" id="open-gallery-main">
+            <img src={d.gallery[0]} alt={d.title} class="h-full max-h-[560px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
           </div>
-        )}
+          {d.gallery.length > 1 && (
+            <div class="flex flex-col gap-4 md:col-span-4">
+              {d.gallery.slice(1, 3).map((g, idx) => (
+                <div class="flex-1 overflow-hidden rounded-2xl cursor-pointer group open-gallery-thumb" data-index={idx + 1}>
+                  <img src={g} alt={d.title} loading="lazy" class="h-full max-h-[272px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+
+        <!-- "View all photos" button -->
+        <button
+          type="button"
+          id="open-gallery-btn"
+          class="absolute bottom-5 right-5 inline-flex items-center gap-2 rounded-xl bg-ink/80 px-4 py-2.5 text-[14px] font-medium text-white shadow-lg backdrop-blur-md transition-all hover:bg-ink hover:scale-105"
+        >
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
+            <circle cx="9" cy="9" r="2"/>
+            <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
+          </svg>
+          <span>View all {d.gallery.length} photos</span>
+        </button>
+
+        <!-- Translucent Overlay Lightbox -->
+        <div
+          id="gallery-modal"
+          class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 transition-opacity duration-300 opacity-0"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Photo gallery"
+        >
+          <!-- Header controls -->
+          <div class="absolute top-4 right-4 z-10 flex items-center gap-4">
+            <span id="gallery-counter" class="text-sm font-medium tracking-wide text-white/70">
+              1 / {d.gallery.length}
+            </span>
+            <button
+              type="button"
+              id="close-gallery-btn"
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
+              aria-label="Close gallery"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6 6 18M6 6l12 12"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Nav previous button -->
+          {d.gallery.length > 1 && (
+            <button
+              type="button"
+              id="prev-photo-btn"
+              class="absolute left-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
+              aria-label="Previous photo"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
+            </button>
+          )}
+
+          <!-- Main Photo Container -->
+          <div class="flex h-full w-full max-w-5xl flex-col items-center justify-center">
+            <div class="relative flex max-h-[75vh] w-full items-center justify-center">
+              <img
+                id="gallery-active-img"
+                src={d.gallery[0]}
+                alt={d.title}
+                class="max-h-[75vh] max-w-full rounded-xl object-contain shadow-2xl transition-all duration-200 select-none"
+              />
+            </div>
+
+            <!-- Thumbnail Strip (if multiple photos) -->
+            {d.gallery.length > 1 && (
+              <div class="mt-4 flex max-w-full gap-2 overflow-x-auto pb-2 px-2 scrollbar-thin">
+                {d.gallery.map((imgUrl, i) => (
+                  <button
+                    type="button"
+                    class="gallery-thumbnail shrink-0 overflow-hidden rounded-lg border-2 border-transparent transition opacity-60 hover:opacity-100"
+                    data-thumb-index={i}
+                  >
+                    <img src={imgUrl} alt="" class="h-14 w-20 object-cover" />
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <!-- Nav next button -->
+          {d.gallery.length > 1 && (
+            <button
+              type="button"
+              id="next-photo-btn"
+              class="absolute right-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
+              aria-label="Next photo"
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </button>
+          )}
+        </div>
       </div>
     )}
 
@@ -259,5 +356,107 @@ const hasGallery = d.gallery && d.gallery.length > 0;
 
   <Faq />
   <Cta />
+
+  <script is:inline define:vars={{ galleryImages: d.gallery }}>
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('gallery-modal');
+      if (!modal || !galleryImages || galleryImages.length === 0) return;
+
+      let currentIndex = 0;
+      const activeImg = document.getElementById('gallery-active-img');
+      const counter = document.getElementById('gallery-counter');
+      const thumbs = document.querySelectorAll('.gallery-thumbnail');
+
+      function updateGallery(index) {
+        if (index < 0) index = galleryImages.length - 1;
+        if (index >= galleryImages.length) index = 0;
+        currentIndex = index;
+
+        if (activeImg) {
+          activeImg.src = galleryImages[currentIndex];
+        }
+        if (counter) {
+          counter.textContent = `${currentIndex + 1} / ${galleryImages.length}`;
+        }
+
+        thumbs.forEach((thumb, i) => {
+          if (i === currentIndex) {
+            thumb.classList.remove('opacity-60', 'border-transparent');
+            thumb.classList.add('opacity-100', 'border-white');
+          } else {
+            thumb.classList.remove('opacity-100', 'border-white');
+            thumb.classList.add('opacity-60', 'border-transparent');
+          }
+        });
+      }
+
+      function openModal(index = 0) {
+        updateGallery(index);
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        // Trigger transition
+        requestAnimationFrame(() => {
+          modal.classList.remove('opacity-0');
+          modal.classList.add('opacity-100');
+        });
+      }
+
+      function closeModal() {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        setTimeout(() => {
+          modal.classList.remove('flex');
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+        }, 300);
+      }
+
+      // Open triggers
+      document.getElementById('open-gallery-btn')?.addEventListener('click', () => openModal(0));
+      document.getElementById('open-gallery-main')?.addEventListener('click', () => openModal(0));
+      document.querySelectorAll('.open-gallery-thumb').forEach((el) => {
+        el.addEventListener('click', () => {
+          const idx = parseInt(el.getAttribute('data-index') || '0', 10);
+          openModal(idx);
+        });
+      });
+
+      // Close triggers
+      document.getElementById('close-gallery-btn')?.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || (e.target instanceof HTMLElement && e.target.classList.contains('flex-col'))) {
+          closeModal();
+        }
+      });
+
+      // Nav triggers
+      document.getElementById('prev-photo-btn')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateGallery(currentIndex - 1);
+      });
+      document.getElementById('next-photo-btn')?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        updateGallery(currentIndex + 1);
+      });
+
+      // Thumb clicks
+      thumbs.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = parseInt(btn.getAttribute('data-thumb-index') || '0', 10);
+          updateGallery(idx);
+        });
+      });
+
+      // Keyboard controls
+      document.addEventListener('keydown', (e) => {
+        if (modal.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') updateGallery(currentIndex - 1);
+        if (e.key === 'ArrowRight') updateGallery(currentIndex + 1);
+      });
+    });
+  </script>
 </Layout>
 

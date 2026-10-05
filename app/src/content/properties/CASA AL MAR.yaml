@@ -1,15 +1,31 @@
-title: Hillside View House
-status: For Rent
+title: CASA AL MAR (6 BHK + 1 Studio Apartment)
+status: For Buy
 featured: false
-price: 9200
-street: Silver Ridge Road
-area: Westside Hills
-city: New York
-propertyType: House
-bedrooms: 4+
-bathrooms: '3'
-squareArea: 2400
-yearBuilt: 2019
+price: 180000000
+street: ''
+area: ''
+city: Goa
+propertyType: Villa
+configuration: 6 BHK + 1 Studio Apartment
+bedrooms: '6'
+bathrooms: '6'
+numberOfFloors: 3
+squareArea: 11000
+plotArea:
+  sqM: 371.61
+  sqFt: 4000
+totalSuperBuiltUpArea:
+  sqM: 1021.94
+  sqFt: 11000
+floors:
+- label: Each Floor (3 floors)
+  description: 2 fully furnished bedrooms with a view and attached bathroom.
+- label: 4th Floor
+  description: Infinity swimming pool with an open terrace for get-togethers and parties.
+- label: Attached Basement
+  description: One more swimming pool and party area.
+- label: Another Attached Basement
+  description: 1 BHK cum office area with a pantry.
 cardImage: /assets/img/QmCjEL8YSsyArnN9l5L7Ox8LdSQ.jpeg
 gallery:
 - /assets/img/QmCjEL8YSsyArnN9l5L7Ox8LdSQ.jpeg
@@ -17,13 +33,20 @@ gallery:
 - /assets/img/hVopKBmBnD5YtZ1ZzfHQlgJIXBQ.png
 floorPlan: /assets/img/y8GfVdwtHd2J7ZQa3Tc6k0lSg1c.jpg
 amenities:
-- Swimming Pool
-- Gym
-- Parking
-- Security
-- Air Conditioning
-- Garden
-description: Hillside View House is a beautifully designed modern home located in
-  the peaceful Westside Hills of New York, offering stunning panoramic views of ocean
-  and surrounding landscape. The property features spacious open-plan interiors with
-  glass windows that bring in natural light and enhance the overall living experience.
+- Infinity Swimming Pool
+- Second Swimming Pool
+- Sea Views
+- Terraces
+- Party Area
+- Lift
+- CCTV Surveillance
+- Servant's Quarter
+- Modular Kitchens
+description: A luxurious sea-view residence with 6 bedrooms plus a studio apartment,
+  spacious terraces, a party area and two swimming pools. Plot area 4,000 sq ft and
+  super built-up area 11,000 sq ft over 3 floors, with 2 fully furnished bedrooms
+  and attached bathrooms on each floor. The 4th floor has an infinity pool with an
+  open terrace, and an attached basement has a second pool and party area. Another
+  basement has a 1 BHK cum office with a pantry. Also includes 3 modular kitchens
+  at different levels, a lift, CCTV surveillance and a servant's quarter. Asking price
+  ₹18 Cr.

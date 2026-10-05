@@ -26,7 +26,7 @@ export default config({
     kind: 'local',
   },
   ui: {
-    brand: { name: 'Homy CMS' },
+    brand: { name: 'Vista Luxe CMS' },
   },
   collections: {
     properties: collection({

@@ -1,25 +1,26 @@
-title: Midtown Apartment
-status: For Rent
+title: Donapaula (3BHK)
+status: For Buy
 featured: false
-price: 5500
-street: Park Avenue
-area: Murray Hill
-city: New York
+price: 32000000
+street: ''
+area: Dona Paula
+city: Goa
 propertyType: Apartment
-bedrooms: '2'
-bathrooms: '1'
-squareArea: 1400
-yearBuilt: 2014
+configuration: 3 BHK
+bedrooms: '3'
+squareArea: 2124
+totalSuperBuiltUpArea:
+  sqM: 197.35
+  sqFt: 2124
+carpetArea:
+  sqM: 139.43
+  sqFt: 1501
 cardImage: /assets/img/Vfn4eeciqKniY85fukB1U8Zyig.png
 gallery:
 - /assets/img/Vfn4eeciqKniY85fukB1U8Zyig.png
 - /assets/img/xzeaguzAA0OgBXFx0H91koGNS0.png
 - /assets/img/PW7axrL8Esn2j40Yqx3hJpbSgU.png
 floorPlan: /assets/img/wj6eGC6ENPfWRW1HCoX0PVMwHs.jpg
-amenities:
-- Security
-- Air Conditioning
-- Elevator
-- Parking
-description: Well-appointed midtown apartment with classic pre-war details, updated
-  kitchen, and easy access to Central Park.
+amenities: []
+description: 3 BHK flat in Dona Paula with 197.35 sq m super built-up area and 139.43
+  sq m carpet area.

@@ -1,15 +1,18 @@
-title: Emerald Bay Villa
-status: For Rent
+title: Villa 34 - Socorro, Porvorim
+status: For Buy
 featured: true
-price: 22000
-street: Biscayne Bay Drive
-area: Edgewater
-city: Miami
-propertyType: Apartment
-bedrooms: 4+
-bathrooms: '4'
-squareArea: 5200
-yearBuilt: 2023
+price: 55000000
+street: ''
+area: Socorro, Porvorim
+city: Goa
+propertyType: Villa
+configuration: 3 BHK
+bedrooms: '3'
+squareArea: 2368
+builtUpArea:
+  sqM: 220
+  sqFt: 2368
+privatePoolAndGarden: true
 cardImage: /assets/img/2LXhTbxMglkXHEUCXW8SBkvPGQ.png
 gallery:
 - /assets/img/2LXhTbxMglkXHEUCXW8SBkvPGQ.png
@@ -19,10 +22,9 @@ floorPlan: /assets/img/i9XlWb9aJJQDgMht6TzoJMdflZY.jpg
 amenities:
 - Swimming Pool
 - Gym
-- Parking
-- Security
-- Elevator
-- Pet Friendly
 - Air Conditioning
-description: Brand-new bay-facing villa with smart home technology, a boat dock, chef's
-  kitchen, and resort-style outdoor entertaining.
+- Children's Play Area
+description: 3 BHK villa with a private pool and maid's quarters, one of only a few
+  villas with a private pool in the complex. Fully furnished and air conditioned with
+  all white goods. Built-up area of 220 sq m. The complex is one of Goa's most sought
+  after, with two common pools, a gym and a children's play area.
