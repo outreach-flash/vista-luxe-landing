@@ -35,17 +35,23 @@ const {
   </head>
   <body>
     <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main>
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
     <script>
       import gsap from 'gsap';
       import { ScrollTrigger } from 'gsap/ScrollTrigger';
+      import '../lib/smoother';
       gsap.registerPlugin(ScrollTrigger);
       (window as any).gsap = gsap;
       (window as any).ScrollTrigger = ScrollTrigger;
       window.dispatchEvent(new Event('gsap:ready'));
+      document.fonts?.ready.then(() => ScrollTrigger.refresh());
     </script>
   </body>
 </html>

@@ -51,15 +51,15 @@ const reviews = [
   <!--
     Parallax layering:
     • .hero-scroll-container  – tall scroll driver (≈ 200svh)
-    • .hero-sticky-stage      – sticky viewport-height panel, clips content
+    • .hero-sticky-stage      – pinned viewport-height panel, clips content
     • .hero-bg                – sky/gradient background fills stage (z:0)
-    • .hero-content           – text, badge, buttons  (z:1)  ← stays sticky
+    • .hero-content           – text, badge, buttons  (z:1)  ← stays pinned
     • .hero-building-wrap     – building + clouds     (z:2)  ← rises over text
     As the user scrolls through the extra height the building image
     (which has a higher z-index) climbs upward and visually covers the text.
   -->
   <section id="hero-scroll-container" class="relative" style="height: 200svh;">
-    <div id="hero-sticky-stage" class="sticky top-0 h-[100svh] overflow-hidden">
+    <div id="hero-sticky-stage" class="h-[100svh] overflow-hidden">
 
       <!-- sky background -->
       <img src="/assets/img/lQ2c1tUqYlj0bLtzWgULCmgN7Q.png" alt="" class="absolute inset-0 h-full w-full object-cover" style="z-index:0" />
@@ -167,7 +167,7 @@ const reviews = [
 
   <!-- ============ MANIFESTO (pinned word fill) ============ -->
   <section id="manifesto-section" class="relative bg-mist2" style="height: 180svh;">
-    <div class="sticky top-0 flex h-[100svh] items-center justify-center px-6">
+    <div id="manifesto-stage" class="flex h-[100svh] items-center justify-center px-6">
       <p id="manifesto" class="mx-auto max-w-[900px] text-center text-[30px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]">
         <span class="mword">Focused</span> <span class="mword">on</span> <span class="mword font-bold italic">discovery,</span>
         <span class="mword">built</span> <span class="mword">for</span> <span class="mword">real</span> <span class="mword">choices.</span>
@@ -193,7 +193,7 @@ const reviews = [
 
     <div id="stack-wrap" class="relative mt-14">
       {featured.map((p) => (
-        <div class="stack-card sticky top-0 h-[100svh] overflow-hidden">
+        <div class="stack-card h-[100svh] overflow-hidden">
           <img src={p.data.cardImage} alt={p.data.title} class="absolute inset-0 h-full w-full object-cover" />
           <div class="absolute inset-0 bg-black/45"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -221,23 +221,61 @@ const reviews = [
       </p>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 gap-4 md:grid-cols-4">
+    <div id="services-row" class="reveal mt-14 grid grid-cols-1 gap-3 lg:flex lg:h-[553px]">
       {services.map((s, i) => (
-        <a
-          href="/properties"
+        <button
+          type="button"
+          data-service-card
+          aria-pressed={i === 0 ? 'true' : 'false'}
           class:list={[
-            'reveal group relative flex min-h-[420px] flex-col justify-end overflow-hidden rounded-2xl p-7',
-            i === 0 ? 'md:col-span-2' : 'md:col-span-1',
+            'group relative cursor-pointer overflow-hidden rounded-[20px] text-left transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
+            'h-[480px] lg:h-auto',
+            i === 0 ? 'bg-ink lg:flex-[672_1_0%]' : 'bg-ink lg:bg-mist lg:flex-[280_1_0%]',
           ]}
         >
-          <img src={s.img} alt={s.label} loading="lazy" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
-          <span class="absolute right-6 top-6 font-mono text-[13px] text-white/80">{s.n}</span>
-          <div class="relative">
-            <p class="text-[13px] text-white/80">{s.label}</p>
-            <h3 class="mt-1.5 max-w-[280px] text-[24px] font-semibold leading-snug tracking-tight text-white">{s.title}</h3>
+          <img
+            src={s.img}
+            alt={s.label}
+            loading="lazy"
+            class:list={[
+              'absolute inset-x-6 top-[150px] bottom-0 h-[calc(100%-150px)] w-[calc(100%-48px)] rounded-xl object-cover transition-opacity duration-500 lg:inset-x-[58px] lg:w-[calc(100%-116px)]',
+              i === 0 ? 'opacity-100' : 'opacity-100 lg:opacity-0',
+            ]}
+            data-service-img
+          />
+          <span
+            data-service-num
+            class:list={[
+              'absolute right-6 top-5 text-[120px] font-medium leading-none tracking-[-5.12px] transition-colors duration-700',
+              i === 0 ? 'text-white' : 'text-white lg:text-silver',
+            ]}
+          >
+            {s.n}
+          </span>
+          <div
+            data-service-text
+            class:list={[
+              'absolute left-7 transition-[top] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
+              i === 0 ? 'top-[26px]' : 'top-[26px] lg:top-[415px]',
+            ]}
+          >
+            <p
+              data-service-label
+              class:list={['text-[14px] transition-colors duration-700', i === 0 ? 'text-mist2' : 'text-mist2 lg:text-ink']}
+            >
+              {s.label}
+            </p>
+            <h3
+              data-service-title
+              class:list={[
+                'mt-2 max-w-[240px] text-[28px] font-medium leading-[1.2] tracking-tight transition-colors duration-700',
+                i === 0 ? 'text-white' : 'text-white lg:text-ink',
+              ]}
+            >
+              {s.title}
+            </h3>
           </div>
-        </a>
+        </button>
       ))}
     </div>
   </section>
@@ -299,7 +337,7 @@ const reviews = [
     the viewport like the reference's sticky section.
   -->
   <section id="highlight-pin" class="relative" style="height: 280svh;">
-    <div class="sticky top-0 flex h-[100svh] items-center justify-center overflow-hidden">
+    <div id="highlight-stage" class="flex h-[100svh] items-center justify-center overflow-hidden">
       <div class="absolute inset-0 flex items-center overflow-hidden">
         <div class="marquee-track" id="marquee">
           {Array.from({ length: 4 }).map(() => (
@@ -392,7 +430,28 @@ const reviews = [
 <script>
   import gsap from 'gsap';
   import { ScrollTrigger } from 'gsap/ScrollTrigger';
+  import '../lib/smoother';
   gsap.registerPlugin(ScrollTrigger);
+
+  /* ---- pinned stages (ScrollSmoother-safe replacement for CSS sticky) ---- */
+  ScrollTrigger.create({
+    trigger: '#hero-scroll-container', start: 'top top', end: 'bottom bottom',
+    pin: '#hero-sticky-stage', pinSpacing: false,
+  });
+  ScrollTrigger.create({
+    trigger: '#manifesto-section', start: 'top top', end: 'bottom bottom',
+    pin: '#manifesto-stage', pinSpacing: false,
+  });
+  gsap.utils.toArray<HTMLElement>('.stack-card').forEach((card) => {
+    ScrollTrigger.create({
+      trigger: card, start: 'top top', endTrigger: '#stack-wrap', end: 'bottom bottom',
+      pin: true, pinSpacing: false,
+    });
+  });
+  ScrollTrigger.create({
+    trigger: '#highlight-pin', start: 'top top', end: 'bottom bottom',
+    pin: '#highlight-stage', pinSpacing: false,
+  });
 
   /* ---- hero entrance ---- */
   gsap.from('.hero-badge', { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out' });
@@ -494,6 +553,41 @@ const reviews = [
     gsap.set(track, { x: 0 });
     loop();
   });
+
+  /* ---- services: click-to-expand accordion (matches homy.framer.media) ---- */
+  const serviceCards = Array.from(document.querySelectorAll<HTMLElement>('[data-service-card]'));
+  const CLS = {
+    cardOn: ['bg-ink', 'lg:flex-[672_1_0%]'],
+    cardOff: ['lg:bg-mist', 'lg:flex-[280_1_0%]'],
+    imgOn: ['lg:opacity-100'],
+    imgOff: ['lg:opacity-0'],
+    numOn: ['lg:text-white'],
+    numOff: ['lg:text-silver'],
+    labelOn: ['lg:text-mist2'],
+    labelOff: ['lg:text-ink'],
+    titleOn: ['lg:text-white'],
+    titleOff: ['lg:text-ink'],
+    textOn: ['lg:top-[26px]'],
+    textOff: ['lg:top-[415px]'],
+  };
+  function setService(idx: number) {
+    serviceCards.forEach((card, i) => {
+      const on = i === idx;
+      card.setAttribute('aria-pressed', String(on));
+      const swap = (el: Element | null, onCls: string[], offCls: string[]) => {
+        if (!el) return;
+        el.classList.remove(...(on ? offCls : onCls));
+        el.classList.add(...(on ? onCls : offCls));
+      };
+      swap(card, CLS.cardOn, CLS.cardOff);
+      swap(card.querySelector('[data-service-img]'), CLS.imgOn, CLS.imgOff);
+      swap(card.querySelector('[data-service-num]'), CLS.numOn, CLS.numOff);
+      swap(card.querySelector('[data-service-label]'), CLS.labelOn, CLS.labelOff);
+      swap(card.querySelector('[data-service-title]'), CLS.titleOn, CLS.titleOff);
+      swap(card.querySelector('[data-service-text]'), CLS.textOn, CLS.textOff);
+    });
+  }
+  serviceCards.forEach((card, i) => card.addEventListener('click', () => setService(i)));
 
   /* ---- reviews marquee: single row, continuous leftward ~80px/s ---- */
   function initReviewsMarquee() {

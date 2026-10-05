@@ -44,10 +44,12 @@ proximityLocations:
   distance: approx. 7-8 km
 - location: Panaji
   distance: approx. 17 km
+cardImage: /assets/img/unUSH9a5g14PTwmHdV6e56xNIs.png
 gallery:
-  - null
-  - null
-  - null
+  - /assets/img/unUSH9a5g14PTwmHdV6e56xNIs.png
+  - /assets/img/ftogejPdk0oXG19Viy4a234qHg.png
+  - /assets/img/hPOPfiQGPn5VmFYnqXiqZM67Rw.jpg
+floorPlan: /assets/img/9a5aCxqCQxDVEsE0bOWsRFg8.jpg
 amenities: []
 description: >-
   A prime North Goa property in Arpora, priced at ₹5.50 Crore (slightly negotiable).

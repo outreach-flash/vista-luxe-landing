@@ -35,15 +35,16 @@ const faqs = [
 
 <section id="faq-section" class="mx-auto max-w-[1320px] px-6 py-24 md:px-10 md:py-36">
   <!--
-    Sticky FAQ left column:
-    The grid uses items-start so the left column can independently use
-    position:sticky. The left panel sticks at top:120px while the right
+    Pinned FAQ left column:
+    The left panel is pinned at top:120px via ScrollTrigger while the right
     FAQ accordion list scrolls past it — matching homy.framer.media.
+    (ScrollTrigger pin instead of position:sticky so it survives ScrollSmoother's
+    transformed content wrapper.)
   -->
   <div class="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-start">
 
-    <!-- LEFT: sticky panel -->
-    <div class="md:col-span-5 md:sticky md:top-[120px]">
+    <!-- LEFT: pinned panel -->
+    <div id="faq-panel" class="md:col-span-5">
       <Eyebrow text="FAQ" />
       <h2 class="h-display mt-6 text-[40px] text-ink md:text-[52px]">Things You Should Know</h2>
       <p class="mt-5 max-w-[360px] text-[16px] leading-relaxed text-body">
@@ -85,6 +86,21 @@ const faqs = [
 
 <script>
   import gsap from 'gsap';
+  import { ScrollTrigger } from '../lib/smoother';
+
+  /* pin the left panel while the accordion scrolls (md+ only) */
+  const mm = gsap.matchMedia();
+  mm.add('(min-width: 768px)', () => {
+    const panel = document.getElementById('faq-panel')!;
+    const grid = panel.parentElement!;
+    ScrollTrigger.create({
+      trigger: panel,
+      start: 'top 120px',
+      end: () => '+=' + Math.max(0, grid.offsetHeight - panel.offsetHeight),
+      pin: true,
+      pinSpacing: false,
+    });
+  });
 
   document.querySelectorAll<HTMLElement>('#faq-list .faq-item').forEach((item) => {
     const btn = item.querySelector('.faq-q')!;

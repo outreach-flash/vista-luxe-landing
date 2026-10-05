@@ -324,9 +324,9 @@ const hasGallery = d.gallery && d.gallery.length > 0;
 
       </div>
 
-      <!-- Sticky contact card -->
-      <div class="lg:col-span-5">
-        <div class="rounded-2xl bg-ink p-9 text-center lg:sticky lg:top-28">
+      <!-- Pinned contact card (ScrollTrigger pin; sticky breaks under ScrollSmoother) -->
+      <div class="lg:col-span-5" id="detail-side-col">
+        <div id="detail-card" class="rounded-2xl bg-ink p-9 text-center">
           <img src="/assets/img/wtAazKz9ClT6GcQ95wWsMeO0LI.svg" alt="" class="mx-auto h-12 w-auto" />
           <h3 class="mt-6 text-[26px] font-bold tracking-tight text-white">Like this property?</h3>
           <p class="mt-3 text-[14px] leading-relaxed text-white/70">
@@ -361,6 +361,8 @@ const hasGallery = d.gallery && d.gallery.length > 0;
     document.addEventListener('DOMContentLoaded', () => {
       const modal = document.getElementById('gallery-modal');
       if (!modal || !galleryImages || galleryImages.length === 0) return;
+      // fixed overlays must live outside ScrollSmoother's transformed content
+      document.body.appendChild(modal);
 
       let currentIndex = 0;
       const activeImg = document.getElementById('gallery-active-img');
@@ -455,6 +457,26 @@ const hasGallery = d.gallery && d.gallery.length > 0;
         if (e.key === 'Escape') closeModal();
         if (e.key === 'ArrowLeft') updateGallery(currentIndex - 1);
         if (e.key === 'ArrowRight') updateGallery(currentIndex + 1);
+      });
+    });
+  </script>
+
+  <script>
+    import gsap from 'gsap';
+    import { ScrollTrigger } from '../../lib/smoother';
+
+    const mm = gsap.matchMedia();
+    mm.add('(min-width: 1024px)', () => {
+      const card = document.getElementById('detail-card');
+      const col = document.getElementById('detail-side-col');
+      if (!card || !col) return;
+      const grid = col.parentElement!;
+      ScrollTrigger.create({
+        trigger: card,
+        start: 'top 112px',
+        end: () => '+=' + Math.max(0, grid.offsetHeight - card.offsetHeight),
+        pin: true,
+        pinSpacing: false,
       });
     });
   </script>
