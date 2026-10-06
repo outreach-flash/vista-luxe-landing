@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import Faq from '../../components/Faq.astro';
 import Cta from '../../components/Cta.astro';
+import { resolveImageVariants } from '../../lib/media';
 
 export async function getStaticPaths() {
   const properties = await getCollection('properties');
@@ -70,13 +71,27 @@ const hasProximity = d.proximityLocations && d.proximityLocations.length > 0;
 const hasAmenities = d.amenities && d.amenities.length > 0;
 const hasFloorPlan = !!d.floorPlan;
 
-/** Combined gallery: images first, then videos */
-const mediaItems = [
-  ...(d.gallery ?? []).map((src) => ({ type: 'image' as const, src })),
-  ...(d.galleryVideos ?? []).map((src) => ({ type: 'video' as const, src })),
-];
-const hasGallery = mediaItems.length > 0;
-const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos' : 'photos';
+/** Gallery counts come straight from the YAML; only the first 3 items are
+ *  resolved for the hero grid. The full payload loads via /api/media/<slug>.json. */
+const imageCount = d.gallery?.length ?? 0;
+const videoCount = d.galleryVideos?.length ?? 0;
+const totalMedia = imageCount + videoCount;
+const hasGallery = totalMedia > 0;
+const galleryCountLabel = videoCount > 0 ? 'photos & videos' : 'photos';
+
+interface HeroItem {
+  type: 'image' | 'video';
+  src: string;
+}
+const heroItems: HeroItem[] = await Promise.all(
+  [...(d.gallery ?? []), ...(d.galleryVideos ?? [])].slice(0, 3).map(async (src, i) => {
+    if (i >= imageCount) return { type: 'video' as const, src };
+    const v = await resolveImageVariants(src, { full: i === 0 ? 1200 : 600 });
+    return { type: 'image' as const, src: v.full };
+  }),
+);
+
+const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { full: 1200 })).full : null;
 ---
 
 <Layout title={`${d.title} — Vista Luxe`} description={d.description ?? d.title}>
@@ -115,14 +130,14 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
       </div>
     </div>
 
-    <!-- Gallery -->
+    <!-- Gallery hero (first 3 items; the full payload loads on demand) -->
     {hasGallery && (
       <div class="relative mt-10">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-12">
-          <div class="relative overflow-hidden rounded-2xl md:col-span-8 cursor-pointer group" id="open-gallery-main" style={`view-transition-name: hero-${property.id}`}>
-            {mediaItems[0].type === 'video' ? (
+          <div class="relative overflow-hidden rounded-2xl md:col-span-8 cursor-pointer group js-open-gallery" data-slug={property.id} data-index="0" style={`view-transition-name: hero-${property.id}`}>
+            {heroItems[0].type === 'video' ? (
               <>
-                <video src={mediaItems[0].src} muted loop playsinline preload="metadata" class="h-full max-h-[560px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <video src={heroItems[0].src} muted loop playsinline preload="none" class="h-full max-h-[560px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                 <span class="pointer-events-none absolute inset-0 flex items-center justify-center">
                   <span class="flex h-16 w-16 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -130,16 +145,16 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
                 </span>
               </>
             ) : (
-              <img src={mediaItems[0].src} alt={d.title} class="h-full max-h-[560px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <img src={heroItems[0].src} alt={d.title} class="h-full max-h-[560px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
             )}
           </div>
-          {mediaItems.length > 1 && (
+          {heroItems.length > 1 && (
             <div class="flex flex-col gap-4 md:col-span-4">
-              {mediaItems.slice(1, 3).map((m, idx) => (
-                <div class="relative flex-1 overflow-hidden rounded-2xl cursor-pointer group open-gallery-thumb" data-index={idx + 1}>
+              {heroItems.slice(1).map((m, idx) => (
+                <div class="relative flex-1 overflow-hidden rounded-2xl cursor-pointer group js-open-gallery" data-slug={property.id} data-index={idx + 1}>
                   {m.type === 'video' ? (
                     <>
-                      <video src={m.src} muted loop playsinline preload="metadata" class="h-full max-h-[272px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <video src={m.src} muted loop playsinline preload="none" class="h-full max-h-[272px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       <span class="pointer-events-none absolute inset-0 flex items-center justify-center">
                         <span class="flex h-11 w-11 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
                           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg>
@@ -158,113 +173,18 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
         <!-- "View all photos" button -->
         <button
           type="button"
-          id="open-gallery-btn"
-          class="absolute bottom-5 right-5 inline-flex items-center gap-2 rounded-xl bg-ink/80 px-4 py-2.5 text-[14px] font-medium text-white shadow-lg backdrop-blur-md transition-all hover:bg-ink hover:scale-105"
+          id="view-more-btn"
+          class="js-open-gallery absolute bottom-5 right-5 inline-flex items-center gap-2 rounded-xl bg-ink/80 px-4 py-2.5 text-[14px] font-medium text-white shadow-lg backdrop-blur-md transition-all hover:bg-ink hover:scale-105"
+          data-slug={property.id}
+          data-index="0"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <rect width="18" height="18" x="3" y="3" rx="2" ry="2"/>
             <circle cx="9" cy="9" r="2"/>
             <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/>
           </svg>
-          <span>View all {mediaItems.length} {galleryCountLabel}</span>
+          <span>View all {totalMedia} {galleryCountLabel}</span>
         </button>
-
-        <!-- Translucent Overlay Lightbox -->
-        <div
-          id="gallery-modal"
-          class="fixed inset-0 z-50 hidden items-center justify-center bg-black/85 backdrop-blur-md p-4 transition-opacity duration-300 opacity-0"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Photo gallery"
-        >
-          <!-- Header controls -->
-          <div class="absolute top-4 right-4 z-10 flex items-center gap-4">
-            <span id="gallery-counter" class="text-sm font-medium tracking-wide text-white/70">
-              1 / {mediaItems.length}
-            </span>
-            <button
-              type="button"
-              id="close-gallery-btn"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20"
-              aria-label="Close gallery"
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6 6 18M6 6l12 12"/>
-              </svg>
-            </button>
-          </div>
-
-          <!-- Nav previous button -->
-          {mediaItems.length > 1 && (
-            <button
-              type="button"
-              id="prev-photo-btn"
-              class="absolute left-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
-              aria-label="Previous photo"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m15 18-6-6 6-6"/>
-              </svg>
-            </button>
-          )}
-
-          <!-- Main Photo/Video Container -->
-          <div class="flex h-full w-full max-w-5xl flex-col items-center justify-center">
-            <div class="relative flex max-h-[75vh] w-full items-center justify-center">
-              <img
-                id="gallery-active-img"
-                src={mediaItems[0].type === 'image' ? mediaItems[0].src : undefined}
-                alt={d.title}
-                class:list={["max-h-[75vh] max-w-full rounded-xl object-contain shadow-2xl transition-all duration-200 select-none", { hidden: mediaItems[0].type === 'video' }]}
-              />
-              <video
-                id="gallery-active-video"
-                src={mediaItems[0].type === 'video' ? mediaItems[0].src : undefined}
-                controls
-                playsinline
-                class:list={["max-h-[75vh] max-w-full rounded-xl shadow-2xl", { hidden: mediaItems[0].type !== 'video' }]}
-              />
-            </div>
-
-            <!-- Thumbnail Strip (if multiple photos) -->
-            {mediaItems.length > 1 && (
-              <div class="mt-4 flex max-w-full gap-2 overflow-x-auto pb-2 px-2 scrollbar-thin">
-                {mediaItems.map((m, i) => (
-                  <button
-                    type="button"
-                    class="gallery-thumbnail relative shrink-0 overflow-hidden rounded-lg border-2 border-transparent transition opacity-60 hover:opacity-100"
-                    data-thumb-index={i}
-                  >
-                    {m.type === 'video' ? (
-                      <>
-                        <video src={m.src} muted playsinline preload="metadata" class="h-14 w-20 object-cover" />
-                        <span class="pointer-events-none absolute inset-0 flex items-center justify-center">
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="white" class="drop-shadow"><path d="M8 5.5v13l11-6.5z"/></svg>
-                        </span>
-                      </>
-                    ) : (
-                      <img src={m.src} alt="" class="h-14 w-20 object-cover" />
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-
-          <!-- Nav next button -->
-          {mediaItems.length > 1 && (
-            <button
-              type="button"
-              id="next-photo-btn"
-              class="absolute right-4 top-1/2 z-10 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-white/20 hover:scale-110"
-              aria-label="Next photo"
-            >
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </button>
-          )}
-        </div>
       </div>
     )}
 
@@ -343,7 +263,7 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
           <div class="mt-10">
             <h2 class="text-[28px] font-medium tracking-tight text-ink">Floor Plans</h2>
             <div class="mt-5 overflow-hidden rounded-2xl">
-              <img src={d.floorPlan!} alt={`${d.title} floor plan`} loading="lazy" class="w-full object-cover" />
+              <img src={floorPlanSrc!} alt={`${d.title} floor plan`} loading="lazy" class="w-full object-cover" />
             </div>
           </div>
         )}
@@ -404,129 +324,13 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
   <Faq />
   <Cta />
 
-  <script is:inline define:vars={{ mediaItems }}>
-    document.addEventListener('DOMContentLoaded', () => {
-      const modal = document.getElementById('gallery-modal');
-      if (!modal || !mediaItems || mediaItems.length === 0) return;
-      // fixed overlays must live outside ScrollSmoother's transformed content
-      document.body.appendChild(modal);
-
-      let currentIndex = 0;
-      const activeImg = document.getElementById('gallery-active-img');
-      const activeVideo = document.getElementById('gallery-active-video');
-      const counter = document.getElementById('gallery-counter');
-      const thumbs = document.querySelectorAll('.gallery-thumbnail');
-
-      function pauseVideo() {
-        if (activeVideo && !activeVideo.paused) activeVideo.pause();
-      }
-
-      function updateGallery(index) {
-        if (index < 0) index = mediaItems.length - 1;
-        if (index >= mediaItems.length) index = 0;
-        currentIndex = index;
-
-        const item = mediaItems[currentIndex];
-        pauseVideo();
-        if (item.type === 'video') {
-          if (activeImg) activeImg.classList.add('hidden');
-          if (activeVideo) {
-            activeVideo.src = item.src;
-            activeVideo.classList.remove('hidden');
-          }
-        } else {
-          if (activeVideo) {
-            activeVideo.classList.add('hidden');
-            activeVideo.removeAttribute('src');
-            activeVideo.load();
-          }
-          if (activeImg) {
-            activeImg.src = item.src;
-            activeImg.classList.remove('hidden');
-          }
-        }
-        if (counter) {
-          counter.textContent = `${currentIndex + 1} / ${mediaItems.length}`;
-        }
-
-        thumbs.forEach((thumb, i) => {
-          if (i === currentIndex) {
-            thumb.classList.remove('opacity-60', 'border-transparent');
-            thumb.classList.add('opacity-100', 'border-white');
-          } else {
-            thumb.classList.remove('opacity-100', 'border-white');
-            thumb.classList.add('opacity-60', 'border-transparent');
-          }
-        });
-      }
-
-      function openModal(index = 0) {
-        updateGallery(index);
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
-        // Trigger transition
-        requestAnimationFrame(() => {
-          modal.classList.remove('opacity-0');
-          modal.classList.add('opacity-100');
-        });
-      }
-
-      function closeModal() {
-        pauseVideo();
-        modal.classList.remove('opacity-100');
-        modal.classList.add('opacity-0');
-        setTimeout(() => {
-          modal.classList.remove('flex');
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }, 300);
-      }
-
-      // Open triggers
-      document.getElementById('open-gallery-btn')?.addEventListener('click', () => openModal(0));
-      document.getElementById('open-gallery-main')?.addEventListener('click', () => openModal(0));
-      document.querySelectorAll('.open-gallery-thumb').forEach((el) => {
-        el.addEventListener('click', () => {
-          const idx = parseInt(el.getAttribute('data-index') || '0', 10);
-          openModal(idx);
-        });
-      });
-
-      // Close triggers
-      document.getElementById('close-gallery-btn')?.addEventListener('click', closeModal);
-      modal.addEventListener('click', (e) => {
-        if (e.target === modal || (e.target instanceof HTMLElement && e.target.classList.contains('flex-col'))) {
-          closeModal();
-        }
-      });
-
-      // Nav triggers
-      document.getElementById('prev-photo-btn')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        updateGallery(currentIndex - 1);
-      });
-      document.getElementById('next-photo-btn')?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        updateGallery(currentIndex + 1);
-      });
-
-      // Thumb clicks
-      thumbs.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const idx = parseInt(btn.getAttribute('data-thumb-index') || '0', 10);
-          updateGallery(idx);
-        });
-      });
-
-      // Keyboard controls
-      document.addEventListener('keydown', (e) => {
-        if (modal.classList.contains('hidden')) return;
-        if (e.key === 'Escape') closeModal();
-        if (e.key === 'ArrowLeft') updateGallery(currentIndex - 1);
-        if (e.key === 'ArrowRight') updateGallery(currentIndex + 1);
-      });
+  <script>
+    // Deferred lightbox: the gallery module ships 0 bytes until a trigger is clicked.
+    document.addEventListener('click', (e) => {
+      const trigger = (e.target as HTMLElement).closest<HTMLElement>('.js-open-gallery');
+      if (!trigger?.dataset.slug) return;
+      const index = Number(trigger.dataset.index ?? 0);
+      import('../../lib/lightbox').then((m) => m.openGallery(trigger.dataset.slug!, index));
     });
   </script>
 

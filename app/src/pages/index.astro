@@ -6,10 +6,18 @@ import Button from '../components/Button.astro';
 import PropertyCard from '../components/PropertyCard.astro';
 import Faq from '../components/Faq.astro';
 import Cta from '../components/Cta.astro';
+import { resolveImageVariants } from '../lib/media';
 
 const all = await getCollection('properties');
 const properties = all;
-const featured = properties.filter((p) => p.data.featured);
+const featured = await Promise.all(
+  properties
+    .filter((p) => p.data.featured)
+    .map(async (p) => ({
+      ...p,
+      heroSrc: p.data.cardImage ? (await resolveImageVariants(p.data.cardImage, { full: 1600 })).full : null,
+    })),
+);
 const preview = properties.slice(0, 4);
 
 const services = [
@@ -194,7 +202,7 @@ const reviews = [
     <div id="stack-wrap" class="relative mt-14">
       {featured.map((p) => (
         <div class="stack-card h-[100svh] overflow-hidden">
-          <img src={p.data.cardImage} alt={p.data.title} class="absolute inset-0 h-full w-full object-cover" />
+          <img src={p.heroSrc ?? undefined} alt={p.data.title} class="absolute inset-0 h-full w-full object-cover" />
           <div class="absolute inset-0 bg-black/45"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
             <span class="rounded-full bg-white/15 px-5 py-2 text-[15px] font-medium text-white backdrop-blur-md">

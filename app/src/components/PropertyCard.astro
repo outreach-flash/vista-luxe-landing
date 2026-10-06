@@ -1,4 +1,6 @@
 ---
+import { resolveImageVariants } from '../lib/media';
+
 interface Props {
   slug: string;
   title: string;
@@ -10,6 +12,7 @@ interface Props {
   squareArea?: number | null;
 }
 const { slug, title, status, price, cardImage, bedrooms, bathrooms, squareArea } = Astro.props;
+const cardSrc = cardImage ? (await resolveImageVariants(cardImage, { full: 800 })).full : null;
 const fmt = (n: number) => n.toLocaleString('en-IN');
 const stats = [
   bedrooms ? { icon: 'bed', text: bedrooms } : null,
@@ -26,9 +29,9 @@ const stats = [
   data-title={title.toLowerCase()}
 >
   <div class="aspect-[4/3.4] w-full overflow-hidden rounded-[20px]" style={`view-transition-name: hero-${slug}`}>
-    {cardImage ? (
+    {cardSrc ? (
       <img
-        src={cardImage}
+        src={cardSrc}
         alt={title}
         loading="lazy"
         class="h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
