@@ -65,12 +65,12 @@ const stats = [
 
   <!-- ============ MISSION / VISION ============ -->
   <section id="mission-section" class="px-3 pb-24 pt-24 md:px-5 md:pb-32 md:pt-32">
-    <div id="mission-block" class="relative mx-auto max-w-[998px]">
+    <div id="mission-block" class="relative w-full">
       <div class="overflow-hidden rounded-[20px]">
         <video
           src="/assets/vid/Bg3JpCFVhXQn97VzoZ1IHBgQMBg.mp4"
           autoplay muted loop playsinline
-          class="h-[420px] w-full object-cover md:h-[560px]"
+          class="h-[420px] w-full object-cover md:h-[560px] lg:h-[680px]"
         ></video>
       </div>
       <div class="mt-5 flex flex-col justify-center gap-5 px-1 md:absolute md:inset-x-0 md:bottom-[22px] md:mt-0 md:flex-row md:px-6">
@@ -100,7 +100,7 @@ const stats = [
       </p>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 gap-3 lg:h-[800px] lg:grid-cols-[305px_1fr_275px]">
+    <div class="mt-14 grid grid-cols-1 gap-3 lg:min-h-[800px] lg:grid-cols-[305px_1fr_275px]">
       <!-- LEFT: stats + CTA card -->
       <div class="flex flex-col gap-3">
         <div class="reveal flex flex-col gap-3 rounded-3xl bg-mist2 p-3">
@@ -152,8 +152,8 @@ const stats = [
       <!-- RIGHT: heading + vertical photo ticker -->
       <div class="flex flex-col">
         <h3 class="reveal text-[22px] font-medium leading-[1.4] text-[#191919]">Loved by people who found their home</h3>
-        <div id="photo-ticker" class="reveal mt-5 min-h-[400px] flex-1 overflow-hidden rounded-2xl lg:min-h-0">
-          <div id="photo-ticker-track" class="flex flex-col gap-3 will-change-transform">
+        <div id="photo-ticker" class="reveal relative mt-5 min-h-[400px] flex-1 overflow-hidden rounded-2xl lg:min-h-0">
+          <div id="photo-ticker-track" class="flex flex-col gap-3 will-change-transform lg:absolute lg:inset-x-0 lg:top-0">
             {[...tickerImgs, ...tickerImgs].map((src) => (
               <img src={src} alt="Happy homeowners" loading="lazy" class="h-[170px] w-full shrink-0 rounded-2xl object-cover" />
             ))}
