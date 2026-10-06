@@ -198,10 +198,12 @@ const reviews = [
           <div class="absolute inset-0 bg-black/45"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
             <span class="rounded-full bg-white/15 px-5 py-2 text-[15px] font-medium text-white backdrop-blur-md">
-              ₹{p.data.price.toLocaleString('en-IN')}
+              {p.data.price != null ? `₹${p.data.price.toLocaleString('en-IN')}` : 'Price on Request'}
             </span>
             <h3 class="mt-5 text-[36px] font-bold tracking-tight text-white md:text-[44px]">{p.data.title}</h3>
-            <p class="mt-2 text-[15px] text-white/85">{p.data.street}, {p.data.area}</p>
+            { [p.data.street, p.data.area].filter(Boolean).length > 0 && (
+              <p class="mt-2 text-[15px] text-white/85">{[p.data.street, p.data.area].filter(Boolean).join(', ')}</p>
+            ) }
             <div class="mt-7">
               <Button href={`/properties/${p.id}`} label="Explore" variant="light" />
             </div>

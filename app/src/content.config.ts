@@ -90,6 +90,11 @@ const properties = defineCollection({
       .optional()
       .default([])
       .transform((arr) => arr.filter((v): v is string => v !== null)),
+    galleryVideos: z
+      .array(z.string().nullable())
+      .optional()
+      .default([])
+      .transform((arr) => arr.filter((v): v is string => v !== null)),
     floorPlan: z.string().nullable().optional(),
 
     // ─── Amenities & description ───────────────────────────────────

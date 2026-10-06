@@ -5,6 +5,11 @@ const imgOpts = {
   publicPath: '/assets/img/',
 } as const;
 
+const vidOpts = {
+  directory: 'public/assets/vid',
+  publicPath: '/assets/vid/',
+} as const;
+
 /** Reusable area object: sq m + sq ft, both optional */
 const areaField = (label: string) =>
   fields.object(
@@ -65,7 +70,7 @@ export default config({
         // ─── Pricing (₹) ─────────────────────────────────────────────────
         price: fields.integer({
           label: 'Base Price (₹)',
-          validation: { isRequired: true },
+          validation: { isRequired: false },
         }),
         semiFurnishedPrice: fields.integer({
           label: 'Semi-Furnished Price (₹)',
@@ -205,6 +210,14 @@ export default config({
           {
             label: 'Gallery (detail page)',
             itemLabel: (props) => props.value ?? 'Image',
+          }
+        ),
+        galleryVideos: fields.array(
+          fields.file({ label: 'Gallery Video', ...vidOpts }),
+          {
+            label: 'Gallery Videos (detail page)',
+            description: 'Playable videos shown in the gallery lightbox after the images.',
+            itemLabel: (props) => props.value ?? 'Video',
           }
         ),
         floorPlan: fields.image({ label: 'Floor Plan Image', ...imgOpts }),
