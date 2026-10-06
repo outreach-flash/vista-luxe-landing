@@ -21,3 +21,8 @@ Thumbs.db
 npm-debug.log*
 
 .playwright-mcp/
+# Ignore stray images in repo root only (app assets/public are tracked)
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
