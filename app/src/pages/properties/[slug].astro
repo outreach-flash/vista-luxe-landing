@@ -90,7 +90,7 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
 
     <div class="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
       <div>
-        <h1 class="h-display text-[40px] text-ink md:text-[56px]">{d.title}</h1>
+        <h1 class="h-display w-fit max-w-full text-[40px] text-ink md:text-[56px]" style={`view-transition-name: title-${property.id}`}>{d.title}</h1>
         {(d.street || d.area || d.city) && (
           <p class="mt-4 flex items-center gap-2 text-[15px] text-body">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -119,7 +119,7 @@ const galleryCountLabel = (d.galleryVideos?.length ?? 0) > 0 ? 'photos & videos'
     {hasGallery && (
       <div class="relative mt-10">
         <div class="grid grid-cols-1 gap-4 md:grid-cols-12">
-          <div class="relative overflow-hidden rounded-2xl md:col-span-8 cursor-pointer group" id="open-gallery-main">
+          <div class="relative overflow-hidden rounded-2xl md:col-span-8 cursor-pointer group" id="open-gallery-main" style={`view-transition-name: hero-${property.id}`}>
             {mediaItems[0].type === 'video' ? (
               <>
                 <video src={mediaItems[0].src} muted loop playsinline preload="metadata" class="h-full max-h-[560px] w-full object-cover transition-transform duration-500 group-hover:scale-105" />
