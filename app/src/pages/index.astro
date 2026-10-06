@@ -201,7 +201,7 @@ const reviews = [
 
     <div id="stack-wrap" class="relative mt-14">
       {featured.map((p) => (
-        <div class="stack-card h-[100svh] overflow-hidden">
+        <div class="stack-card relative h-[100svh] overflow-hidden">
           <img src={p.heroSrc ?? undefined} alt={p.data.title} class="absolute inset-0 h-full w-full object-cover" />
           <div class="absolute inset-0 bg-black/45"></div>
           <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
