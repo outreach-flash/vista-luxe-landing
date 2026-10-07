@@ -101,12 +101,12 @@ const reviews = [
         so the CTA buttons (at ~46-50vh) are fully visible at scroll=0.
         GSAP translates it up linearly by 50vh (−0.5×scroll), matching the reference.
       -->
-      <div id="hero-building-wrap" class="absolute inset-x-0 w-full" style="z-index:2; top:57vh">
+      <div id="hero-building-wrap" class="absolute inset-x-0 w-full flex justify-center" style="z-index:2; top:57vh">
         <img
           id="hero-building"
           src="/assets/img/JmEO3k1QnS2hTbLE5miZu6iHho.png"
           alt="Modern dream home"
-          class="block h-auto w-full"
+          class="block h-auto w-full min-w-[1200px] lg:min-w-full max-w-none"
           style="will-change: transform;"
         />
         <img id="cloud-left" src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png" alt="" class="absolute -left-[6%] bottom-0 w-[42%] opacity-90" />
@@ -485,7 +485,8 @@ const reviews = [
     }
   );
 
-  /* ---- hero text: shrink + fade saturate ~2/3 in, downward drift continues ---- */
+
+  /* ---- hero text: shrink + fade saturate ~2/3 in ---- */
   gsap.set('#hero-content', { transformOrigin: 'center top' });
   gsap
     .timeline({
@@ -496,8 +497,7 @@ const reviews = [
         scrub: true,
       },
     })
-    .to('#hero-content', { scale: 0.87, opacity: 0.75, duration: 0.66, ease: 'none' }, 0)
-    .to('#hero-content', { y: '10vh', duration: 1, ease: 'none' }, 0);
+    .to('#hero-content', { scale: 0.87, opacity: 0.75, duration: 0.66, ease: 'none' }, 0);
 
   /* ---- clouds drift (floating) ---- */
   gsap.to('#cloud-left', { x: 60, duration: 14, yoyo: true, repeat: -1, ease: 'sine.inOut' });
