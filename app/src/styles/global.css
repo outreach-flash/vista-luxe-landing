@@ -12,6 +12,10 @@
   --color-mist2: #f6f6f6;
   --color-line: #ebebeb;
   --color-silver: #c7c7c7;
+
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 810px;
+  --breakpoint-lg: 1200px;
 }
 
 html {
@@ -21,6 +25,26 @@ html {
 body {
   @apply bg-white text-ink font-sans antialiased;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+
+
+/* Pinned scroll sections: shorter on mobile (reference uses compact mobile rhythm) */
+.pin-hero { height: 150svh; }
+.pin-manifesto { height: 130svh; }
+.pin-highlight { height: 180svh; }
+@media (min-width: 810px) {
+  .pin-hero { height: 200svh; }
+  .pin-manifesto { height: 180svh; }
+  .pin-highlight { height: 280svh; }
+}
+
+/* Mobile: comfortable line-height for display headings, 16px inputs avoid iOS zoom */
+@media (max-width: 809.98px) {
+  .h-display { line-height: 1.2; letter-spacing: -0.02em; }
+  input, select, textarea { font-size: 16px; }
+  #hero-sticky-stage { height: 100svh; }
 }
 
 ::selection {

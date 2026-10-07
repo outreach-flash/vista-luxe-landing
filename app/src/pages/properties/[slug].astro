@@ -95,7 +95,7 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
 ---
 
 <Layout title={`${d.title} — Vista Luxe`} description={d.description ?? d.title}>
-  <section class="mx-auto max-w-[1320px] px-6 pt-32 md:px-10 md:pt-44">
+  <section class="mx-auto max-w-[1320px] px-5 pt-28 md:px-6 lg:px-8 md:pt-32 lg:pt-44">
     {d.status && (
       <span class="inline-flex items-center gap-1.5 rounded-full bg-mist px-4 py-2 text-[13px] font-medium text-ink">
         <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 2 12h3v8h6v-6h2v6h6v-8h3z"/></svg>
@@ -105,7 +105,7 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
 
     <div class="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
       <div>
-        <h1 class="h-display w-fit max-w-full text-[40px] text-ink md:text-[56px]" style={`view-transition-name: title-${property.id}`}>{d.title}</h1>
+        <h1 class="h-display w-fit max-w-full text-[28px] text-ink md:text-[56px]" style={`view-transition-name: title-${property.id}`}>{d.title}</h1>
         {(d.street || d.area || d.city) && (
           <p class="mt-4 flex items-center gap-2 text-[15px] text-body">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -116,7 +116,7 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
 
       <!-- Pricing -->
       <div class="flex flex-col items-end gap-2">
-        <p class="text-[36px] font-bold tracking-tight text-ink md:text-[48px]">{d.price != null ? formatINR(d.price) : 'Price on Request'}</p>
+        <p class="text-[28px] font-bold tracking-tight text-ink md:text-[48px]">{d.price != null ? formatINR(d.price) : 'Price on Request'}</p>
         {d.semiFurnishedPrice != null && (
           <p class="text-[14px] text-body">
             Semi-Furnished: <span class="font-semibold text-ink">{formatINR(d.semiFurnishedPrice)}</span>
@@ -189,25 +189,25 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
     )}
 
     <!-- Content + sticky card -->
-    <div class="mt-16 grid grid-cols-1 gap-12 pb-24 lg:grid-cols-12">
+    <div class="mt-10 grid grid-cols-1 gap-10 pb-10 md:mt-16 md:gap-12 md:pb-16 lg:pb-24 lg:grid-cols-12">
       <div class="lg:col-span-7">
 
         <!-- Description -->
         {d.description && (
           <>
-            <h2 class="text-[28px] font-medium tracking-tight text-ink">Description</h2>
+            <h2 class="text-[22px] font-medium tracking-tight text-ink md:text-[28px]">Description</h2>
             <p class="mt-4 text-[15px] leading-[1.8] text-body">{d.description}</p>
           </>
         )}
 
         <!-- Key Specs -->
         {specRows.length > 0 && (
-          <div class="mt-10">
+          <div class="mt-8">
             <div class="mt-5">
               {specRows.map((s) => (
-                <div class="flex items-center justify-between border-b border-line py-4 last:border-0">
-                  <span class="text-[15px] text-body">{s.label}</span>
-                  <span class="text-[15px] font-semibold text-ink">{s.value}</span>
+                <div class="flex items-center justify-between gap-4 border-b border-line py-4 last:border-0">
+                  <span class="shrink-0 text-[15px] text-body">{s.label}</span>
+                  <span class="text-right text-[15px] font-semibold text-ink">{s.value}</span>
                 </div>
               ))}
             </div>
@@ -217,12 +217,12 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
         <!-- Area Breakdown -->
         {hasAreaRows && (
           <div class="mt-10">
-            <h2 class="text-[28px] font-medium tracking-tight text-ink">Area Breakdown</h2>
+            <h2 class="text-[22px] font-medium tracking-tight text-ink md:text-[28px]">Area Breakdown</h2>
             <div class="mt-5">
               {areaRows.map((r) => (
-                <div class="flex items-center justify-between border-b border-line py-4 last:border-0">
-                  <span class="text-[15px] text-body">{r.label}</span>
-                  <span class="text-[15px] font-semibold text-ink">{r.value}</span>
+                <div class="flex items-center justify-between gap-4 border-b border-line py-4 last:border-0">
+                  <span class="shrink-0 text-[15px] text-body">{r.label}</span>
+                  <span class="text-right text-[15px] font-semibold text-ink">{r.value}</span>
                 </div>
               ))}
             </div>
@@ -232,7 +232,7 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
         <!-- Floors -->
         {hasFloors && (
           <div class="mt-10">
-            <h2 class="text-[28px] font-medium tracking-tight text-ink">Floors</h2>
+            <h2 class="text-[22px] font-medium tracking-tight text-ink md:text-[28px]">Floors</h2>
             <div class="mt-5 flex flex-col gap-4">
               {d.floors!.map((floor) => (
                 <div class="rounded-xl bg-mist px-5 py-4">
@@ -249,7 +249,7 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
         <!-- Amenities -->
         {hasAmenities && (
           <div class="mt-10">
-            <h2 class="text-[28px] font-medium tracking-tight text-ink">Amenities & Features</h2>
+            <h2 class="text-[22px] font-medium tracking-tight text-ink md:text-[28px]">Amenities & Features</h2>
             <div class="mt-5 flex flex-wrap gap-2.5">
               {d.amenities.map((a) => (
                 <span class="rounded-lg bg-mist px-5 py-2.5 text-[14px] font-medium text-ink">{a}</span>
@@ -261,7 +261,7 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
         <!-- Floor Plans -->
         {hasFloorPlan && (
           <div class="mt-10">
-            <h2 class="text-[28px] font-medium tracking-tight text-ink">Floor Plans</h2>
+            <h2 class="text-[22px] font-medium tracking-tight text-ink md:text-[28px]">Floor Plans</h2>
             <div class="mt-5 overflow-hidden rounded-2xl">
               <img src={floorPlanSrc!} alt={`${d.title} floor plan`} loading="lazy" class="w-full object-cover" />
             </div>
@@ -271,18 +271,18 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
         <!-- Proximity Locations -->
         {hasProximity && (
           <div class="mt-10">
-            <h2 class="text-[28px] font-medium tracking-tight text-ink">Nearby Locations</h2>
+            <h2 class="text-[22px] font-medium tracking-tight text-ink md:text-[28px]">Nearby Locations</h2>
             <div class="mt-5">
               {d.proximityLocations!.map((loc) => (
-                <div class="flex items-center justify-between border-b border-line py-4 last:border-0">
-                  <span class="flex items-center gap-2.5 text-[15px] text-body">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <div class="flex items-center justify-between gap-4 border-b border-line py-4 last:border-0">
+                  <span class="flex min-w-0 items-center gap-2.5 text-[15px] text-body">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="shrink-0">
                       <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
                       <circle cx="12" cy="10" r="3"/>
                     </svg>
-                    {loc.location}
+                    <span class="truncate">{loc.location}</span>
                   </span>
-                  <span class="text-[15px] font-semibold text-ink">{loc.distance}</span>
+                  <span class="shrink-0 text-right text-[15px] font-semibold text-ink">{loc.distance}</span>
                 </div>
               ))}
             </div>
@@ -323,6 +323,22 @@ const floorPlanSrc = d.floorPlan ? (await resolveImageVariants(d.floorPlan, { fu
 
   <Faq />
   <Cta />
+
+  <!-- Mobile sticky CTA bar (hidden on lg where the side card is pinned) -->
+  <div class="sticky bottom-0 z-40 border-t border-line bg-white/90 px-5 py-4 backdrop-blur-md lg:hidden">
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex flex-col">
+        <span class="text-[13px] font-medium text-body">Interested?</span>
+        <span class="text-[16px] font-bold text-ink">{d.price != null ? formatINR(d.price) : 'Price on Request'}</span>
+      </div>
+      <a
+        href="/contact-us"
+        class="inline-flex h-12 items-center justify-center rounded-full bg-ink px-6 text-[14px] font-medium text-white transition-colors hover:bg-black"
+      >
+        Enquire Now
+      </a>
+    </div>
+  </div>
 
   <script>
     // Deferred lightbox: the gallery module ships 0 bytes until a trigger is clicked.

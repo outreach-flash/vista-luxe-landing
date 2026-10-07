@@ -16,19 +16,29 @@ const beds = [...new Set(all.map((p) => p.data.bedrooms).filter((b): b is string
 ---
 
 <Layout title="Properties — Vista Luxe" description="Explore a range of properties built for comfort, location, and everyday living.">
-  <section class="mx-auto max-w-[1320px] px-6 pb-24 pt-32 md:px-10 md:pt-44">
+  <section class="mx-auto max-w-[1320px] px-5 pb-10 pt-28 md:px-6 lg:px-8 md:pb-16 lg:pb-24 md:pt-32 lg:pt-44">
     <Eyebrow text="Property Listings" />
     <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-      <h1 class="h-display text-[40px] text-ink md:text-[52px]">Discover homes that fit your lifestyle</h1>
+      <h1 class="h-display text-[28px] text-ink md:text-[52px]">Discover homes that fit your lifestyle</h1>
       <p class="max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
         Explore a range of properties built for comfort, location, and everyday living.
       </p>
     </div>
 
-    <div class="mt-14 grid grid-cols-1 gap-10 lg:grid-cols-12">
+    <div class="mt-8 grid grid-cols-1 gap-6 md:mt-14 lg:grid-cols-12 lg:gap-10">
       <!-- ============ FILTERS ============ -->
       <aside class="lg:col-span-4 xl:col-span-3">
-        <div class="rounded-2xl bg-mist p-6">
+        <button
+          id="filters-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="filters-panel"
+          class="flex h-12 w-full items-center justify-between rounded-full bg-ink px-6 text-[14px] font-medium text-white lg:hidden"
+        >
+          <span>Filters</span>
+          <svg id="filters-chevron" class="transition-transform duration-300" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div id="filters-panel" class="mt-3 hidden rounded-2xl bg-mist p-5 md:p-6 lg:mt-0 lg:block">
           <div class="flex items-center justify-between">
             <h2 class="text-[18px] font-bold text-ink">Filters</h2>
             <button id="clear-all" class="text-[13px] text-body underline-offset-2 hover:underline">Clear all</button>
@@ -252,5 +262,16 @@ const beds = [...new Set(all.map((p) => p.data.bedrooms).filter((b): b is string
       });
     });
     apply();
+  });
+
+  const filtersToggle = document.getElementById('filters-toggle')!;
+  const filtersPanel = document.getElementById('filters-panel')!;
+  const filtersChevron = document.getElementById('filters-chevron')!;
+  filtersToggle.addEventListener('click', () => {
+    const open = filtersToggle.getAttribute('aria-expanded') !== 'true';
+    filtersToggle.setAttribute('aria-expanded', String(open));
+    filtersPanel.classList.toggle('hidden', !open);
+    filtersChevron.style.transform = open ? 'rotate(180deg)' : '';
+    (window as any).ScrollTrigger?.refresh();
   });
 </script>

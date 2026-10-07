@@ -2,7 +2,7 @@
 ---
 
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
-  <div class="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-5 md:px-10">
+  <div class="mx-auto flex max-w-[1320px] items-center justify-between px-5 py-5 md:px-6 lg:px-8">
     <a href="/" class="flex items-center gap-2">
       <img src="/assets/img/hpBPVJ4EDWe6VR2UVdlcckRzGFo.svg" alt="Vista Luxe" class="h-6 w-auto" />
       <span class="text-[22px] font-bold tracking-tight text-ink">Vista Luxe</span>
@@ -23,17 +23,18 @@
       </a>
     </nav>
 
-    <button id="menu-btn" class="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-white md:hidden" aria-label="Menu">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    <button id="menu-btn" class="flex h-10 w-10 items-center justify-center rounded-full bg-ink text-white md:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg id="icon-open" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 4h12M2 8h12M2 12h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <svg id="icon-close" class="hidden" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 3l10 10M13 3L3 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
     </button>
   </div>
 
-  <div id="mobile-menu" class="hidden bg-white px-6 pb-6 pt-2 shadow-lg md:hidden">
-    <nav class="flex flex-col gap-4">
-      <a href="/properties" class="text-sm font-medium uppercase tracking-[0.08em]">Properties</a>
-      <a href="/#services" class="text-sm font-medium uppercase tracking-[0.08em]">Services</a>
-      <a href="/about-us" class="text-sm font-medium uppercase tracking-[0.08em]">About</a>
-      <a href="/contact-us" class="text-sm font-medium uppercase tracking-[0.08em]">Contact us</a>
+  <div id="mobile-menu" class="pointer-events-none absolute right-5 top-[68px] w-[min(340px,calc(100%-40px))] origin-top-right scale-95 rounded-3xl bg-white p-5 opacity-0 shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-200 md:hidden">
+    <nav class="flex flex-col">
+      <a href="/properties" class="border-b border-line py-3.5 text-sm font-medium uppercase tracking-[0.08em]">Properties</a>
+      <a href="/#services" class="border-b border-line py-3.5 text-sm font-medium uppercase tracking-[0.08em]">Services</a>
+      <a href="/about-us" class="py-3.5 text-sm font-medium uppercase tracking-[0.08em]">About</a>
+      <a href="/contact-us" class="mt-2 flex h-12 items-center justify-center rounded-full bg-ink text-sm font-medium text-white">Contact us</a>
     </nav>
   </div>
 </header>
@@ -52,5 +53,21 @@
 
   const btn = document.getElementById('menu-btn');
   const menu = document.getElementById('mobile-menu');
-  btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+  const setMenu = (open: boolean) => {
+    menu?.classList.toggle('opacity-0', !open);
+    menu?.classList.toggle('scale-95', !open);
+    menu?.classList.toggle('pointer-events-none', !open);
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+    btn?.setAttribute('aria-expanded', String(open));
+  };
+  btn?.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+  menu?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', (e) => {
+    if (!header?.contains(e.target as Node)) setMenu(false);
+  });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+  window.matchMedia('(min-width: 768px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 </script>

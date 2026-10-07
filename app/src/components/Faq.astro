@@ -33,7 +33,7 @@ const faqs = [
 ];
 ---
 
-<section id="faq-section" class="mx-auto max-w-[1320px] px-6 py-24 md:px-10 md:py-36">
+<section id="faq-section" class="mx-auto max-w-[1320px] px-5 py-10 md:px-6 lg:px-8 md:py-16 lg:py-20">
   <!--
     Pinned FAQ left column:
     The left panel is pinned at top:120px via ScrollTrigger while the right
@@ -46,7 +46,7 @@ const faqs = [
     <!-- LEFT: pinned panel -->
     <div id="faq-panel" class="md:col-span-5">
       <Eyebrow text="FAQ" />
-      <h2 class="h-display mt-6 text-[40px] text-ink md:text-[52px]">Things You Should Know</h2>
+      <h2 class="h-display mt-6 text-[28px] text-ink md:text-[52px]">Things You Should Know</h2>
       <p class="mt-5 max-w-[360px] text-[16px] leading-relaxed text-body">
         We've answered the most common questions to help you get started with clarity.
       </p>
@@ -54,7 +54,7 @@ const faqs = [
       <div class="mt-8">
         <a
           href="/contact-us"
-          class="inline-flex items-center gap-2.5 rounded-full bg-ink px-6 py-3.5 text-[14px] font-semibold text-white transition-opacity hover:opacity-80"
+          class="inline-flex items-center gap-2.5 rounded-full bg-ink px-5 py-3.5 text-[14px] font-semibold text-white transition-opacity hover:opacity-80"
         >
           Get in Touch
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -68,7 +68,7 @@ const faqs = [
     <div class="md:col-span-7">
       <div class="flex flex-col gap-3" id="faq-list">
         {faqs.map((f, i) => (
-          <div class="faq-item rounded-2xl bg-mist px-6 py-5 md:px-7">
+          <div class="faq-item rounded-2xl bg-mist px-5 py-5 md:px-7">
             <button class="faq-q flex w-full items-center justify-between gap-4 text-left" data-index={i}>
               <span class="text-[15px] font-semibold text-ink md:text-[16px]">{f.q}</span>
               <span class="faq-icon text-[20px] font-light leading-none text-ink">{i === 0 ? '−' : '+'}</span>

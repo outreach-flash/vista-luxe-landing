@@ -8,12 +8,20 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
  * Shared smooth-scroll instance. Imported for side effects by every page
  * script BEFORE any ScrollTrigger is created, so pinning inside the
  * transformed content resolves to transform-based pinning.
+ *
+ * Skipped on touch devices: native momentum scrolling feels better there and
+ * avoids address-bar / transform jank with pinned sections.
  */
-export const smoother = ScrollSmoother.create({
-  wrapper: '#smooth-wrapper',
-  content: '#smooth-content',
-  smooth: 1.1,
-  effects: false,
-});
+const isTouch =
+  typeof window !== 'undefined' && window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+export const smoother = isTouch
+  ? undefined
+  : ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 1.1,
+      effects: false,
+    });
 
 export { gsap, ScrollTrigger };
