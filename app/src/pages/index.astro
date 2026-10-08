@@ -546,20 +546,20 @@ const reviews = [
   </section>
 
   <!--
-    Pinned zoom section: the ticker drifts continuously (time-based) inside the
-    pinned viewport while the video scales 1× → 5.7× on scroll, zooming through
-    the viewport like the reference's sticky section.
+    Pinned zoom section: mimics homy.framer.media exactly.
+    The marquee scrubs horizontally, and the video morphs its width/height
+    and border-radius to cover the viewport.
   -->
-  <section id="highlight-pin" class="pin-highlight relative">
+  <section id="highlight-pin" class="pin-highlight relative min-h-[250vh] lg:min-h-[300vh]">
     <div
       id="highlight-stage"
       class="flex h-[100svh] items-center justify-center overflow-hidden"
     >
       <div class="absolute inset-0 flex items-center overflow-hidden">
-        <div class="marquee-track" id="marquee">
+        <div class="marquee-track flex" id="marquee">
           {
             Array.from({ length: 4 }).map(() => (
-              <span class="marquee-chunk whitespace-nowrap pr-8 text-[40px] font-semibold tracking-tight text-silver md:text-[96px]">
+              <span class="marquee-chunk whitespace-nowrap pr-8 text-[60px] font-extrabold tracking-tight text-[#334155] lg:text-[130px]">
                 Explore Homes&nbsp;&nbsp;·&nbsp;&nbsp;Live
                 Better&nbsp;&nbsp;·&nbsp;&nbsp;Modern
                 Spaces&nbsp;&nbsp;·&nbsp;&nbsp;
@@ -570,8 +570,8 @@ const reviews = [
       </div>
       <div
         id="video-zoom"
-        class="relative w-[min(520px,72vw)] overflow-hidden rounded-[28px]"
-        style="will-change: transform; z-index:1"
+        class="relative w-[320px] h-[220px] lg:w-[480px] lg:h-[320px] overflow-hidden rounded-2xl lg:rounded-3xl shadow-2xl"
+        style="will-change: width, height, border-radius; z-index:1"
       >
         <video
           src="/assets/vid/zEQ2uqOoz4IUC6n5QUkeURSWg.mp4"
@@ -580,7 +580,7 @@ const reviews = [
           muted
           loop
           playsinline
-          class="aspect-video w-full object-cover"></video>
+          class="h-full w-full object-cover"></video>
       </div>
     </div>
   </section>
@@ -907,38 +907,51 @@ const reviews = [
     },
   });
 
-  /* ---- highlighted home: video zooms 1× → 5.7× across the pin ---- */
-  gsap.fromTo(
-    "#video-zoom",
-    { scale: 1 },
-    {
-      scale: 5.7,
-      ease: "none",
+  /* ---- highlighted home: exact framer match (responsive) ---- */
+  let mmHighlight = gsap.matchMedia();
+
+  // Desktop Timeline
+  mmHighlight.add("(min-width: 1024px)", () => {
+    const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#highlight-pin",
         start: "top top",
         end: "bottom bottom",
-        scrub: true,
-      },
-    },
-  );
+        scrub: 1,
+      }
+    });
 
-  /* ---- marquee: time-based drift inside the pinned viewport ---- */
-  const track = document.getElementById("marquee")!;
-  const chunk = track.querySelector<HTMLElement>(".marquee-chunk")!;
-  const loop = () => {
-    const w = chunk.offsetWidth;
-    gsap.fromTo(
-      track,
-      { x: 0 },
-      { x: -w, duration: 22, ease: "none", repeat: -1 },
-    );
-  };
-  loop();
-  window.addEventListener("resize", () => {
-    gsap.killTweensOf(track);
-    gsap.set(track, { x: 0 });
-    loop();
+    // 1. Move marquee text Left -> Right (start negative so we have text to reveal)
+    tl.fromTo("#marquee", { xPercent: -20 }, { xPercent: 0, ease: "none" }, 0);
+
+    // 2. Expand video card to full screen
+    tl.to("#video-zoom", {
+      width: "100vw",
+      height: "100vh",
+      borderRadius: "0px",
+      ease: "power1.inOut",
+    }, 0);
+  });
+
+  // Mobile Timeline
+  mmHighlight.add("(max-width: 1023px)", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#highlight-pin",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: 1,
+      }
+    });
+
+    tl.fromTo("#marquee", { xPercent: -20 }, { xPercent: -5, ease: "none" }, 0);
+    
+    tl.to("#video-zoom", {
+      width: "92vw",
+      height: "55vh",
+      borderRadius: "16px",
+      ease: "power1.inOut",
+    }, 0);
   });
 
   /* ---- services: click-to-expand accordion (matches homy.framer.media) ---- */
