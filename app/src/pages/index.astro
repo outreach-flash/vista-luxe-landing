@@ -304,7 +304,7 @@ const reviews = [
     >
       <p
         id="manifesto"
-        class="sticky top-32 lg:static mx-auto max-w-[900px] text-center text-[22px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]"
+        class="mx-auto max-w-[900px] text-center text-[22px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]"
       >
         <span class="mword">Focused</span>
         <span class="mword">on</span>
@@ -879,14 +879,17 @@ const reviews = [
     });
   });
 
-  // Mobile Pinning (top text)
+  // Mobile Pinning (top text mimics sticky)
   mmManifesto.add("(max-width: 1023px)", () => {
     ScrollTrigger.create({
-      trigger: "#manifesto",
-      start: "top top+=128",
-      endTrigger: "#manifesto-section",
-      end: "bottom bottom",
-      pin: true,
+      trigger: "#manifesto-section",
+      start: "top top",
+      end: () => {
+        const p = document.querySelector("#manifesto");
+        // 128px (pt-32) + text height + 64px (pb-16 margin)
+        return "bottom " + (128 + p.offsetHeight + 64);
+      },
+      pin: "#manifesto",
       pinSpacing: false,
     });
   });
