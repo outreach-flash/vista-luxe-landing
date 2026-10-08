@@ -1,55 +1,84 @@
 ---
-import { getCollection } from 'astro:content';
-import Layout from '../layouts/Layout.astro';
-import Eyebrow from '../components/Eyebrow.astro';
-import Button from '../components/Button.astro';
-import PropertyCard from '../components/PropertyCard.astro';
-import Faq from '../components/Faq.astro';
-import Cta from '../components/Cta.astro';
-import { resolveImageVariants } from '../lib/media';
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import Eyebrow from "../components/Eyebrow.astro";
+import Button from "../components/Button.astro";
+import PropertyCard from "../components/PropertyCard.astro";
+import Faq from "../components/Faq.astro";
+import Cta from "../components/Cta.astro";
+import { resolveImageVariants } from "../lib/media";
 
-const all = await getCollection('properties');
+const all = await getCollection("properties");
 const properties = all;
 const featured = await Promise.all(
   properties
     .filter((p) => p.data.featured)
     .map(async (p) => ({
       ...p,
-      heroSrc: p.data.cardImage ? (await resolveImageVariants(p.data.cardImage, { full: 1600 })).full : null,
+      heroSrc: p.data.cardImage
+        ? (await resolveImageVariants(p.data.cardImage, { full: 1600 })).full
+        : null,
     })),
 );
 const preview = properties.slice(0, 4);
 
 const services = [
-  { n: '.01', label: 'Buy a Home', title: 'Find Homes Perfect For You', img: '/assets/img/Pt48YpvwQR3aV3F0PcwV1ZfGs.png' },
-  { n: '.02', label: 'Rent a Home', title: 'Find Rental Homes With Ease', img: '/assets/img/fTvLhDbO86UBiJORkMBXabiLfM.png' },
-  { n: '.03', label: 'Explore Listings', title: 'Explore Available Properties Easily', img: '/assets/img/Cn8DCdolOsfC5Loc5Z2UAI1fY.png' },
+  {
+    n: ".01",
+    label: "Buy a Home",
+    title: "Find Homes Perfect For You",
+    img: "/assets/img/Pt48YpvwQR3aV3F0PcwV1ZfGs.png",
+  },
+  {
+    n: ".02",
+    label: "Rent a Home",
+    title: "Find Rental Homes With Ease",
+    img: "/assets/img/fTvLhDbO86UBiJORkMBXabiLfM.png",
+  },
+  {
+    n: ".03",
+    label: "Explore Listings",
+    title: "Explore Available Properties Easily",
+    img: "/assets/img/Cn8DCdolOsfC5Loc5Z2UAI1fY.png",
+  },
 ];
 
 const reviews = [
   {
-    text: 'I was able to find a home that matched my needs perfectly. The overall experience was smooth and very easy to follow.',
-    name: 'Olivia Bennett', role: 'Interior Designer', avatar: '/assets/img/acIeRY2yV2JQft8tHEVInJNRM.png',
+    text: "I was able to find a home that matched my needs perfectly. The overall experience was smooth and very easy to follow.",
+    name: "Olivia Bennett",
+    role: "Interior Designer",
+    avatar: "/assets/img/acIeRY2yV2JQft8tHEVInJNRM.png",
   },
   {
-    text: 'Clean interface and useful details helped me make better decisions. It saved time and made the process much easier.',
-    name: 'Liam Carter', role: 'Real Estate Investor', avatar: '/assets/img/7dVYJ55BZQIncK7SDGrshTKZcE0.png',
+    text: "Clean interface and useful details helped me make better decisions. It saved time and made the process much easier.",
+    name: "Liam Carter",
+    role: "Real Estate Investor",
+    avatar: "/assets/img/7dVYJ55BZQIncK7SDGrshTKZcE0.png",
   },
   {
-    text: 'From browsing to shortlisting properties, everything felt intuitive. It helped me move forward with confidence.',
-    name: 'Sophia Turner', role: 'Marketing Manager', avatar: '/assets/img/OgBtefhmhr3VouU2xaj0nJf60.png',
+    text: "From browsing to shortlisting properties, everything felt intuitive. It helped me move forward with confidence.",
+    name: "Sophia Turner",
+    role: "Marketing Manager",
+    avatar: "/assets/img/OgBtefhmhr3VouU2xaj0nJf60.png",
   },
   {
-    text: 'The way homes are presented makes it easy to understand value and compare options without feeling overwhelmed.',
-    name: 'Noah Mitchell', role: 'Software Engineer', avatar: '/assets/img/HEZdbLUhbczLhoFloUmzapT33QQ.png',
+    text: "The way homes are presented makes it easy to understand value and compare options without feeling overwhelmed.",
+    name: "Noah Mitchell",
+    role: "Software Engineer",
+    avatar: "/assets/img/HEZdbLUhbczLhoFloUmzapT33QQ.png",
   },
   {
-    text: 'A very well-designed experience that made finding the right home simple. Everything was clear and easy to navigate.',
-    name: 'Emma Collins', role: 'Business Analyst', avatar: '/assets/img/TPme1TmgGcM5s0V2rbRpTFZhMI.png',
+    text: "A very well-designed experience that made finding the right home simple. Everything was clear and easy to navigate.",
+    name: "Emma Collins",
+    role: "Business Analyst",
+    avatar: "/assets/img/TPme1TmgGcM5s0V2rbRpTFZhMI.png",
   },
   {
-    text: 'The experience felt clean and thoughtfully designed. It helped me explore options clearly and choose a home with confidence.',
-    name: 'Lucas Anderson', role: 'Architect', avatar: '/assets/img/PxK4SiyP328sI5a8iZD9GzF1psw.png',
+    text: "The experience felt clean and thoughtfully designed. It helped me explore options clearly and choose a home with confidence.",
+    name: "Lucas Anderson",
+    role: "Architect",
+    avatar: "/assets/img/PxK4SiyP328sI5a8iZD9GzF1psw.png",
   },
 ];
 ---
@@ -68,28 +97,57 @@ const reviews = [
   -->
   <section id="hero-scroll-container" class="pin-hero relative">
     <div id="hero-sticky-stage" class="h-[100svh] overflow-hidden">
-
       <!-- sky background -->
-      <img src="/assets/img/lQ2c1tUqYlj0bLtzWgULCmgN7Q.png" alt="" class="absolute inset-0 h-full w-full object-cover" style="z-index:0" />
+      <img
+        src="/assets/img/lQ2c1tUqYlj0bLtzWgULCmgN7Q.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+        style="z-index:0"
+      />
 
       <!-- text content — sits BEHIND the building image -->
-      <div id="hero-content" class="relative mx-auto flex w-full max-w-[1320px] flex-col items-center px-5 pt-28 text-center md:pt-32 lg:pt-44" style="z-index:1">
-        <div class="hero-badge flex items-center gap-2.5 rounded-full border border-white/60 bg-white/50 py-1.5 pl-2 pr-4 backdrop-blur-md">
+      <div
+        id="hero-content"
+        class="relative mx-auto flex w-full max-w-[1320px] flex-col items-center px-5 pt-28 text-center md:pt-32 lg:pt-44"
+        style="z-index:1"
+      >
+        <div
+          class="hero-badge flex items-center gap-2.5 rounded-full border border-white/60 bg-white/50 py-1.5 pl-2 pr-4 backdrop-blur-md"
+        >
           <span class="flex -space-x-2">
-            <img src="/assets/img/GxM7bKLSVnAGAmdHwGVLuMTXU.png" alt="" class="h-6 w-6 rounded-full border border-white object-cover" />
-            <img src="/assets/img/xr937T4MDyNfNI6hQKE0vaUL0Rk.png" alt="" class="h-6 w-6 rounded-full border border-white object-cover" />
-            <img src="/assets/img/9OKbutbMYdTLxQ8UP6D7nFyc7NM.png" alt="" class="h-6 w-6 rounded-full border border-white object-cover" />
+            <img
+              src="/assets/img/GxM7bKLSVnAGAmdHwGVLuMTXU.png"
+              alt=""
+              class="h-6 w-6 rounded-full border border-white object-cover"
+            />
+            <img
+              src="/assets/img/xr937T4MDyNfNI6hQKE0vaUL0Rk.png"
+              alt=""
+              class="h-6 w-6 rounded-full border border-white object-cover"
+            />
+            <img
+              src="/assets/img/9OKbutbMYdTLxQ8UP6D7nFyc7NM.png"
+              alt=""
+              class="h-6 w-6 rounded-full border border-white object-cover"
+            />
           </span>
           <span class="text-[12px] font-medium text-ink">3,500+ Pro Users</span>
         </div>
 
-        <h1 class="hero-title h-display mt-7 max-w-[1000px] text-[40px] text-ink md:text-[88px]">
+        <h1
+          class="hero-title h-display mt-7 max-w-[1000px] text-[40px] text-ink md:text-[88px]"
+        >
           Find Your Dream Home
         </h1>
-        <p class="hero-sub mt-6 max-w-[560px] text-[15px] leading-relaxed text-body md:text-[17px]">
-          Explore thoughtfully designed homes in premium locations, crafted to match modern lifestyles with comfort, elegance, and long-term value.
+        <p
+          class="hero-sub mt-6 max-w-[560px] text-[15px] leading-relaxed text-body md:text-[17px]"
+        >
+          Explore thoughtfully designed homes in premium locations, crafted to
+          match modern lifestyles with comfort, elegance, and long-term value.
         </p>
-        <div class="hero-cta mt-9 flex flex-wrap items-center justify-center gap-4">
+        <div
+          class="hero-cta mt-9 flex flex-wrap items-center justify-center gap-4"
+        >
           <Button href="/properties" label="Explore Homes" variant="dark" />
           <Button href="/contact-us" label="Book a Visit" variant="outline" />
         </div>
@@ -101,7 +159,11 @@ const reviews = [
         so the CTA buttons (at ~46-50vh) are fully visible at scroll=0.
         GSAP translates it up linearly by 50vh (−0.5×scroll), matching the reference.
       -->
-      <div id="hero-building-wrap" class="absolute inset-x-0 w-full flex justify-center" style="z-index:2; top:57vh">
+      <div
+        id="hero-building-wrap"
+        class="absolute inset-x-0 w-full flex justify-center"
+        style="z-index:2; top:57vh"
+      >
         <img
           id="hero-building"
           src="/assets/img/JmEO3k1QnS2hTbLE5miZu6iHho.png"
@@ -109,8 +171,18 @@ const reviews = [
           class="block h-auto w-full min-w-[1200px] lg:min-w-full max-w-none"
           style="will-change: transform;"
         />
-        <img id="cloud-left" src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png" alt="" class="absolute -left-[6%] bottom-0 w-[42%] opacity-90" />
-        <img id="cloud-right" src="/assets/img/C2ebO7rPg1aRgfSeP2BBMcx45A.png" alt="" class="absolute -right-[7%] bottom-0 w-[36%] opacity-90" />
+        <img
+          id="cloud-left"
+          src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png"
+          alt=""
+          class="absolute -left-[6%] bottom-0 w-[42%] opacity-90"
+        />
+        <img
+          id="cloud-right"
+          src="/assets/img/C2ebO7rPg1aRgfSeP2BBMcx45A.png"
+          alt=""
+          class="absolute -right-[7%] bottom-0 w-[36%] opacity-90"
+        />
       </div>
 
       <!--
@@ -119,70 +191,143 @@ const reviews = [
         fade into a white gradient, making the hero dissolve seamlessly into
         the white background of the next section.
       -->
-      <div id="hero-fog" class="absolute inset-x-0 bottom-0 pointer-events-none" style="z-index:3">
+      <div
+        id="hero-fog"
+        class="absolute inset-x-0 bottom-0 pointer-events-none"
+        style="z-index:3"
+      >
         <!-- left cloud -->
         <img
-          src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png" alt=""
+          src="/assets/img/NXdUSIBNIJTu11OIau01snTtI.png"
+          alt=""
           class="absolute -left-[4%] bottom-0 w-[58%] opacity-95"
           style="transform: translateY(18%)"
         />
         <!-- right cloud -->
         <img
-          src="/assets/img/C2ebO7rPg1aRgfSeP2BBMcx45A.png" alt=""
+          src="/assets/img/C2ebO7rPg1aRgfSeP2BBMcx45A.png"
+          alt=""
           class="absolute -right-[4%] bottom-0 w-[52%] opacity-95"
           style="transform: translateY(18%)"
         />
         <!-- gradient band that fades the mist into clean white -->
-        <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/70 to-transparent"></div>
+        <div
+          class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/70 to-transparent"
+        >
+        </div>
       </div>
-
     </div>
   </section>
 
   <!-- ============ OUR IMPACT ============ -->
-  <section class="mx-auto max-w-[1320px] px-5 py-10 md:px-6 lg:px-8 md:py-16 lg:py-20">
+  <section
+    class="mx-auto max-w-[1320px] px-5 py-10 md:px-6 lg:px-8 md:py-16 lg:py-20"
+  >
     <Eyebrow text="Our Impact" />
     <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-      <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">Real insights behind every property decision</h2>
-      <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
-        Built to make modern home discovery simple, transparent, and more confident for every user.
+      <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">
+        Real insights behind every property decision
+      </h2>
+      <p
+        class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end"
+      >
+        Built to make modern home discovery simple, transparent, and more
+        confident for every user.
       </p>
     </div>
 
     <div class="mt-14 grid grid-cols-1 gap-4 md:grid-cols-4">
       <div class="reveal overflow-hidden rounded-2xl">
-        <img src="/assets/img/7kuxPVTjMLe1PbETJGXV0BIBB6s.png" alt="Modern home exterior" class="aspect-[4/3] h-full w-full object-cover md:aspect-auto" />
+        <img
+          src="/assets/img/7kuxPVTjMLe1PbETJGXV0BIBB6s.png"
+          alt="Modern home exterior"
+          class="aspect-[4/3] h-full w-full object-cover md:aspect-auto"
+        />
       </div>
       <div class="flex flex-col gap-4 md:col-span-2">
-        <div class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-6 lg:px-8">
-          <span class="stat-value text-[28px] font-bold tracking-tight text-ink md:text-[44px]" data-target="4.6" data-prefix="₹" data-suffix="M+">₹4.6M+</span>
-          <span class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">Total Value</span>
+        <div
+          class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-6 lg:px-8"
+        >
+          <span
+            class="stat-value text-[28px] font-bold tracking-tight text-ink md:text-[44px]"
+            data-target="4.6"
+            data-prefix="₹"
+            data-suffix="M+">₹4.6M+</span
+          >
+          <span
+            class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink"
+            >Total Value</span
+          >
         </div>
-        <div class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-6 lg:px-8">
-          <span class="stat-value text-[28px] font-bold tracking-tight text-ink md:text-[44px]" data-target="320" data-suffix="+">320+</span>
-          <span class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">Active Homes</span>
+        <div
+          class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-6 lg:px-8"
+        >
+          <span
+            class="stat-value text-[28px] font-bold tracking-tight text-ink md:text-[44px]"
+            data-target="320"
+            data-suffix="+">320+</span
+          >
+          <span
+            class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink"
+            >Active Homes</span
+          >
         </div>
-        <div class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-6 lg:px-8">
-          <span class="stat-value text-[28px] font-bold tracking-tight text-ink md:text-[44px]" data-target="98" data-suffix="%">98%</span>
-          <span class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink">Happy Clients</span>
+        <div
+          class="reveal flex flex-1 items-center justify-between rounded-2xl bg-mist px-8 py-7 md:px-6 lg:px-8"
+        >
+          <span
+            class="stat-value text-[28px] font-bold tracking-tight text-ink md:text-[44px]"
+            data-target="98"
+            data-suffix="%">98%</span
+          >
+          <span
+            class="font-mono text-[12px] uppercase tracking-[0.14em] text-ink"
+            >Happy Clients</span
+          >
         </div>
       </div>
       <div class="reveal overflow-hidden rounded-2xl">
-        <img src="/assets/img/RakXiRCu0eigdFvdHDqHa9us9PQ.png" alt="Hillside home" class="aspect-[4/3] h-full w-full object-cover md:aspect-auto" />
+        <img
+          src="/assets/img/RakXiRCu0eigdFvdHDqHa9us9PQ.png"
+          alt="Hillside home"
+          class="aspect-[4/3] h-full w-full object-cover md:aspect-auto"
+        />
       </div>
     </div>
   </section>
 
   <!-- ============ MANIFESTO (pinned word fill) ============ -->
   <section id="manifesto-section" class="pin-manifesto relative bg-mist2">
-    <div id="manifesto-stage" class="flex h-[100svh] items-center justify-center px-6">
-      <p id="manifesto" class="mx-auto max-w-[900px] text-center text-[22px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]">
-        <span class="mword">Focused</span> <span class="mword">on</span> <span class="mword font-bold italic">discovery,</span>
-        <span class="mword">built</span> <span class="mword">for</span> <span class="mword">real</span> <span class="mword">choices.</span>
-        <span class="mword">We</span> <span class="mword">design</span> <span class="mword">platforms</span> <span class="mword">that</span>
-        <span class="mword">help</span> <span class="mword font-bold italic">buyers</span> <span class="mword">explore</span>
-        <span class="mword">homes,</span> <span class="mword">understand</span> <span class="mword">value,</span> <span class="mword">and</span>
-        <span class="mword">move</span> <span class="mword font-bold italic">forward</span> <span class="mword">with</span> <span class="mword">confidence.</span>
+    <div
+      id="manifesto-stage"
+      class="h-full px-6"
+    >
+      <p
+        id="manifesto"
+        class="sticky top-[50dvh] -translate-y-1/2 mx-auto max-w-[900px] text-center text-[22px] font-medium leading-[1.3] tracking-[-0.02em] text-ink md:text-[44px]"
+      >
+        <span class="mword">Focused</span>
+        <span class="mword">on</span>
+        <span class="mword font-bold italic">discovery,</span>
+        <span class="mword">built</span>
+        <span class="mword">for</span>
+        <span class="mword">real</span>
+        <span class="mword">choices.</span>
+        <span class="mword">We</span>
+        <span class="mword">design</span>
+        <span class="mword">platforms</span>
+        <span class="mword">that</span>
+        <span class="mword">help</span>
+        <span class="mword font-bold italic">buyers</span>
+        <span class="mword">explore</span>
+        <span class="mword">homes,</span>
+        <span class="mword">understand</span>
+        <span class="mword">value,</span>
+        <span class="mword">and</span>
+        <span class="mword">move</span>
+        <span class="mword font-bold italic">forward</span>
+        <span class="mword">with</span>
+        <span class="mword">confidence.</span>
       </p>
     </div>
   </section>
@@ -192,112 +337,163 @@ const reviews = [
     <div class="mx-auto max-w-[1320px] px-5 md:px-6 lg:px-8">
       <Eyebrow text="Top Properties" />
       <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-        <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">Explore our selected homes for modern living</h2>
-        <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
-          Carefully chosen properties that combine design, comfort, and location to match real lifestyle needs.
+        <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">
+          Explore our selected homes for modern living
+        </h2>
+        <p
+          class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end"
+        >
+          Carefully chosen properties that combine design, comfort, and location
+          to match real lifestyle needs.
         </p>
       </div>
     </div>
 
     <div id="stack-wrap" class="relative mt-14">
-      {featured.map((p) => (
-        <div class="stack-card relative h-[100svh] overflow-hidden">
-          <img src={p.heroSrc ?? undefined} alt={p.data.title} class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-black/45"></div>
-          <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <span class="rounded-full bg-white/15 px-5 py-2 text-[15px] font-medium text-white backdrop-blur-md">
-              {p.data.price != null ? `₹${p.data.price.toLocaleString('en-IN')}` : 'Price on Request'}
-            </span>
-            <h3 class="mt-5 text-[26px] font-bold tracking-tight text-white md:text-[44px]">{p.data.title}</h3>
-            { [p.data.street, p.data.area].filter(Boolean).length > 0 && (
-              <p class="mt-2 text-[15px] text-white/85">{[p.data.street, p.data.area].filter(Boolean).join(', ')}</p>
-            ) }
-            <div class="mt-7">
-              <Button href={`/properties/${p.id}`} label="Explore" variant="light" />
+      {
+        featured.map((p) => (
+          <div class="stack-card relative h-[100svh] overflow-hidden">
+            <img
+              src={p.heroSrc ?? undefined}
+              alt={p.data.title}
+              class="absolute inset-0 h-full w-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black/45" />
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+              <span class="rounded-full bg-white/15 px-5 py-2 text-[15px] font-medium text-white backdrop-blur-md">
+                {p.data.price != null
+                  ? `₹${p.data.price.toLocaleString("en-IN")}`
+                  : "Price on Request"}
+              </span>
+              <h3 class="mt-5 text-[26px] font-bold tracking-tight text-white md:text-[44px]">
+                {p.data.title}
+              </h3>
+              {[p.data.street, p.data.area].filter(Boolean).length > 0 && (
+                <p class="mt-2 text-[15px] text-white/85">
+                  {[p.data.street, p.data.area].filter(Boolean).join(", ")}
+                </p>
+              )}
+              <div class="mt-7">
+                <Button
+                  href={`/properties/${p.id}`}
+                  label="Explore"
+                  variant="light"
+                />
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </section>
 
   <!-- ============ SERVICES ============ -->
-  <section id="services" class="mx-auto max-w-[1320px] scroll-mt-24 px-5 py-10 md:px-6 lg:px-8 md:py-16 lg:py-20">
+  <section
+    id="services"
+    class="mx-auto max-w-[1320px] scroll-mt-24 px-5 py-10 md:px-6 lg:px-8 md:py-16 lg:py-20"
+  >
     <Eyebrow text="Our Services" />
     <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-      <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">Everything you need for your home</h2>
-      <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
-        Built to simplify your home search with clear insights, better options, and confident decisions.
+      <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">
+        Everything you need for your home
+      </h2>
+      <p
+        class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end"
+      >
+        Built to simplify your home search with clear insights, better options,
+        and confident decisions.
       </p>
     </div>
 
-    <div id="services-row" class="reveal mt-14 grid grid-cols-1 gap-3 lg:flex lg:h-[553px]">
-      {services.map((s, i) => (
-        <button
-          type="button"
-          data-service-card
-          aria-pressed={i === 0 ? 'true' : 'false'}
-          class:list={[
-            'group relative cursor-pointer overflow-hidden rounded-[20px] text-left transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
-            'h-[400px] lg:h-auto',
-            'bg-ink lg:flex-[672_1_0%]', i !== 0 && 'lg:bg-mist lg:flex-[280_1_0%]',
-          ]}
-        >
-          <img
-            src={s.img}
-            alt={s.label}
-            loading="lazy"
+    <div
+      id="services-row"
+      class="reveal mt-14 grid grid-cols-1 gap-3 lg:flex lg:h-[553px]"
+    >
+      {
+        services.map((s, i) => (
+          <button
+            type="button"
+            data-service-card
+            aria-pressed={i === 0 ? "true" : "false"}
             class:list={[
-              'absolute inset-x-6 top-[150px] bottom-0 h-[calc(100%-150px)] w-[calc(100%-48px)] rounded-xl object-cover transition-opacity duration-500 lg:inset-x-[58px] lg:w-[calc(100%-116px)]',
-              'opacity-100', i !== 0 && 'lg:opacity-0',
-            ]}
-            data-service-img
-          />
-          <span
-            data-service-num
-            class:list={[
-              'absolute right-6 top-5 text-[80px] lg:text-[120px] font-medium leading-none tracking-[-5.12px] transition-colors duration-700',
-              'text-white', i !== 0 && 'lg:text-silver',
+              "group relative cursor-pointer overflow-hidden rounded-[20px] text-left transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+              "h-[400px] lg:h-auto",
+              "bg-ink", // Base background for all cards on mobile
+              i === 0 ? "lg:bg-ink lg:flex-[672_1_0%]" : "lg:bg-mist lg:flex-[280_1_0%]",
             ]}
           >
-            {s.n}
-          </span>
-          <div
-            data-service-text
-            class:list={[
-              'absolute left-7 transition-[top] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]',
-              'top-[26px]', i !== 0 && 'lg:top-[415px]',
-            ]}
-          >
-            <p
-              data-service-label
-              class:list={['text-[14px] transition-colors duration-700', 'text-mist2', i !== 0 && 'lg:text-ink']}
-            >
-              {s.label}
-            </p>
-            <h3
-              data-service-title
+            <img
+              src={s.img}
+              alt={s.label}
+              loading="lazy"
               class:list={[
-                'mt-2 max-w-[240px] text-[28px] font-medium leading-[1.2] tracking-tight transition-colors duration-700',
-                'text-white', i !== 0 && 'lg:text-ink',
+                "absolute bottom-0 object-cover transition-opacity duration-500",
+                "inset-x-0 top-[120px] h-[calc(100%-120px)] w-full", // Mobile: no horizontal padding, touches edges
+                "lg:inset-x-[58px] lg:top-[150px] lg:h-[calc(100%-150px)] lg:w-[calc(100%-116px)] lg:rounded-xl",
+                "opacity-100",
+                i !== 0 && "lg:opacity-0",
+              ]}
+              data-service-img
+            />
+            <span
+              data-service-num
+              class:list={[
+                "absolute right-6 top-5 font-medium leading-none tracking-[-5.12px] transition-colors duration-700",
+                "hidden lg:block lg:text-[120px]", // Hidden on mobile
+                "text-white",
+                i !== 0 && "lg:text-silver",
               ]}
             >
-              {s.title}
-            </h3>
-          </div>
-        </button>
-      ))}
+              {s.n}
+            </span>
+            <div
+              data-service-text
+              class:list={[
+                "absolute left-6 lg:left-7 transition-[top] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+                "top-6 lg:top-[26px]",
+                i !== 0 && "lg:top-[415px]",
+              ]}
+            >
+              <p
+                data-service-label
+                class:list={[
+                  "text-[14px] transition-colors duration-700",
+                  "text-mist2",
+                  i !== 0 && "lg:text-ink",
+                ]}
+              >
+                {s.label}
+              </p>
+              <h3
+                data-service-title
+                class:list={[
+                  "mt-2 max-w-[280px] text-[26px] lg:text-[28px] font-medium leading-[1.2] tracking-tight transition-colors duration-700",
+                  "text-white",
+                  i !== 0 && "lg:text-ink",
+                ]}
+              >
+                {s.title}
+              </h3>
+            </div>
+          </button>
+        ))
+      }
     </div>
   </section>
 
   <!-- ============ LISTINGS PREVIEW ============ -->
-  <section class="mx-auto max-w-[1320px] px-5 pb-10 md:px-6 lg:px-8 md:pb-16 lg:pb-20">
+  <section
+    class="mx-auto max-w-[1320px] px-5 pb-10 md:px-6 lg:px-8 md:pb-16 lg:pb-20"
+  >
     <Eyebrow text="Property Listings" />
     <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-      <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">Discover homes that fit your lifestyle</h2>
+      <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">
+        Discover homes that fit your lifestyle
+      </h2>
       <div class="reveal md:justify-self-end">
         <p class="max-w-[420px] text-[16px] leading-relaxed text-body">
-          Explore a range of properties built for comfort, location, and everyday living.
+          Explore a range of properties built for comfort, location, and
+          everyday living.
         </p>
         <div class="mt-6">
           <Button href="/properties" label="Explore All" variant="dark" />
@@ -306,20 +502,22 @@ const reviews = [
     </div>
 
     <div class="mt-14 grid grid-cols-1 gap-5 md:grid-cols-2">
-      {preview.map((p) => (
-        <div class="reveal">
-          <PropertyCard
-            slug={p.id}
-            title={p.data.title}
-            status={p.data.status}
-            price={p.data.price}
-            cardImage={p.data.cardImage}
-            bedrooms={p.data.bedrooms}
-            bathrooms={p.data.bathrooms}
-            squareArea={p.data.squareArea}
-          />
-        </div>
-      ))}
+      {
+        preview.map((p) => (
+          <div class="reveal">
+            <PropertyCard
+              slug={p.id}
+              title={p.data.title}
+              status={p.data.status}
+              price={p.data.price}
+              cardImage={p.data.cardImage}
+              bedrooms={p.data.bedrooms}
+              bathrooms={p.data.bathrooms}
+              squareArea={p.data.squareArea}
+            />
+          </div>
+        ))
+      }
     </div>
   </section>
 
@@ -329,11 +527,16 @@ const reviews = [
       <div class="flex justify-center">
         <Eyebrow text="Highlighted Home" />
       </div>
-      <h2 class="h-display reveal mx-auto mt-6 max-w-[800px] text-[28px] text-ink md:text-[52px]">
+      <h2
+        class="h-display reveal mx-auto mt-6 max-w-[800px] text-[28px] text-ink md:text-[52px]"
+      >
         Modern homes, designed to live better
       </h2>
-      <p class="reveal mx-auto mt-5 max-w-[520px] text-[16px] leading-relaxed text-body">
-        Explore how modern homes are designed to feel clean, open, and functional.
+      <p
+        class="reveal mx-auto mt-5 max-w-[520px] text-[16px] leading-relaxed text-body"
+      >
+        Explore how modern homes are designed to feel clean, open, and
+        functional.
       </p>
       <div class="reveal mt-8 flex justify-center">
         <Button href="/properties" label="Explore Homes" variant="dark" />
@@ -347,23 +550,36 @@ const reviews = [
     the viewport like the reference's sticky section.
   -->
   <section id="highlight-pin" class="pin-highlight relative">
-    <div id="highlight-stage" class="flex h-[100svh] items-center justify-center overflow-hidden">
+    <div
+      id="highlight-stage"
+      class="flex h-[100svh] items-center justify-center overflow-hidden"
+    >
       <div class="absolute inset-0 flex items-center overflow-hidden">
         <div class="marquee-track" id="marquee">
-          {Array.from({ length: 4 }).map(() => (
-            <span class="marquee-chunk whitespace-nowrap pr-8 text-[40px] font-semibold tracking-tight text-silver md:text-[96px]">
-              Explore Homes&nbsp;&nbsp;·&nbsp;&nbsp;Live Better&nbsp;&nbsp;·&nbsp;&nbsp;Modern Spaces&nbsp;&nbsp;·&nbsp;&nbsp;
-            </span>
-          ))}
+          {
+            Array.from({ length: 4 }).map(() => (
+              <span class="marquee-chunk whitespace-nowrap pr-8 text-[40px] font-semibold tracking-tight text-silver md:text-[96px]">
+                Explore Homes&nbsp;&nbsp;·&nbsp;&nbsp;Live
+                Better&nbsp;&nbsp;·&nbsp;&nbsp;Modern
+                Spaces&nbsp;&nbsp;·&nbsp;&nbsp;
+              </span>
+            ))
+          }
         </div>
       </div>
-      <div id="video-zoom" class="relative w-[min(520px,72vw)] overflow-hidden rounded-[28px]" style="will-change: transform; z-index:1">
+      <div
+        id="video-zoom"
+        class="relative w-[min(520px,72vw)] overflow-hidden rounded-[28px]"
+        style="will-change: transform; z-index:1"
+      >
         <video
           src="/assets/vid/zEQ2uqOoz4IUC6n5QUkeURSWg.mp4"
           poster="/assets/img/CdWqqbxMdI0CYbn1OZIsaPpFSU.png"
-          autoplay muted loop playsinline
-          class="aspect-video w-full object-cover"
-        ></video>
+          autoplay
+          muted
+          loop
+          playsinline
+          class="aspect-video w-full object-cover"></video>
       </div>
     </div>
   </section>
@@ -373,9 +589,14 @@ const reviews = [
     <div class="mx-auto max-w-[1320px] px-5 md:px-6 lg:px-8">
       <Eyebrow text="Client Reviews" />
       <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-2">
-        <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">What people say about their home search</h2>
-        <p class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end">
-          Real feedback from users who explored homes and found the right place with confidence.
+        <h2 class="h-display reveal text-[28px] text-ink md:text-[52px]">
+          What people say about their home search
+        </h2>
+        <p
+          class="reveal max-w-[420px] self-end text-[16px] leading-relaxed text-body md:justify-self-end"
+        >
+          Real feedback from users who explored homes and found the right place
+          with confidence.
         </p>
       </div>
     </div>
@@ -383,47 +604,97 @@ const reviews = [
     <!-- single row: continuous leftward drift, photo card ends each loop unit -->
     <div class="reviews-marquee-outer mt-14">
       <div class="reviews-marquee-track" id="reviews-row">
-        {reviews.map((r) => (
-          <div class="reviews-card shrink-0 w-[min(300px,85vw)] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between" style="min-height:280px">
-            <div>
-              <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7"><path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z"/></svg>
-              <p class="mt-4 text-[15px] leading-relaxed text-ink/80">{r.text}</p>
-            </div>
-            <div class="mt-7 flex items-center gap-3">
-              <img src={r.avatar} alt={r.name} loading="lazy" class="h-10 w-10 rounded-lg object-cover" />
+        {
+          reviews.map((r) => (
+            <div
+              class="reviews-card shrink-0 w-[min(300px,85vw)] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between"
+              style="min-height:280px"
+            >
               <div>
-                <p class="text-[14px] font-semibold text-ink">{r.name}</p>
-                <p class="text-[12px] text-body">{r.role}</p>
+                <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7">
+                  <path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z" />
+                </svg>
+                <p class="mt-4 text-[15px] leading-relaxed text-ink/80">
+                  {r.text}
+                </p>
+              </div>
+              <div class="mt-7 flex items-center gap-3">
+                <img
+                  src={r.avatar}
+                  alt={r.name}
+                  loading="lazy"
+                  class="h-10 w-10 rounded-lg object-cover"
+                />
+                <div>
+                  <p class="text-[14px] font-semibold text-ink">{r.name}</p>
+                  <p class="text-[12px] text-body">{r.role}</p>
+                </div>
               </div>
             </div>
+          ))
+        }
+        <div
+          class="reviews-card shrink-0 relative w-[min(300px,85vw)] md:w-[380px] overflow-hidden rounded-2xl"
+          style="min-height:280px"
+        >
+          <img
+            src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png"
+            alt="Ethan Walker"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          >
           </div>
-        ))}
-        <div class="reviews-card shrink-0 relative w-[min(300px,85vw)] md:w-[380px] overflow-hidden rounded-2xl" style="min-height:280px">
-          <img src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png" alt="Ethan Walker" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div class="absolute bottom-7 left-7">
             <p class="text-[18px] font-semibold text-white">Ethan Walker</p>
             <p class="mt-0.5 text-[13px] text-white/80">Property Consultant</p>
           </div>
         </div>
-        {reviews.map((r) => (
-          <div class="reviews-card shrink-0 w-[min(300px,85vw)] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between" style="min-height:280px">
-            <div>
-              <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7"><path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z"/></svg>
-              <p class="mt-4 text-[15px] leading-relaxed text-ink/80">{r.text}</p>
-            </div>
-            <div class="mt-7 flex items-center gap-3">
-              <img src={r.avatar} alt={r.name} loading="lazy" class="h-10 w-10 rounded-lg object-cover" />
+        {
+          reviews.map((r) => (
+            <div
+              class="reviews-card shrink-0 w-[min(300px,85vw)] md:w-[380px] rounded-2xl bg-mist p-7 flex flex-col justify-between"
+              style="min-height:280px"
+            >
               <div>
-                <p class="text-[14px] font-semibold text-ink">{r.name}</p>
-                <p class="text-[12px] text-body">{r.role}</p>
+                <svg width="22" height="17" viewBox="0 0 26 20" fill="#c7c7c7">
+                  <path d="M0 20V11.4C0 8.3.8 5.7 2.4 3.7 4 1.6 6.3.3 9.3-.3l1 2.3c-2.9 1-4.4 2.9-4.6 5.6H10V20H0Zm15.4 0V11.4c0-3.1.8-5.7 2.4-7.7 1.6-2.1 3.9-3.4 6.9-4l1 2.3c-2.9 1-4.4 2.9-4.6 5.6h4.3V20H15.4Z" />
+                </svg>
+                <p class="mt-4 text-[15px] leading-relaxed text-ink/80">
+                  {r.text}
+                </p>
+              </div>
+              <div class="mt-7 flex items-center gap-3">
+                <img
+                  src={r.avatar}
+                  alt={r.name}
+                  loading="lazy"
+                  class="h-10 w-10 rounded-lg object-cover"
+                />
+                <div>
+                  <p class="text-[14px] font-semibold text-ink">{r.name}</p>
+                  <p class="text-[12px] text-body">{r.role}</p>
+                </div>
               </div>
             </div>
+          ))
+        }
+        <div
+          class="reviews-card shrink-0 relative w-[min(300px,85vw)] md:w-[380px] overflow-hidden rounded-2xl"
+          style="min-height:280px"
+        >
+          <img
+            src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png"
+            alt="Ethan Walker"
+            loading="lazy"
+            class="absolute inset-0 h-full w-full object-cover"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+          >
           </div>
-        ))}
-        <div class="reviews-card shrink-0 relative w-[min(300px,85vw)] md:w-[380px] overflow-hidden rounded-2xl" style="min-height:280px">
-          <img src="/assets/img/24676iJ3kvc31oG1WX19Yc7fCV0.png" alt="Ethan Walker" loading="lazy" class="absolute inset-0 h-full w-full object-cover" />
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
           <div class="absolute bottom-7 left-7">
             <p class="text-[18px] font-semibold text-white">Ethan Walker</p>
             <p class="mt-0.5 text-[13px] text-white/80">Property Consultant</p>
@@ -438,183 +709,279 @@ const reviews = [
 </Layout>
 
 <script>
-  import gsap from 'gsap';
-  import { ScrollTrigger } from 'gsap/ScrollTrigger';
-  import '../lib/smoother';
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  import "../lib/smoother";
   gsap.registerPlugin(ScrollTrigger);
 
   /* ---- pinned stages (ScrollSmoother-safe replacement for CSS sticky) ---- */
   ScrollTrigger.create({
-    trigger: '#hero-scroll-container', start: 'top top', end: 'bottom bottom',
-    pin: '#hero-sticky-stage', pinSpacing: false,
+    trigger: "#hero-scroll-container",
+    start: "top top",
+    end: "bottom bottom",
+    pin: "#hero-sticky-stage",
+    pinSpacing: false,
   });
-  ScrollTrigger.create({
-    trigger: '#manifesto-section', start: 'top top', end: 'bottom bottom',
-    pin: '#manifesto-stage', pinSpacing: false,
-  });
-  gsap.utils.toArray<HTMLElement>('.stack-card').forEach((card) => {
+
+  gsap.utils.toArray<HTMLElement>(".stack-card").forEach((card) => {
     ScrollTrigger.create({
-      trigger: card, start: 'top top', endTrigger: '#stack-wrap', end: 'bottom bottom',
-      pin: true, pinSpacing: false,
+      trigger: card,
+      start: "top top",
+      endTrigger: "#stack-wrap",
+      end: "bottom bottom",
+      pin: true,
+      pinSpacing: false,
     });
   });
   ScrollTrigger.create({
-    trigger: '#highlight-pin', start: 'top top', end: 'bottom bottom',
-    pin: '#highlight-stage', pinSpacing: false,
+    trigger: "#highlight-pin",
+    start: "top top",
+    end: "bottom bottom",
+    pin: "#highlight-stage",
+    pinSpacing: false,
   });
 
   /* ---- hero entrance ---- */
-  gsap.from('.hero-badge', { y: 24, opacity: 0, duration: 0.9, ease: 'power3.out' });
-  gsap.from('.hero-title', { y: 44, opacity: 0, duration: 1.1, delay: 0.1, ease: 'power3.out' });
-  gsap.from('.hero-sub', { y: 30, opacity: 0, duration: 1, delay: 0.25, ease: 'power3.out' });
-  gsap.from('.hero-cta', { y: 24, opacity: 0, duration: 1, delay: 0.4, ease: 'power3.out' });
+  gsap.from(".hero-badge", {
+    y: 24,
+    opacity: 0,
+    duration: 0.9,
+    ease: "power3.out",
+  });
+  gsap.from(".hero-title", {
+    y: 44,
+    opacity: 0,
+    duration: 1.1,
+    delay: 0.1,
+    ease: "power3.out",
+  });
+  gsap.from(".hero-sub", {
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    delay: 0.25,
+    ease: "power3.out",
+  });
+  gsap.from(".hero-cta", {
+    y: 24,
+    opacity: 0,
+    duration: 1,
+    delay: 0.4,
+    ease: "power3.out",
+  });
 
   /* ---- hero parallax: building rises linearly at −0.5×scroll ---- */
   gsap.fromTo(
-    '#hero-building-wrap',
+    "#hero-building-wrap",
     { y: 0 },
     {
-      y: '-50vh',
-      ease: 'none',
+      y: "-50vh",
+      ease: "none",
       scrollTrigger: {
-        trigger: '#hero-scroll-container',
-        start: 'top top',
-        end: 'bottom bottom',
+        trigger: "#hero-scroll-container",
+        start: "top top",
+        end: "bottom bottom",
         scrub: true,
       },
-    }
+    },
   );
 
-
   /* ---- hero text: shrink + fade saturate ~2/3 in ---- */
-  gsap.set('#hero-content', { transformOrigin: 'center top' });
+  gsap.set("#hero-content", { transformOrigin: "center top" });
   gsap
     .timeline({
       scrollTrigger: {
-        trigger: '#hero-scroll-container',
-        start: 'top top',
-        end: 'bottom bottom',
+        trigger: "#hero-scroll-container",
+        start: "top top",
+        end: "bottom bottom",
         scrub: true,
       },
     })
-    .to('#hero-content', { scale: 0.87, opacity: 0.75, duration: 0.66, ease: 'none' }, 0);
+    .to(
+      "#hero-content",
+      { scale: 0.87, opacity: 0.75, duration: 0.66, ease: "none" },
+      0,
+    );
 
   /* ---- clouds drift (floating) ---- */
-  gsap.to('#cloud-left', { x: 60, duration: 14, yoyo: true, repeat: -1, ease: 'sine.inOut' });
-  gsap.to('#cloud-right', { x: -70, duration: 17, yoyo: true, repeat: -1, ease: 'sine.inOut' });
+  gsap.to("#cloud-left", {
+    x: 60,
+    duration: 14,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut",
+  });
+  gsap.to("#cloud-right", {
+    x: -70,
+    duration: 17,
+    yoyo: true,
+    repeat: -1,
+    ease: "sine.inOut",
+  });
 
   /* ---- generic reveals: scrubbed scale + rise + fade ---- */
-  gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
+  gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
     gsap.fromTo(
       el,
       { scale: 0.9, y: 20, opacity: 0 },
       {
-        scale: 1, y: 0, opacity: 1, ease: 'none',
-        scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 60%', scrub: true },
-      }
+        scale: 1,
+        y: 0,
+        opacity: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: el,
+          start: "top 95%",
+          end: "top 60%",
+          scrub: true,
+        },
+      },
     );
   });
 
   /* ---- stat counters ---- */
-  gsap.utils.toArray<HTMLElement>('.stat-value').forEach((el) => {
-    const target = parseFloat(el.dataset.target || '0');
-    const prefix = el.dataset.prefix || '';
-    const suffix = el.dataset.suffix || '';
-    const isFloat = String(el.dataset.target).includes('.');
+  gsap.utils.toArray<HTMLElement>(".stat-value").forEach((el) => {
+    const target = parseFloat(el.dataset.target || "0");
+    const prefix = el.dataset.prefix || "";
+    const suffix = el.dataset.suffix || "";
+    const isFloat = String(el.dataset.target).includes(".");
     const obj = { v: 0 };
     ScrollTrigger.create({
-      trigger: el, start: 'top 88%', once: true,
+      trigger: el,
+      start: "top 88%",
+      once: true,
       onEnter: () =>
         gsap.to(obj, {
-          v: target, duration: 1.6, ease: 'power2.out',
+          v: target,
+          duration: 1.6,
+          ease: "power2.out",
           onUpdate: () => {
-            el.textContent = prefix + (isFloat ? obj.v.toFixed(1) : Math.round(obj.v).toString()) + suffix;
+            el.textContent =
+              prefix +
+              (isFloat ? obj.v.toFixed(1) : Math.round(obj.v).toString()) +
+              suffix;
           },
         }),
     });
   });
 
-  /* ---- manifesto: pinned per-word fill, scrubbed across the pin ---- */
-  gsap.to('#manifesto .mword', {
-    opacity: 1, stagger: 0.06, ease: 'none',
-    scrollTrigger: { trigger: '#manifesto-section', start: 'top top', end: 'bottom bottom', scrub: true },
+  /* ---- manifesto: per-word fill, scrubbed across the section ---- */
+
+  gsap.to("#manifesto .mword", {
+    color: "#080b0f",
+    stagger: 0.06,
+    ease: "none",
+    scrollTrigger: {
+      trigger: "#manifesto-section",
+      start: "top top",
+      end: "bottom bottom",
+      scrub: true,
+    },
   });
 
   /* ---- highlighted home: video zooms 1× → 5.7× across the pin ---- */
   gsap.fromTo(
-    '#video-zoom',
+    "#video-zoom",
     { scale: 1 },
     {
-      scale: 5.7, ease: 'none',
-      scrollTrigger: { trigger: '#highlight-pin', start: 'top top', end: 'bottom bottom', scrub: true },
-    }
+      scale: 5.7,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#highlight-pin",
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+      },
+    },
   );
 
   /* ---- marquee: time-based drift inside the pinned viewport ---- */
-  const track = document.getElementById('marquee')!;
-  const chunk = track.querySelector<HTMLElement>('.marquee-chunk')!;
+  const track = document.getElementById("marquee")!;
+  const chunk = track.querySelector<HTMLElement>(".marquee-chunk")!;
   const loop = () => {
     const w = chunk.offsetWidth;
-    gsap.fromTo(track, { x: 0 }, { x: -w, duration: 22, ease: 'none', repeat: -1 });
+    gsap.fromTo(
+      track,
+      { x: 0 },
+      { x: -w, duration: 22, ease: "none", repeat: -1 },
+    );
   };
   loop();
-  window.addEventListener('resize', () => {
+  window.addEventListener("resize", () => {
     gsap.killTweensOf(track);
     gsap.set(track, { x: 0 });
     loop();
   });
 
   /* ---- services: click-to-expand accordion (matches homy.framer.media) ---- */
-  const serviceCards = Array.from(document.querySelectorAll<HTMLElement>('[data-service-card]'));
+  const serviceCards = Array.from(
+    document.querySelectorAll<HTMLElement>("[data-service-card]"),
+  );
   const CLS = {
-    cardOn: ['bg-ink', 'lg:flex-[672_1_0%]'],
-    cardOff: ['lg:bg-mist', 'lg:flex-[280_1_0%]'],
-    imgOn: ['lg:opacity-100'],
-    imgOff: ['lg:opacity-0'],
-    numOn: ['lg:text-white'],
-    numOff: ['lg:text-silver'],
-    labelOn: ['lg:text-mist2'],
-    labelOff: ['lg:text-ink'],
-    titleOn: ['lg:text-white'],
-    titleOff: ['lg:text-ink'],
-    textOn: ['lg:top-[26px]'],
-    textOff: ['lg:top-[415px]'],
+    cardOn: ["lg:bg-ink", "lg:flex-[672_1_0%]"],
+    cardOff: ["lg:bg-mist", "lg:flex-[280_1_0%]"],
+    imgOn: ["lg:opacity-100"],
+    imgOff: ["lg:opacity-0"],
+    numOn: ["lg:text-white"],
+    numOff: ["lg:text-silver"],
+    labelOn: ["lg:text-mist2"],
+    labelOff: ["lg:text-ink"],
+    titleOn: ["lg:text-white"],
+    titleOff: ["lg:text-ink"],
+    textOn: ["lg:top-[26px]"],
+    textOff: ["lg:top-[415px]"],
   };
   function setService(idx: number) {
+    if (window.innerWidth < 1024) return; // Disable interaction strictly on mobile/tablet
+
     serviceCards.forEach((card, i) => {
       const on = i === idx;
-      card.setAttribute('aria-pressed', String(on));
+      card.setAttribute("aria-pressed", String(on));
       const swap = (el: Element | null, onCls: string[], offCls: string[]) => {
         if (!el) return;
         el.classList.remove(...(on ? offCls : onCls));
         el.classList.add(...(on ? onCls : offCls));
       };
       swap(card, CLS.cardOn, CLS.cardOff);
-      swap(card.querySelector('[data-service-img]'), CLS.imgOn, CLS.imgOff);
-      swap(card.querySelector('[data-service-num]'), CLS.numOn, CLS.numOff);
-      swap(card.querySelector('[data-service-label]'), CLS.labelOn, CLS.labelOff);
-      swap(card.querySelector('[data-service-title]'), CLS.titleOn, CLS.titleOff);
-      swap(card.querySelector('[data-service-text]'), CLS.textOn, CLS.textOff);
+      swap(card.querySelector("[data-service-img]"), CLS.imgOn, CLS.imgOff);
+      swap(card.querySelector("[data-service-num]"), CLS.numOn, CLS.numOff);
+      swap(
+        card.querySelector("[data-service-label]"),
+        CLS.labelOn,
+        CLS.labelOff,
+      );
+      swap(
+        card.querySelector("[data-service-title]"),
+        CLS.titleOn,
+        CLS.titleOff,
+      );
+      swap(card.querySelector("[data-service-text]"), CLS.textOn, CLS.textOff);
     });
   }
-  serviceCards.forEach((card, i) => card.addEventListener('click', () => setService(i)));
+  serviceCards.forEach((card, i) =>
+    card.addEventListener("click", () => setService(i)),
+  );
 
   /* ---- reviews marquee: single row, continuous leftward ~80px/s ---- */
   function initReviewsMarquee() {
-    const el = document.getElementById('reviews-row')!;
-    const cards = el.querySelectorAll<HTMLElement>('.reviews-card');
+    const el = document.getElementById("reviews-row")!;
+    const cards = el.querySelectorAll<HTMLElement>(".reviews-card");
     // the first half of the track = one loop unit (6 reviews + photo card)
     const halfCount = Math.floor(cards.length / 2);
     let halfW = 0;
     for (let i = 0; i < halfCount; i++) {
       halfW += cards[i].offsetWidth + 16; // 16px = gap
     }
-    gsap.fromTo(el, { x: 0 }, { x: -halfW, duration: halfW / 80, ease: 'none', repeat: -1 });
+    gsap.fromTo(
+      el,
+      { x: 0 },
+      { x: -halfW, duration: halfW / 80, ease: "none", repeat: -1 },
+    );
   }
   initReviewsMarquee();
-  window.addEventListener('resize', () => {
-    gsap.killTweensOf('#reviews-row');
-    gsap.set('#reviews-row', { x: 0 });
+  window.addEventListener("resize", () => {
+    gsap.killTweensOf("#reviews-row");
+    gsap.set("#reviews-row", { x: 0 });
     initReviewsMarquee();
   });
 </script>
