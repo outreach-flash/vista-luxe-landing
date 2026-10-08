@@ -155,14 +155,13 @@ const reviews = [
 
       <!-- building + clouds — sits IN FRONT of the text, rises on scroll -->
       <!--
-        top: 57vh  → building's top edge starts at 57% of the viewport,
-        so the CTA buttons (at ~46-50vh) are fully visible at scroll=0.
-        GSAP translates it up linearly by 50vh (−0.5×scroll), matching the reference.
+        Use max() to guarantee the building sits well below the text/buttons 
+        even on heavily zoomed or short screens.
       -->
       <div
         id="hero-building-wrap"
         class="absolute inset-x-0 w-full flex justify-center"
-        style="z-index:2; top:57vh"
+        style="z-index:2; top: max(55vh, 600px);"
       >
         <img
           id="hero-building"
