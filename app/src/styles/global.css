@@ -18,8 +18,9 @@
   --breakpoint-lg: 1200px;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Hardware acceleration hints for animated elements */
+.reveal {
+  will-change: transform, opacity;
 }
 
 body {

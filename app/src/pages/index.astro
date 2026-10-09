@@ -722,6 +722,7 @@ const reviews = [
     end: "bottom bottom",
     pin: "#hero-sticky-stage",
     pinSpacing: false,
+    anticipatePin: 1,
   });
 
   gsap.utils.toArray<HTMLElement>(".stack-card").forEach((card) => {
@@ -732,6 +733,7 @@ const reviews = [
       end: "bottom bottom",
       pin: true,
       pinSpacing: false,
+      anticipatePin: 1,
     });
   });
   ScrollTrigger.create({
@@ -740,6 +742,7 @@ const reviews = [
     end: "bottom bottom",
     pin: "#highlight-stage",
     pinSpacing: false,
+    anticipatePin: 1,
   });
 
   /* ---- hero entrance ---- */
@@ -782,7 +785,7 @@ const reviews = [
         trigger: "#hero-scroll-container",
         start: "top top",
         end: "bottom bottom",
-        scrub: true,
+        scrub: 1,
       },
     },
   );
@@ -795,7 +798,7 @@ const reviews = [
         trigger: "#hero-scroll-container",
         start: "top top",
         end: "bottom bottom",
-        scrub: true,
+        scrub: 1,
       },
     })
     .to(
@@ -820,21 +823,21 @@ const reviews = [
     ease: "sine.inOut",
   });
 
-  /* ---- generic reveals: scrubbed scale + rise + fade ---- */
+  /* ---- generic reveals: entrance fade & rise ---- */
   gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
     gsap.fromTo(
       el,
-      { scale: 0.9, y: 20, opacity: 0 },
+      { opacity: 0, y: 24 },
       {
-        scale: 1,
-        y: 0,
         opacity: 1,
-        ease: "none",
+        y: 0,
+        duration: 0.8,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 95%",
-          end: "top 60%",
-          scrub: true,
+          start: "top 88%",
+          toggleActions: "play none none none",
+          once: true,
         },
       },
     );
@@ -877,6 +880,7 @@ const reviews = [
       end: "bottom bottom",
       pin: "#manifesto-stage",
       pinSpacing: false,
+      anticipatePin: 1,
     });
   });
 
@@ -887,11 +891,13 @@ const reviews = [
       start: "top top",
       end: () => {
         const p = document.querySelector("#manifesto");
+        if (!p) return "bottom bottom";
         // 128px (pt-32) + text height + 64px (pb-16 margin)
-        return "bottom " + (128 + p.offsetHeight + 64);
+        return "bottom " + (128 + (p as HTMLElement).offsetHeight + 64);
       },
       pin: "#manifesto",
       pinSpacing: false,
+      anticipatePin: 1,
     });
   });
 
@@ -903,7 +909,7 @@ const reviews = [
       trigger: "#manifesto-section",
       start: "top top",
       end: "bottom bottom",
-      scrub: true,
+      scrub: 0.8,
     },
   });
 
@@ -1020,7 +1026,10 @@ const reviews = [
     );
   }
   initReviewsMarquee();
+  let lastReviewsW = typeof window !== "undefined" ? window.innerWidth : 0;
   window.addEventListener("resize", () => {
+    if (window.innerWidth === lastReviewsW) return;
+    lastReviewsW = window.innerWidth;
     gsap.killTweensOf("#reviews-row");
     gsap.set("#reviews-row", { x: 0 });
     initReviewsMarquee();

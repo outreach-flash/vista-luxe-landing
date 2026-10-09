@@ -174,10 +174,18 @@ const stats = [
   gsap.registerPlugin(ScrollTrigger);
   gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
     gsap.fromTo(el,
-      { scale: 0.9, y: 20, opacity: 0 },
+      { opacity: 0, y: 24 },
       {
-        scale: 1, y: 0, opacity: 1, ease: 'none',
-        scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 60%', scrub: true },
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: 'power2.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+          once: true,
+        },
       }
     );
   });
@@ -188,7 +196,7 @@ const stats = [
       { scale: 0.7 },
       {
         scale: 1, ease: 'none',
-        scrollTrigger: { trigger: '#mission-section', start: 'top 95%', end: 'top 45%', scrub: true },
+        scrollTrigger: { trigger: '#mission-section', start: 'top 95%', end: 'top 45%', scrub: 1 },
       }
     );
   }
@@ -221,7 +229,10 @@ const stats = [
       gsap.fromTo(tickerTrack, { y: 0 }, { y: -half, duration: half / 40, ease: 'none', repeat: -1 });
     };
     startTicker();
+    let lastTickerW = typeof window !== 'undefined' ? window.innerWidth : 0;
     window.addEventListener('resize', () => {
+      if (window.innerWidth === lastTickerW) return;
+      lastTickerW = window.innerWidth;
       gsap.killTweensOf(tickerTrack);
       gsap.set(tickerTrack, { y: 0 });
       startTicker();

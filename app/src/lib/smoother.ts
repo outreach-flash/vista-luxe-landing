@@ -4,6 +4,11 @@ import { ScrollSmoother } from 'gsap/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
+// Configure ScrollTrigger globally for optimal mobile performance
+ScrollTrigger.config({
+  ignoreMobileResize: true,
+});
+
 /**
  * Shared smooth-scroll instance. Imported for side effects by every page
  * script BEFORE any ScrollTrigger is created, so pinning inside the
