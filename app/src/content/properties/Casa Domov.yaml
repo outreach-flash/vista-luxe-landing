@@ -1,0 +1,22 @@
+title: Casa Domov
+status: For Buy
+price: 0    
+featured: true
+cardImage: /assets/properties/casa-domov/casa_domov_7.webp
+gallery:
+- /assets/properties/casa-domov/casa_domov_1.webp
+- /assets/properties/casa-domov/casa_domov_2.webp
+- /assets/properties/casa-domov/casa_domov_3.webp
+- /assets/properties/casa-domov/casa_domov_4.webp
+- /assets/properties/casa-domov/casa_domov_5.webp
+- /assets/properties/casa-domov/casa_domov_6.webp
+- /assets/properties/casa-domov/casa_domov_7.webp
+- /assets/properties/casa-domov/casa_domov_8.webp
+- /assets/properties/casa-domov/casa_domov_9.webp
+- /assets/properties/casa-domov/casa_domov_10.webp
+galleryVideos:
+- /videos/casa-domov/casa_domov_10.webm
+- /videos/casa-domov/casa_domov_11.webm
+- /videos/casa-domov/casa_domov_12.webm
+- /videos/casa-domov/casa_domov_13.webm
+amenities: []

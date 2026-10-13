@@ -1,6 +1,6 @@
 title: ASMO Apartments
 status: For Buy
-featured: false
+featured: true
 price: 26000000
 street: ''
 area: ''
@@ -46,11 +46,14 @@ proximityLocations:
   distance: 25 mins
 - location: Dona Paula
   distance: 25 mins
-cardImage: /assets/img/Hs28VYJsumw25Bf01iFhauVh6U.png
+cardImage: /assets/properties/asmo-apartments/asmo_apartments_4.webp
 gallery:
-- /assets/img/Hs28VYJsumw25Bf01iFhauVh6U.png
-- /assets/img/yOdTsLHyVYJtTN0cWFTecJSlIg.png
-- /assets/img/fpaYDfZrIl7dyaMkII2rkOs.png
+- /assets/properties/asmo-apartments/asmo_apartments_3.webp
+- /assets/properties/asmo-apartments/asmo_apartments_4.webp
+- /assets/properties/asmo-apartments/asmo_apartments_5.webp
+galleryVideos:
+  - /videos/asmo-apartments/asmo_apartments_2.webm
+  - /videos/asmo-apartments/asmo_apartments_1.webm
 floorPlan: /assets/img/wj6eGC6ENPfWRW1HCoX0PVMwHs.jpg
 amenities:
 - Swimming Pool
